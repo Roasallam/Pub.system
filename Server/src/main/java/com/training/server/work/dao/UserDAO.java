@@ -1,5 +1,10 @@
 package com.training.server.work.dao;
 
-public class UserDAO {
+
+/**
+ *  * DATA ACCESS OBJECT FOR User
+ */
+
+public interface UserDAO {
    // each method data type should return User
 }

@@ -1,5 +1,9 @@
 package com.training.server.work.dao;
 
-public class LicenseDAO {
+/**
+ * DATA ACCESS OBJECT FOR License
+ */
+
+public interface LicenseDAO {
    // each method data type should return License
 }

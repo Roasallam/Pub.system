@@ -1,5 +1,9 @@
 package com.training.server.work.dao;
 
-public class PublicationDAO {
+/**
+ *  * DATA ACCESS OBJECT FOR Publication
+ */
+
+public interface PublicationDAO {
    // each method data type should return Publication
 }
