@@ -16,6 +16,13 @@ public class User {
    private String password;
    private UserType userType;
 
+   // private static #noOfUsers
+   // maybe userId = UserType.getId + 50 + #noOfUsers
+
+   protected User () {
+
+   }
+
    private User(String userName, String email, String password, UserType userType) {
 
       // handle all of these if == null

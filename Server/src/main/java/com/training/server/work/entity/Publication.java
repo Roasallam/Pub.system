@@ -22,6 +22,10 @@ public class Publication {
    // each publication has a contents ( generic data type )
    // then add it to a generic data type data structure
 
+   protected Publication () {
+
+   }
+
 
    private Publication(long publicationId, String journalName, String content) {
 

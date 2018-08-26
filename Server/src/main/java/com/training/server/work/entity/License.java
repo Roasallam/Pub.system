@@ -16,6 +16,10 @@ public class License {
    private LocalDate start_date;
    private LocalDate end_date;
 
+   protected License () {
+
+   }
+
    private License (Builder builder) {
 
       userName = builder.userName;
@@ -27,6 +31,7 @@ public class License {
    }
 
    // Builder Pattern .. According to ::::: EFFECTIVE JAVA (ITEM 2)
+   // why ? Many Parameters of the constructor .. ( Guarantee Safety and Readability )
 
    public static class Builder {
 
