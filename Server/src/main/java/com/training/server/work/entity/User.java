@@ -9,7 +9,8 @@ import java.util.InputMismatchException;
 public class User {
 
 
-   // there is a possibility to delete userId and depend on userName as a primary key
+   // there is a possibility to delete userId and //
+   // depend on userName as a primary key
    private long userId;
    private String userName;
    private String email;
@@ -25,11 +26,16 @@ public class User {
 
    private User(String userName, String email, String password, UserType userType) {
 
-      // handle all of these if == null
+      if (userName == null) throw new InputMismatchException("USERNAME cannot be null");
+      if (email == null) throw new InputMismatchException("EMAIL cannot be null");
+      if (password == null) throw new InputMismatchException("PASSWORD cannot be null");
+      if (userType == null) throw new InputMismatchException("TYPE cannot be null");
+
 
       this.userName = userName;
       this.email = email;
       this.password = password;
+
       // if ( userType == Journal)
       // then PrivilegesLicense is READ_WRITE
       // if ( userType == USER )

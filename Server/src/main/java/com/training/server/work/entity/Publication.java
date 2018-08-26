@@ -29,7 +29,9 @@ public class Publication {
 
    private Publication(long publicationId, String journalName, String content) {
 
-      // handle all of these if == null
+      if (journalName == null) throw new InputMismatchException("JOURNAL NAME  cannot be null");
+      if (content == null) throw new InputMismatchException("PUBLICATION cannot be null");
+
       this.publicationId = publicationId;
       this.journalName = journalName;
       this.content = content;
@@ -71,11 +73,13 @@ public class Publication {
    }
 
    public void setContent(String content) {
+
+      // PUBLICATION must have a content to publish.
+
       if (content == null)
          throw new InputMismatchException("PUBLICATION cannot be null!");
       this.content = content;
 
-      // PUBLICATION must have a content to publish.
    }
 
    @Override

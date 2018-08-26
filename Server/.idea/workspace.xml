@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/PublicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/PublicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/Publication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" afterDir="false" />
     </list>
@@ -50,12 +46,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/UserType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/Publication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/PublicationDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/Publication.java" />
       </list>
     </option>
   </component>
@@ -263,12 +259,12 @@
       <updated>1535195236120</updated>
       <workItem from="1535195240408" duration="1593000" />
       <workItem from="1535202241653" duration="1047000" />
-      <workItem from="1535207443436" duration="9026000" />
+      <workItem from="1535207443436" duration="9961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11666000" />
+    <option name="totallyTimeSpent" value="12601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -412,30 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/Publication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -454,6 +426,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/Publication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="75" column="6" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
         </state>
       </provider>
     </entry>
