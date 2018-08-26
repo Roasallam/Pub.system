@@ -11,7 +11,7 @@ public class User {
 
    // there is a possibility to delete userId and //
    // depend on userName as a primary key
-   private long userId;
+   private int userId;
    private String userName;
    private String email;
    private String password;
@@ -52,11 +52,11 @@ public class User {
       this.userName = userName;
    }
 
-   public long getUserId() {
+   public int getUserId() {
       return userId;
    }
 
-   public void setUserId(long userId) {
+   public void setUserId(int userId) {
       this.userId = userId;
    }
 
