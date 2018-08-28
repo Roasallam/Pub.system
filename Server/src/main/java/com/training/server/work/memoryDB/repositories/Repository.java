@@ -1,4 +1,8 @@
 package com.training.server.work.memoryDB.repositories;
 
-public class Repository {
+public interface Repository {
+
+   void add ();
+   Object remove ();
+   Object get();
 }

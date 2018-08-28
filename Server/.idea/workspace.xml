@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/DAOFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/PublicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/PublicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/MemoryDBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/MemoryDBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/MemoryDBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/DataDealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,11 +20,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CacheRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#198#199#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiskRepository.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataDealer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/DataDealer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -36,9 +82,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,7 +105,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/FileSystemDBDAOFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/FileSystemDAOs.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/MemoryDBManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/License.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/EntitiesImp/UserDAOImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" />
@@ -67,6 +112,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/EntitiesImp/PublicationDAOImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/EntitiesImp/LicenseDAOImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/DataDealer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java" />
       </list>
     </option>
   </component>
@@ -89,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -177,11 +228,16 @@
               <item name="Server" type="616d4139:PackageViewModuleNode" />
               <item name="com.training.server" type="1f31426a:PackageElementNode" />
             </path>
+            <path>
+              <item name="server" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Server" type="616d4139:PackageViewModuleNode" />
+              <item name="com.training.server" type="1f31426a:PackageElementNode" />
+              <item name="work" type="1f31426a:PackageElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,12 +320,13 @@
       <workItem from="1535202241653" duration="1047000" />
       <workItem from="1535207443436" duration="11969000" />
       <workItem from="1535279793290" duration="123000" />
-      <workItem from="1535280070385" duration="12398000" />
+      <workItem from="1535280070385" duration="12468000" />
+      <workItem from="1535446459884" duration="2023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27130000" />
+    <option name="totallyTimeSpent" value="29223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -287,9 +344,8 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27221325" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27625203" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -301,6 +357,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,13 +374,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/EntitiesImp/LicenseDAOImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -331,9 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -347,13 +415,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/DAOFactory.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -429,27 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -472,57 +513,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/com/training/server/work/dao/DAOFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/InMemoryDBDAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/FileSystemDAOs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/FileSystemDBDAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/InMemoryDBDAOFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/DAOFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/FileSystemDAOs.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/FileSystemDBDAOFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/dao/Table.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/MemoryDBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -547,26 +545,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding>
-            <element signature="e#1533#1534#0" expanded="true" />
-            <element signature="e#1573#1574#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="972" column="19" selection-start-line="972" selection-start-column="19" selection-end-line="972" selection-end-column="19" />
-          <folding>
-            <element signature="e#42980#42981#0" expanded="true" />
-            <element signature="e#43019#43020#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,15 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,9 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="881">
           <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,27 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/EntitiesImp/LicenseDAOImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -669,10 +618,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/repositories/cache/Cacheable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/DataDealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/EntitiesImp/LicenseDAOImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

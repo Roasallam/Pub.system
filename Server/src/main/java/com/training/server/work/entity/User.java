@@ -24,6 +24,8 @@ public class User {
 
    }
 
+
+   // solve this ,, it is not atomic
    private User(String userName, String email, String password, UserType userType) {
 
       if (userName == null) throw new InputMismatchException("USERNAME cannot be null");
