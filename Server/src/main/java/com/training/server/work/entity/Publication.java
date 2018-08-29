@@ -3,6 +3,7 @@ package com.training.server.work.entity;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 import java.util.InputMismatchException;
+import java.util.Objects;
 
 /**
  * Publication Represents entity
@@ -15,7 +16,7 @@ public class Publication {
    private String journalName;
    private LocalDate publicationDate;
    // define/set the publicationId when saving the publication.
-   private long publicationId;
+   private int publicationId;
 
    private String content;
    // private Data type/Structure content
@@ -27,7 +28,9 @@ public class Publication {
    }
 
 
-   private Publication(long publicationId, String journalName, String content) {
+
+   // solve this ,, it is not atomic
+   private Publication(int publicationId, String journalName, String content) {
 
       if (journalName == null) throw new InputMismatchException("JOURNAL NAME  cannot be null");
       if (content == null) throw new InputMismatchException("PUBLICATION cannot be null");
@@ -40,11 +43,12 @@ public class Publication {
       this.publicationDate = LocalDate.now();
    }
 
-   public long getPublicationId() {
+
+   public int getPublicationId() {
       return publicationId;
    }
 
-   public void setPublicationId(long publicationId) {
+   public void setPublicationId(int publicationId) {
       this.publicationId = publicationId;
    }
 

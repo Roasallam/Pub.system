@@ -1,6 +1,7 @@
 package com.training.server.work.entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  * License Represents entity
@@ -30,7 +31,7 @@ public class License {
       end_date = builder.end_date;
    }
 
-   // Builder Pattern .. According to ::::: EFFECTIVE JAVA (ITEM 2)
+   // Builder Pattern .. According to ::::: EFFECTIVE JAVA (ITEM 2) ^ REFERENCE POINT ^
    // why ? Many Parameters of the constructor .. ( Guarantee Safety and Readability )
 
    public static class Builder {
@@ -41,7 +42,7 @@ public class License {
       // Optional parameters - initialized to default values
       private TimeLicense timeLicense = TimeLicense.FREE_TRIAL;
       private PrivilegesLicense privilegesLicense = PrivilegesLicense.READ;
-      private String slice = null;
+      private String slice = "FULL";
       private LocalDate start_date = LocalDate.now();
       private LocalDate end_date = LocalDate.now().plusDays(20);
 
@@ -134,6 +135,5 @@ public class License {
          ", end_date=" + end_date +
          '}';
    }
-
 
 }

@@ -1,6 +1,7 @@
 package com.training.server.work.entity;
 
 import java.util.InputMismatchException;
+import java.util.Objects;
 
 /**
  * User Represents entity
