@@ -1,7 +1,7 @@
 package com.training.server.work.dao;
 
 import com.training.server.work.entity.User;
-
+import com.training.server.work.entity.UserType;
 
 /**
  * DATA ACCESS OBJECT FOR User
@@ -11,9 +11,9 @@ public interface UserDAO {
 
    User findByName(String userName);
 
-   User RegisterUser(User user);
+   Status RegisterUser(String userName, String password, UserType userType);
 
-   User updateUserPassword(User user);
+   Status updateUserPassword(String userName, String newPassword);
 
-   User deleteUser(User user);
+   Status deleteUser(String userName);
 }

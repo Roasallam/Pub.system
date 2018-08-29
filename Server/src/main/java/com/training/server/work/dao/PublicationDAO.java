@@ -9,11 +9,15 @@ import java.util.List;
 
 public interface PublicationDAO {
 
-   void findAll();
-   Publication findById();
-   void  findByJournalName(); // it could return a list of publications
-   Publication createPublication(Publication publication);
-   Publication updatePublication(Publication publication);
-   Publication deletePublication(Publication publication);
+
+   Publication findById(int publicationId);
+
+   List<Publication>  findByJournalName(); // it could return a list of publications
+
+   int createPublication(String journalName, String content);
+
+   Status updatePublication(int publicationId, String newContent);
+
+   Status deletePublication(int publicationId);
 
 }

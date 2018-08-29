@@ -3,7 +3,7 @@ package com.training.server.work.entity;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 import java.util.InputMismatchException;
-import java.util.Objects;
+
 
 /**
  * Publication Represents entity
@@ -23,17 +23,16 @@ public class Publication {
    // each publication has a contents ( generic data type )
    // then add it to a generic data type data structure
 
-   protected Publication () {
+   private Publication () {
 
    }
 
 
-
    // solve this ,, it is not atomic
-   private Publication(int publicationId, String journalName, String content) {
+   public Publication(int publicationId, String journalName, String content) {
 
       if (journalName == null) throw new InputMismatchException("JOURNAL NAME  cannot be null");
-      if (content == null) throw new InputMismatchException("PUBLICATION cannot be null");
+      if (content == null) throw new InputMismatchException("PUBLICATION cannot be empty");
 
       this.publicationId = publicationId;
       this.journalName = journalName;
@@ -81,7 +80,7 @@ public class Publication {
       // PUBLICATION must have a content to publish.
 
       if (content == null)
-         throw new InputMismatchException("PUBLICATION cannot be null!");
+         throw new InputMismatchException("PUBLICATION cannot be empty!");
       this.content = content;
 
    }
@@ -94,4 +93,7 @@ public class Publication {
          ", content='" + content + '\'' +
          '}';
    }
+
+   // No Equals and hashcode cause each instance of this class is equal to itself only
+
 }

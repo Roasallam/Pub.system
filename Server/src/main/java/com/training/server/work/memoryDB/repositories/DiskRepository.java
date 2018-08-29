@@ -1,18 +1,19 @@
 package com.training.server.work.memoryDB.repositories;
 
 public class DiskRepository implements Repository {
+
    @Override
-   public void add() {
+   public void add(String name, int id, Object obj) {
 
    }
 
    @Override
-   public Object remove() {
-      return null;
+   public boolean remove(String name, int id) {
+      return false;
    }
 
    @Override
-   public Object get() {
+   public Object get(String name, int id) {
       return null;
    }
 }

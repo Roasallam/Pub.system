@@ -1,12 +1,15 @@
 package com.training.server.work.entity;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.InputMismatchException;
-import java.util.Objects;
+
 
 /**
  * User Represents entity
  * this class is to contain the User DATA
  */
+
+@XmlRootElement
 public class User {
 
 
@@ -14,29 +17,24 @@ public class User {
    // depend on userName as a primary key
    private int userId;
    private String userName;
-   private String email;
    private String password;
    private UserType userType;
 
-   // private static #noOfUsers
-   // maybe userId = UserType.getId + 50 + #noOfUsers
 
-   protected User () {
+   private User () {
 
    }
 
 
    // solve this ,, it is not atomic
-   private User(String userName, String email, String password, UserType userType) {
+   public User(String userName, String password, UserType userType) {
 
       if (userName == null) throw new InputMismatchException("USERNAME cannot be null");
-      if (email == null) throw new InputMismatchException("EMAIL cannot be null");
       if (password == null) throw new InputMismatchException("PASSWORD cannot be null");
       if (userType == null) throw new InputMismatchException("TYPE cannot be null");
 
 
       this.userName = userName;
-      this.email = email;
       this.password = password;
 
       // if ( userType == Journal)
@@ -90,4 +88,7 @@ public class User {
          ", userName='" + userName + '\'' +
          '}';
    }
+
+   // No Equals and hashcode cause each instance of this class is equal to itself only
+
 }

@@ -1,7 +1,7 @@
 package com.training.server.work.entity;
 
 public enum UserType {
-   ADMIN (0) , JOURNAL (1), USER (10000);
+   ADMIN (0) , JOURNAL (1), READER (10000);
 
    private int userTypeId;
 

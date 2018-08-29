@@ -1,6 +1,7 @@
 package com.training.server.work.dao;
 
 import com.training.server.work.entity.License;
+import com.training.server.work.entity.*;
 
 
 /**
@@ -12,9 +13,13 @@ public interface LicenseDAO {
 
    License findByUserName(String userName);
 
-   License createLicense(License license);
+   Status createLicense(String userName);
 
-   License updateLicense(License license);
+   Status updateTimeLicense(String userName, TimeLicense newTimeLicense);
 
-   License deleteLicense(License license);
+   Status updatePrivilegesLicense(String userName, PrivilegesLicense newPrivilegesLicense);
+
+   Status updateSlice (String userName, String newSlice);
+
+   Status deleteLicense(String userName);
 }

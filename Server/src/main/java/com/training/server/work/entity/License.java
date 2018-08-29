@@ -1,13 +1,15 @@
 package com.training.server.work.entity;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
-import java.util.Objects;
+
 
 /**
  * License Represents entity
  * this class is to contain the License DATA
  */
 
+@XmlRootElement
 public class License {
 
    private String userName;
@@ -17,11 +19,11 @@ public class License {
    private LocalDate start_date;
    private LocalDate end_date;
 
-   protected License () {
+   private License () {
 
    }
 
-   private License (Builder builder) {
+   public License (Builder builder) {
 
       userName = builder.userName;
       timeLicense = builder.timeLicense;
@@ -135,5 +137,7 @@ public class License {
          ", end_date=" + end_date +
          '}';
    }
+
+   // No Equals and hashcode cause each instance of this class is equal to itself only
 
 }
