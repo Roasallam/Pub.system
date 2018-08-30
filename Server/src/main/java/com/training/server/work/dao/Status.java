@@ -10,5 +10,18 @@ package com.training.server.work.dao;
  */
 public enum Status {
 
-   ERROR , NOT_EXIST , MISSION_ACCOMPLISHED;
+   ERROR (0), NOT_EXIST (0) , MISSION_ACCOMPLISHED (1);
+
+   private int statusId;
+   Status (int statusId ) {
+      this.statusId = statusId;
+   }
+
+   public int getStatusId() {
+      return statusId;
+   }
+
+   public void setStatusId(int statusId) {
+      this.statusId = statusId;
+   }
 }

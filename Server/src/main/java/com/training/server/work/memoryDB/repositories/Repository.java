@@ -2,9 +2,12 @@ package com.training.server.work.memoryDB.repositories;
 
 public interface Repository {
 
-   void add (String name, int id, Object obj);
+   // id could be publicationId (int)
+   // or userName (String)
 
-   boolean remove (String name, int id);
+   void add (String tableName, String id, Object obj);
 
-   Object get(String name, int id);
+   boolean remove (String tableName, String id);
+
+   Object get(String tableName, String id);
 }

@@ -1,19 +1,32 @@
 package com.training.server.work.memoryDB.repositories;
 
+import java.io.*;
+
+
 public class DiskRepository implements Repository {
 
-   @Override
-   public void add(String name, int id, Object obj) {
+   DiskRepository (String rootFolder) {
+
+      new File ("/Users/ruaasallam/GitHup/me/Server/" + rootFolder).mkdir();
+      new File ("/Users/ruaasallam/GitHup/me/Server/" + rootFolder + "/License/records").mkdirs();
+      new File ("/Users/ruaasallam/GitHup/me/Server/" + rootFolder + "/Publication/records").mkdirs();
+      new File ("/Users/ruaasallam/GitHup/me/Server/" + rootFolder + "/Content/records").mkdirs();
+      new File ("/Users/ruaasallam/GitHup/me/Server/" + rootFolder + "/User/records").mkdirs();
 
    }
 
    @Override
-   public boolean remove(String name, int id) {
+   public void add(String tableName, String id, Object obj) {
+
+   }
+
+   @Override
+   public boolean remove(String tableName, String id) {
       return false;
    }
 
    @Override
-   public Object get(String name, int id) {
+   public Object get(String tableName, String id) {
       return null;
    }
 }

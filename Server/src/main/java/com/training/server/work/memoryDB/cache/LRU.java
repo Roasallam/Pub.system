@@ -2,6 +2,7 @@ package com.training.server.work.memoryDB.cache;
 
 import com.training.server.work.dao.Status;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.*;
 import java.util.*;
 
 /**
@@ -17,12 +18,17 @@ public class LRU<K, V> implements Cacheable<K, V>{
    // Node represents a (User/ Publication/License ) object
    // K is like a userName or a PublicationId
    // V is like the User object or Publication object...
-   private ConcurrentLinkedDeque<Node<K,V>> cache = new ConcurrentLinkedDeque<>();
+   private Deque<Node<K,V>> cache = new ConcurrentLinkedDeque<>();
 
-   private ConcurrentHashMap<K, Node<K,V>> data = new ConcurrentHashMap<>();
+   private ConcurrentMap<K, Node<K,V>> data = new ConcurrentHashMap<>();
+
 
    // capacity of the cache
    private final int maxSize;
+
+   private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+   private Lock readLock = readWriteLock.readLock();
+   private Lock writeLock = readWriteLock.writeLock();
 
    public LRU(int maxSize) {
 
@@ -36,42 +42,53 @@ public class LRU<K, V> implements Cacheable<K, V>{
 
       if (name != null && obj != null) {
 
-         Node<K,V> toAdd = new Node<>(name, obj);
+         writeLock.lock();
 
-         // had to check size first, ((cause putIfAbsent may add a new node..))
+         try {
 
-         // Checking if there is an available space
-         if (data.size() < maxSize) {
+            Node<K, V> toAdd = new Node<>(name, obj);
 
-            // if there is an value associated with the specified key,
-            // >> then returns that value
-            // if not >> then puts the value, and returns null.
-            if (data.putIfAbsent(name, toAdd) == null) {
+            // had to check size first, ((cause putIfAbsent may add a new node..))
 
-               cache.addFirst(toAdd);
+            // Checking if there is an available space
+            if (data.size() < maxSize) {
+
+               // if there is an value associated with the specified key,
+               // >> then returns that value
+               // if not >> then puts the value, and returns null.
+               if (data.putIfAbsent(name, toAdd) == null) {
+
+                  cache.addFirst(toAdd);
+               } else {
+
+                  // update the existing value
+                  updateExistingValue(name, obj);
+               }
+               // Making some room space for the new node.
             } else {
 
-               // update the existing value
-               updateExistingValue(name, obj);
+               // if the value associated with the specified key already exist
+               // just update the value , no need for new room space,
+               // if not >> then puts the new value and returns null.
+               if (data.putIfAbsent(name, toAdd) != null)
+
+                  updateExistingValue(name, obj);
+
+               // value is not exist, so make a new room space
+               else {
+
+                  // remove the LAST RECENTLY USED VALUE .
+                  Node<K, V> toRemove = cache.removeLast();
+                  data.remove(toRemove.index);
+
+                  cache.addFirst(toAdd);
+               }
             }
-           // Making some room space for the new node.
-         } else {
+         } catch (Exception e ) {
+            e.printStackTrace();
+         } finally {
 
-            // if the value associated with the specified key already exist
-            // just update the value , no need for new room space,
-            // if not >> then puts the new value and returns null.
-            if (data.putIfAbsent(name, toAdd) != null)
-
-               updateExistingValue(name, obj);
-            // value is not exist, so make a new room space
-            else {
-
-               // remove the LAST RECENTLY USED VALUE .
-               Node<K,V> toRemove = cache.removeLast();
-               data.remove(toRemove.index);
-
-               cache.addFirst(toAdd);
-            }
+            writeLock.unlock();
          }
       }
    }
@@ -93,19 +110,34 @@ public class LRU<K, V> implements Cacheable<K, V>{
       if (name == null)
          return null;
 
-      Node<K,V> node = data.get(name);
-      // if  map contains a mapping from a key name to a value V
-      // data is in cache ,, so just bring it to the front of the queue
-      // cache HIT..
-      if (node != null) {
+      readLock.lock();
 
-         cache.remove(node);
-         cache.addFirst(node);
+      try {
 
-         return node.value;
+         Node<K, V> node = data.get(name);
+
+         // data is not in cache ,, get it from somewhere else..
+         // cache MISS..
+         if (node == null)
+            return null;
+
+         // if  map contains a mapping from a key name to a value V
+         // data is in cache ,, so just bring it to the front of the queue
+         // cache HIT..
+         else {
+
+            cache.remove(node);
+            cache.addFirst(node);
+
+            return node.value;
+         }
+
+      } catch (Exception e ) {
+         e.printStackTrace();
+      } finally {
+
+         readLock.unlock();
       }
-
-      // data is not in cache ,, get it from somewhere else..
       // cache MISS..
       return null;
    }
@@ -113,17 +145,30 @@ public class LRU<K, V> implements Cacheable<K, V>{
    @Override
    public Status delete(K name) {
 
-      // if we deleted a record , we have to delete it everywhere
+      try {
 
-      Node <K,V> node = data.get(name);
-      // checking if the data exist in cache
-      if (node != null) {
-
-         cache.remove(node);
-         data.remove(name);
-         return Status.MISSION_ACCOMPLISHED;
+         Thread.sleep(2000);
+      } catch (InterruptedException e) {
+         e.printStackTrace();
       }
 
+      writeLock.lock();
+      try {
+
+         Node<K, V> node = data.get(name);
+         // checking if the data exist in cache
+         if (node != null) {
+
+            cache.remove(node);
+            data.remove(name);
+            return Status.MISSION_ACCOMPLISHED;
+         }
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+
+         writeLock.unlock();
+      }
       return Status.NOT_EXIST;
    }
 
