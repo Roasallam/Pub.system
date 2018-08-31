@@ -33,6 +33,10 @@ public class DataDealer {
 
    public void saveData (String tableName, String id, Object object) {
 
+      cache.add(tableName,id,object);
+
+      // adding to the disk in other thread,
+
    }
 
    public Object retrieveData (String tableName,String id) {
@@ -50,8 +54,15 @@ public class DataDealer {
       return Status.NOT_EXIST;
    }
 
-   public Object findById (String id) {
-      return null;
+   public Status deleteData (String tableName, String id) {
+
+      boolean status = cache.remove(tableName, id);
+
+      // removing from disk in other thread
+
+      return Status.MISSION_ACCOMPLISHED;
+
    }
+
 
 }

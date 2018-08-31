@@ -16,21 +16,21 @@ public class LicenseDAOImp implements LicenseDAO {
 
    }
 
-
    @Override
    public License findByUserName(String userName) {
-      return null;
-   }
 
-   @Override
-   public Status createLicense(String userName) {
-      return null;
+      Object license = dataDealer.retrieveData(Table.LICENSE.getTableName(),userName);
+
+      if (license == null)
+         return null;
+
+      return (License)license;
    }
 
    @Override
    public Status updateTimeLicense(String userName, TimeLicense newTimeLicense) {
 
-      Object license = dataDealer.findById(userName);
+      Object license = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
       if (license == null)
          return Status.NOT_EXIST;
@@ -53,7 +53,7 @@ public class LicenseDAOImp implements LicenseDAO {
          } break;
          case 7: {
             newTimeLicense.setStart_date(LocalDate.now());
-            newTimeLicense.setEnd_date(LocalDate.now().plusYears(200));
+            newTimeLicense.setEnd_date(LocalDate.now().plusYears(Integer.MAX_VALUE));
             newTimeLicense = TimeLicense.PERMANENT;
          } break;
          case 0: {

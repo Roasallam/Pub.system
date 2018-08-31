@@ -13,8 +13,6 @@ public interface LicenseDAO {
 
    License findByUserName(String userName);
 
-   Status createLicense(String userName);
-
    Status updateTimeLicense(String userName, TimeLicense newTimeLicense);
 
    Status updatePrivilegesLicense(String userName, PrivilegesLicense newPrivilegesLicense);

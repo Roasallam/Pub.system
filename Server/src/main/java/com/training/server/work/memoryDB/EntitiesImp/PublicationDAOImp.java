@@ -19,7 +19,13 @@ public class PublicationDAOImp implements PublicationDAO {
 
    @Override
    public Publication findById(String publicationId) {
-      return null;
+
+      Object publication = dataDealer.retrieveData(Table.PUBLICATION.getTableName(), publicationId);
+
+      if (publication == null)
+         return null;
+
+      return (Publication) publication;
    }
 
    @Override
@@ -55,7 +61,9 @@ public class PublicationDAOImp implements PublicationDAO {
 
    @Override
    public Status deletePublication(String publicationId) {
-      return null;
+
+      return dataDealer.deleteData(Table.PUBLICATION.getTableName(), publicationId);
+
    }
 
 

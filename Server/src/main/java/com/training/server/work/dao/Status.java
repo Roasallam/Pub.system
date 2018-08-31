@@ -10,7 +10,7 @@ package com.training.server.work.dao;
  */
 public enum Status {
 
-   ERROR (0), NOT_EXIST (0) , MISSION_ACCOMPLISHED (1);
+   ERROR (0), NOT_EXIST (0) , ALREADY_EXISTS (0), MISSION_ACCOMPLISHED (1);
 
    private int statusId;
    Status (int statusId ) {
