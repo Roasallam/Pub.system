@@ -1,5 +1,8 @@
 package com.training.server.work.memoryDB;
 
+import com.training.server.work.dao.Status;
+import com.training.server.work.memoryDB.repositories.CacheRepository;
+import com.training.server.work.memoryDB.repositories.DiskRepository;
 import com.training.server.work.memoryDB.repositories.Repository;
 
 /**
@@ -20,23 +23,34 @@ import com.training.server.work.memoryDB.repositories.Repository;
 
 public class DataDealer {
 
-   private Repository cache;
-   private Repository disk;
+   private Repository cache ;
+   private Repository disk ;
 
-   public DataDealer(Repository cache, Repository disk) {
-      this.cache = cache;
-      this.disk = disk;
+   public DataDealer() {
+      cache = new CacheRepository();
+      disk = new DiskRepository();
    }
 
    public void saveData (String tableName, String id, Object object) {
 
    }
 
-   public <T> T retrieveData (String tableName,String id) {
-      return null;
+   public Object retrieveData (String tableName,String id) {
+
+      Object obj = cache.get(tableName,id);
+
+      if (obj == null) {
+         obj = disk.get(tableName,id);
+
+         if (obj != null) {
+            cache.add(tableName, id, obj);
+            return obj;
+         }
+      }
+      return Status.NOT_EXIST;
    }
 
-   public <T> T findById (String id) {
+   public Object findById (String id) {
       return null;
    }
 

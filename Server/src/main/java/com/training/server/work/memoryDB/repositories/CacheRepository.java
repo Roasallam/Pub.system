@@ -11,6 +11,9 @@ import java.util.*;
 
 public class CacheRepository implements Repository {
 
+   public CacheRepository() {
+   }
+
    // String is for the table name
    // Cacheable is a cacheable object/record in that table
    // we can add or get or remove records using that cacheable object

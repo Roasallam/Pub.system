@@ -32,6 +32,9 @@ public class DiskRepository implements Repository {
       }
    }
 
+   public DiskRepository() {
+   }
+
    @Override
    public void add(String folderName, String id, Object obj) {
 
