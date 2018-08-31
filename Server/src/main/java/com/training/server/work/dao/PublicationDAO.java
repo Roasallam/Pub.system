@@ -10,14 +10,14 @@ import java.util.List;
 public interface PublicationDAO {
 
 
-   Publication findById(int publicationId);
+   Publication findById(String publicationId);
 
    List<Publication>  findByJournalName(); // it could return a list of publications
 
    int createPublication(String journalName, String content);
 
-   Status updatePublication(int publicationId, String newContent);
+   Status updatePublication(String publicationId, String newContent);
 
-   Status deletePublication(int publicationId);
+   Status deletePublication(String publicationId);
 
 }

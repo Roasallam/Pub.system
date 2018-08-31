@@ -95,5 +95,5 @@ public class Publication {
    }
 
    // No Equals and hashcode cause each instance of this class is equal to itself only
-
+   // using the publicationId field which is a unique value for each instance , with IdGenerator
 }

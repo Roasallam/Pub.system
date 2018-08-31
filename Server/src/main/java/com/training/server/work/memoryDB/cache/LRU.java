@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Implementing Least Recently Used algorithm
  * using a HashMap to save values
- * and a queue to keep the most recently used in front
+ * and a queue to keep the most recently used (Trending) in front
  * and the least recently used in back
  * @param <K> key with which the specified value is to be associated
  * @param <V> cached value to be associated with the specified key
@@ -107,7 +107,7 @@ public class LRU<K, V> implements Cacheable<K, V>{
    @Override
    public V get(K name) {
 
-      if (name == null)
+      if (name == null || cache.isEmpty())
          return null;
 
       readLock.lock();

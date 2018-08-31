@@ -24,7 +24,6 @@ public class CacheRepository implements Repository {
    @Override
    public void add(String tableName, String id, Object obj) {
 
-      // only cache records that their tables are in cache
       if (cachedTables.containsKey(tableName))
          cachedTables.get(tableName).add(id, obj);
    }

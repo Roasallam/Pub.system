@@ -13,9 +13,8 @@ import java.util.InputMismatchException;
 public class User {
 
 
-   // there is a possibility to delete userId and //
+
    // depend on userName as a primary key
-  // private int userId;
    private String userName;
    private String password;
    private UserType userType;
@@ -53,14 +52,6 @@ public class User {
       this.userName = userName;
    }
 
-  /* public int getUserId() {
-      return userId;
-   }
-
-   public void setUserId(int userId) {
-      this.userId = userId;
-   } */
-
    public String getPassword() {
       return password;
    }
@@ -84,11 +75,11 @@ public class User {
    @Override
    public String toString() {
       return "User{" +
-        // "userId=" + userId +
          ", userName='" + userName + '\'' +
          '}';
    }
 
    // No Equals and hashcode cause each instance of this class is equal to itself only
+   // using the userName field which is a unique value for each instance
 
 }

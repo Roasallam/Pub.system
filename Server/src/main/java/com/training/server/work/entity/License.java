@@ -139,5 +139,6 @@ public class License {
    }
 
    // No Equals and hashcode cause each instance of this class is equal to itself only
+   // using the userName field which is a unique value for each instancef
 
 }
