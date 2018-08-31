@@ -7,9 +7,7 @@ import com.training.server.work.entity.*;
 /**
  * DATA ACCESS OBJECT FOR License
  */
-
 public interface LicenseDAO {
-
 
    License findByUserName(String userName);
 
@@ -19,5 +17,4 @@ public interface LicenseDAO {
 
    Status updateSlice (String userName, String newSlice);
 
-   Status deleteLicense(String userName);
 }

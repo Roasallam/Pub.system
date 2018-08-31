@@ -9,19 +9,14 @@ import java.util.InputMismatchException;
  * Publication Represents entity
  * this class is to contain the publication DATA
  */
-
 @XmlRootElement
 public class Publication {
 
    private String journalName;
    private LocalDate publicationDate;
-   // define/set the publicationId when saving the publication.
    private int publicationId;
 
    private String content;
-   // private Data type/Structure content
-   // each publication has a contents ( generic data type )
-   // then add it to a generic data type data structure
 
    private Publication () {
 
@@ -37,8 +32,6 @@ public class Publication {
       this.publicationId = publicationId;
       this.journalName = journalName;
       this.content = content;
-
-      // critic idea , creation of the publication differs from the publishing of it
       this.publicationDate = LocalDate.now();
    }
 

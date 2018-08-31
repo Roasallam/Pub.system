@@ -16,10 +16,9 @@ public enum IdGenerator {
    ID_GENERATOR;
 
 
-   // why implemented by hand,, didn't use a UUID
-   // no need for security
-   // easiest  to handle an int value than UUID type
-   // easiest searching ..
+   // why implemented by hand,, didn't use a UUID?
+   // easiest  to handle an int value than UUID type?
+   // easiest searching? ..
    public static int generateId (String foldername) {
 
       String uri = "DiskRepo" + File.separator + foldername + File.separator + "records" ;

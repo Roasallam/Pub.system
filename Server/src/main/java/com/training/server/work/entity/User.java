@@ -8,11 +8,8 @@ import java.util.InputMismatchException;
  * User Represents entity
  * this class is to contain the User DATA
  */
-
 @XmlRootElement
 public class User {
-
-
 
    // depend on userName as a primary key
    private String userName;
@@ -24,7 +21,6 @@ public class User {
 
    }
 
-
    // solve this ,, it is not atomic
    public User(String userName, String password, UserType userType) {
 
@@ -32,14 +28,8 @@ public class User {
       if (password == null) throw new InputMismatchException("PASSWORD cannot be null");
       if (userType == null) throw new InputMismatchException("TYPE cannot be null");
 
-
       this.userName = userName;
       this.password = password;
-
-      // if ( userType == Journal)
-      // then PrivilegesLicense is READ_WRITE
-      // if ( userType == USER )
-      // then PrivilegesLicense is READ
       this.userType = userType;
    }
 
@@ -75,7 +65,8 @@ public class User {
    @Override
    public String toString() {
       return "User{" +
-         ", userName='" + userName + '\'' +
+         "userName='" + userName + '\'' +
+         ", userType=" + userType +
          '}';
    }
 

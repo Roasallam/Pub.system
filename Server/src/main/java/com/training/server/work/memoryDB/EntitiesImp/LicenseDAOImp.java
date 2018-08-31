@@ -79,8 +79,4 @@ public class LicenseDAOImp implements LicenseDAO {
       return null;
    }
 
-   @Override
-   public Status deleteLicense(String userName) {
-      return null;
-   }
 }

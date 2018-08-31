@@ -33,9 +33,6 @@ public class License {
       end_date = builder.end_date;
    }
 
-   // Builder Pattern .. According to ::::: EFFECTIVE JAVA (ITEM 2) ^ REFERENCE POINT ^
-   // why ? Many Parameters of the constructor .. ( Guarantee Safety and Readability )
-
    public static class Builder {
 
       // Required parameters
@@ -139,6 +136,6 @@ public class License {
    }
 
    // No Equals and hashcode cause each instance of this class is equal to itself only
-   // using the userName field which is a unique value for each instancef
+   // using the userName field which is a unique value for each instance
 
 }
