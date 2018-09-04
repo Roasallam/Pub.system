@@ -1,6 +1,6 @@
 package com.training.server.work.memoryDB;
 
-import com.training.server.work.dao.Status;
+import com.training.server.work.Status;
 import com.training.server.work.memoryDB.repositories.CacheRepository;
 import com.training.server.work.memoryDB.repositories.DiskRepository;
 import com.training.server.work.memoryDB.repositories.Repository;
@@ -11,14 +11,13 @@ import com.training.server.work.memoryDB.repositories.Repository;
  * 1- disk
  * 2- cache
  *
- * saving and setting data
- * 1st on disk
- * 2nd in cache
+ * Saving and setting data:
+ * 1st on disk, (Non-Volatile)
+ * 2nd in cache (Volatile)
  *
- * reading data
- * 1st from memory , if not found
- * 2nd from cache , if not found
- * 3rd from disk , if not found , then doesn't exist at all
+ * Reading data:
+ * 1st from cache (faster to get data from), if not found
+ * 2nd from disk , if not found , then it doesn't exist at all.
  */
 
 public class DataDealer {
@@ -27,8 +26,8 @@ public class DataDealer {
    private Repository disk ;
 
    public DataDealer(Repository cache, Repository disk) {
-      this.cache = new CacheRepository();
-      this.disk = new DiskRepository();
+      this.cache = cache;
+      this.disk = disk;
    }
 
    public void saveData (String tableName, String id, Object object) {
@@ -41,22 +40,31 @@ public class DataDealer {
 
    public Object retrieveData (String tableName,String id) {
 
+      Object [] containType = {null};
+      containType[0] = cache.get(tableName, id);
+
       // cache HIT
-      if (cache.get(tableName,id) != Status.NOT_EXIST)
-         return cache.get(tableName, id);
+      if (containType[0] != Status.NOT_EXIST)
+         return containType[0];
 
       // cache MISS
-      else if (disk.get(tableName, id) !=  Status.NOT_EXIST) {
+      else {
 
-         cache.add(tableName, id, disk.get(tableName, id));
-         return cache.get(tableName, id);
+         containType[0] = disk.get(tableName, id);
 
-      } else
+         if (containType[0] !=  Status.NOT_EXIST) {
+
+            cache.add(tableName, id, containType[0]);
+            return containType[0];
+         }
+
          return Status.NOT_EXIST;
-
+      }
    }
 
    public Status deleteData (String tableName, String id) {
+
+      // don't change from status to boolean please
 
       boolean status = cache.remove(tableName, id);
 

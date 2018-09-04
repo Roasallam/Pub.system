@@ -1,8 +1,7 @@
 package com.training.server.work.memoryDB.cache;
 
-import com.training.server.work.dao.Status;
-import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
+import com.training.server.work.Status;
+
 import java.util.*;
 
 
@@ -34,7 +33,6 @@ public class LRU<K,V> implements Cacheable {
          update(name, obj);
       else
          addNew(name, obj);
-
 
    }
 

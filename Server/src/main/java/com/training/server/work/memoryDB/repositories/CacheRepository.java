@@ -1,6 +1,6 @@
 package com.training.server.work.memoryDB.repositories;
 
-import com.training.server.work.dao.Status;
+import com.training.server.work.Status;
 import com.training.server.work.memoryDB.cache.*;
 
 import java.util.*;
@@ -11,8 +11,6 @@ import java.util.*;
 
 public class CacheRepository implements Repository {
 
-   public CacheRepository() {
-   }
 
    private Map<String, Cacheable> cachedTables = new HashMap<>();
 

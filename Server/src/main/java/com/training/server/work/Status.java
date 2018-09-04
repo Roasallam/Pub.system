@@ -1,4 +1,4 @@
-package com.training.server.work.dao;
+package com.training.server.work;
 
 
 /**

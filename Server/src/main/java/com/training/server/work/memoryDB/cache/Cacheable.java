@@ -1,6 +1,6 @@
 package com.training.server.work.memoryDB.cache;
 
-import com.training.server.work.dao.Status;
+import com.training.server.work.Status;
 
 public interface Cacheable {
 

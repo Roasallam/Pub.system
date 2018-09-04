@@ -6,7 +6,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
 
-import com.training.server.work.dao.Status;
+import com.training.server.work.Status;
 import com.training.server.work.entity.*;
 
 
@@ -32,8 +32,6 @@ public class DiskRepository implements Repository {
       }
    }
 
-   public DiskRepository() {
-   }
 
    @Override
    public void add(String folderName, String id, Object obj) {

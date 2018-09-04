@@ -1,5 +1,6 @@
 package com.training.server.work.dao;
 
+import com.training.server.work.Status;
 import com.training.server.work.entity.License;
 import com.training.server.work.entity.*;
 
@@ -16,5 +17,6 @@ public interface LicenseDAO {
    Status updatePrivilegesLicense(String userName, PrivilegesLicense newPrivilegesLicense);
 
    Status updateSlice (String userName, String newSlice);
+
 
 }
