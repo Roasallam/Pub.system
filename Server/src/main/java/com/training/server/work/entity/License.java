@@ -19,6 +19,7 @@ public class License {
    private LocalDate start_date;
    private LocalDate end_date;
 
+
    private License () {
 
    }
@@ -122,6 +123,7 @@ public class License {
    public void setEnd_date(LocalDate end_date) {
       this.end_date = end_date;
    }
+
 
    @Override
    public String toString() {

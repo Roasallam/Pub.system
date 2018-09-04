@@ -7,6 +7,8 @@ import java.nio.file.*;
 
 //Singelton
 
+// have to change this to RandomStringGenerator
+
 /**
  * used to generate a unique id
  * for each specific instance of a model

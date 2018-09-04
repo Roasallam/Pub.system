@@ -14,10 +14,7 @@ public class CacheRepository implements Repository {
    public CacheRepository() {
    }
 
-   // String is for the table name
-   // Cacheable is a cacheable object/record in that table
-   // we can add or get or remove records using that cacheable object
-   private Map<String, Cacheable<String,Object>> cachedTables = new HashMap<>();
+   private Map<String, Cacheable> cachedTables = new HashMap<>();
 
    public void addTable (String tableName, Cacheable cacheable) {
 
@@ -29,6 +26,7 @@ public class CacheRepository implements Repository {
 
       if (cachedTables.containsKey(tableName))
          cachedTables.get(tableName).add(id, obj);
+
    }
 
    @Override
@@ -36,8 +34,7 @@ public class CacheRepository implements Repository {
 
       if (cachedTables.containsKey(tableName)) {
 
-         Status status = (cachedTables.get(tableName).delete(id));
-         if (status.getStatusId() == 1)
+         if ((cachedTables.get(tableName).removeObj(id)))
             return true;
       }
       return false;
@@ -47,8 +44,8 @@ public class CacheRepository implements Repository {
    public Object get(String tableName, String id) {
 
       if (cachedTables.containsKey(tableName)) {
-          return cachedTables.get(tableName).get(id);
+          return cachedTables.get(tableName).retrieve(id);
       }
-      return null;
+      return Status.NOT_EXIST;
    }
 }

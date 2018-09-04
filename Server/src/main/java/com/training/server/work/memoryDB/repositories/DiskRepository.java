@@ -77,7 +77,7 @@ public class DiskRepository implements Repository {
 
       } catch (Exception e ) {
          e.printStackTrace();
-         return null;
+         return Status.NOT_EXIST;
       }
    }
 

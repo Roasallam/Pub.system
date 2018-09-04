@@ -2,19 +2,15 @@ package com.training.server.work.memoryDB.cache;
 
 import com.training.server.work.dao.Status;
 
-public interface Cacheable <K, V>{
+public interface Cacheable {
 
-   void add (K name, V obj) ;
+   void add (String name, Object obj) ;
 
-   V get (K name);
+   Object retrieve (String name);
 
-   /**
-    * if we want to delete some record completely
-    * we have to delete it everywhere it could exist.
-    * @param name key with which the specified value is to be associated
-    * @return status of the operation
-    */
-   Status delete (K name);
+   Status deleteLRU ();
+
+   boolean removeObj (String name);
 
 
 }

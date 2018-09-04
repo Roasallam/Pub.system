@@ -26,9 +26,9 @@ public class DataDealer {
    private Repository cache ;
    private Repository disk ;
 
-   public DataDealer() {
-      cache = new CacheRepository();
-      disk = new DiskRepository();
+   public DataDealer(Repository cache, Repository disk) {
+      this.cache = new CacheRepository();
+      this.disk = new DiskRepository();
    }
 
    public void saveData (String tableName, String id, Object object) {
@@ -41,17 +41,19 @@ public class DataDealer {
 
    public Object retrieveData (String tableName,String id) {
 
-      Object obj = cache.get(tableName,id);
+      // cache HIT
+      if (cache.get(tableName,id) != Status.NOT_EXIST)
+         return cache.get(tableName, id);
 
-      if (obj == null) {
-         obj = disk.get(tableName,id);
+      // cache MISS
+      else if (disk.get(tableName, id) !=  Status.NOT_EXIST) {
 
-         if (obj != null) {
-            cache.add(tableName, id, obj);
-            return obj;
-         }
-      }
-      return Status.NOT_EXIST;
+         cache.add(tableName, id, disk.get(tableName, id));
+         return cache.get(tableName, id);
+
+      } else
+         return Status.NOT_EXIST;
+
    }
 
    public Status deleteData (String tableName, String id) {

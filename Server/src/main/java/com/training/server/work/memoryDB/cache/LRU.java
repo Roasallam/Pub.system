@@ -5,181 +5,107 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 import java.util.*;
 
-/**
- * Implementing Least Recently Used algorithm
- * using a HashMap to save values
- * and a queue to keep the most recently used (Trending) in front
- * and the least recently used in back
- * @param <K> key with which the specified value is to be associated
- * @param <V> cached value to be associated with the specified key
- */
-public class LRU<K, V> implements Cacheable<K, V>{
 
-   // Node represents a (User/ Publication/License ) object
-   // K is like a userName or a PublicationId
-   // V is like the User object or Publication object...
-   private Deque<Node<K,V>> cache = new ConcurrentLinkedDeque<>();
+public class LRU<K,V> implements Cacheable {
 
-   private ConcurrentMap<K, Node<K,V>> data = new ConcurrentHashMap<>();
+   private final int maxEntries;
+   private static final int DEFAULT_INITIAL_CAPACITY = 16;
+   private static final float DEFAULT_LOAD_FACTOR = 0.75f;
+   private Map <String,Object> cachedEntries = new LinkedHashMap<>
+      (DEFAULT_INITIAL_CAPACITY,DEFAULT_LOAD_FACTOR, false) ;
 
 
-   // capacity of the cache
-   private final int maxSize;
+   public LRU (int maxEntries) {
 
-   private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
-   private Lock readLock = readWriteLock.readLock();
-   private Lock writeLock = readWriteLock.writeLock();
+      if (maxEntries <= 0 )
+         throw new InputMismatchException("Minimum number of entries the cache can hold is 1");
+      this.maxEntries = maxEntries;
 
-   public LRU(int maxSize) {
-
-      if (maxSize <= 0 )
-         throw new InputMismatchException("Minimum capacity should be 1");
-      this.maxSize = maxSize;
-   }
-
-   @Override
-   public void add(K name, V obj) {
-
-      if (name != null && obj != null) {
-
-         writeLock.lock();
-
-         try {
-
-            Node<K, V> toAdd = new Node<>(name, obj);
-
-            // had to check size first, ((cause putIfAbsent may add a new node..))
-
-            // Checking if there is an available space
-            if (data.size() < maxSize) {
-
-               // if there is an value associated with the specified key,
-               // >> then returns that value
-               // if not >> then puts the value, and returns null.
-               if (data.putIfAbsent(name, toAdd) == null) {
-
-                  cache.addFirst(toAdd);
-               } else {
-
-                  // update the existing value
-                  updateExistingValue(name, obj);
-               }
-               // Making some room space for the new node.
-            } else {
-
-               // if the value associated with the specified key already exist
-               // just update the value , no need for new room space,
-               // if not >> then puts the new value and returns null.
-               if (data.putIfAbsent(name, toAdd) != null)
-
-                  updateExistingValue(name, obj);
-
-               // value is not exist, so make a new room space
-               else {
-
-                  // remove the LAST RECENTLY USED VALUE .
-                  Node<K, V> toRemove = cache.removeLast();
-                  data.remove(toRemove.index);
-
-                  cache.addFirst(toAdd);
-               }
-            }
-         } catch (Exception e ) {
-            e.printStackTrace();
-         } finally {
-
-            writeLock.unlock();
-         }
-      }
-   }
-
-   private void updateExistingValue (K name, V newObj) {
-
-      Node <K,V> node = data.get(name);
-      cache.remove(node);
-
-      Node <K,V> toAdd = new Node<>(name,newObj);
-      data.put(name, toAdd);
-      cache.addFirst(toAdd);
    }
 
 
    @Override
-   public V get(K name) {
+   public synchronized void add(String name, Object obj) {
 
-      if (name == null || cache.isEmpty())
-         return null;
+      if (name == null || obj == null)
+         throw new InputMismatchException("nulls");
 
-      readLock.lock();
+      if (cachedEntries.containsKey(name))
+         update(name, obj);
+      else
+         addNew(name, obj);
 
-      try {
 
-         Node<K, V> node = data.get(name);
+   }
 
-         // data is not in cache ,, get it from somewhere else..
-         // cache MISS..
-         if (node == null)
-            return null;
+   private void update (String name, Object obj) {
+      // no need to check for available space
 
-         // if  map contains a mapping from a key name to a value V
-         // data is in cache ,, so just bring it to the front of the queue
-         // cache HIT..
-         else {
+     cachedEntries.remove(name);
+     cachedEntries.put(name, obj);
 
-            cache.remove(node);
-            cache.addFirst(node);
+   }
 
-            return node.value;
-         }
+   private void addNew (String name, Object obj) {
+      // check for available space
 
-      } catch (Exception e ) {
-         e.printStackTrace();
-      } finally {
-
-         readLock.unlock();
+      if (isFull()) {
+         Status status = deleteLRU();
+         if (status == Status.FAILED)
+            throw new RuntimeException("Failed to delete Least recently used");
       }
-      // cache MISS..
-      return null;
+
+      cachedEntries.put(name, obj);
    }
 
    @Override
-   public Status delete(K name) {
+   public synchronized Object retrieve(String name) {
 
-      try {
+      if (name == null)
+         return Status.NOT_EXIST;
 
-         Thread.sleep(2000);
-      } catch (InterruptedException e) {
-         e.printStackTrace();
-      }
+      if (!(cachedEntries.containsKey(name)))
+         return Status.NOT_EXIST;
 
-      writeLock.lock();
-      try {
-
-         Node<K, V> node = data.get(name);
-         // checking if the data exist in cache
-         if (node != null) {
-
-            cache.remove(node);
-            data.remove(name);
-            return Status.MISSION_ACCOMPLISHED;
-         }
-      } catch (Exception e) {
-         e.printStackTrace();
-      } finally {
-
-         writeLock.unlock();
-      }
-      return Status.NOT_EXIST;
+      update(name, cachedEntries.get(name));
+      return cachedEntries.get(name);
    }
 
-   private static class Node <K, V> {
+   @Override
+   public synchronized boolean removeObj(String name) {
 
-      K index;
-      V value;
+      if (!cachedEntries.containsKey(name))
+         return false;
 
-      Node(K index, V value) {
-         this.index = index;
-         this.value = value;
-      }
+      cachedEntries.remove(name);
+
+      return true;
+   }
+
+   @Override
+   public synchronized Status deleteLRU() {
+
+      String name = getEldestKey();
+
+      if (name == null)
+         return Status.FAILED;
+
+      cachedEntries.remove(name);
+
+      return Status.MISSION_ACCOMPLISHED;
+   }
+
+
+   private boolean isFull () {
+      return cachedEntries.size() >= maxEntries;
+   }
+
+   private String getEldestKey () {
+      // LEAST RECENTLY USED ENTRY
+
+      Map.Entry<String ,Object> eldest = cachedEntries.entrySet().iterator().next();
+
+      return eldest.getKey();
+
    }
 }
