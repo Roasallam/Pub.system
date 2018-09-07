@@ -11,6 +11,16 @@ import java.time.LocalDate;
 
 /**
  * ADMIN
+ * An admin of the database server
+ * have full rights and give authorities
+ * to users
+ * An admin is verified using the authentication code written in a file
+ * through checkAuthenticationCode method.
+ *
+ * Each time a user request for a read operation or
+ * a journal requests to publish a content
+ * the admin checks their licenses if they were active
+ * or expired.
  */
 public class Authenticator {
 
@@ -40,7 +50,7 @@ public class Authenticator {
          return Status.NOT_EXIST;
 
       if (license.getPrivilegesLicense() != PrivilegesLicense.READ_WRITE )
-         return Status.NOT_ALLOWD;
+         return Status.NOT_ALLOWED;
 
       LocalDate licenseDate = license.getEnd_date();
 
@@ -50,7 +60,6 @@ public class Authenticator {
       return Status.LICENSE_ACTIVE;
 
    }
-
 
 
    public static Status checkAuthenticationCode (String adminCode) {

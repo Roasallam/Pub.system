@@ -2,6 +2,7 @@ package com.training.server.work.protocols.userProtocols;
 
 import com.training.server.work.DB.daoImplemnters.UserDAOImp;
 import com.training.server.work.Status;
+import com.training.server.work.authentication.SignIn;
 import com.training.server.work.protocols.Protocol;
 
 import java.util.regex.Matcher;
@@ -13,6 +14,7 @@ public class UserUpdatePassword implements Protocol {
    private String statement;
    private String userName;
    private String newPassword;
+   private String oldPassword;
 
    public UserUpdatePassword(String statement) {
 
@@ -24,6 +26,13 @@ public class UserUpdatePassword implements Protocol {
 
       if (!checkSyntax())
          return Status.SYNTAX_ERROR;
+
+      // verify user
+
+      boolean verifier = SignIn.isValidPassword(userName, oldPassword);
+
+      if (!verifier)
+         return Status.INCORRECT_PASSWORD;
 
       return userDAOImp.updatePassword(userName, newPassword);
    }
@@ -38,7 +47,7 @@ public class UserUpdatePassword implements Protocol {
 
    public boolean checkSyntax () {
 
-      String passwordRegex = "^UPDATE\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+      String passwordRegex = "^UPDATE\\s[a-zA-Z_0-9]+\\sNEWPASSWORD\\s[a-zA-Z_0-9]+\\sOLDPASSWORD\\s[a-zA-Z_0-9]+";
 
       Pattern passwordPattern = Pattern.compile(passwordRegex, Pattern.CASE_INSENSITIVE);
 
@@ -50,9 +59,9 @@ public class UserUpdatePassword implements Protocol {
          String [] data = passwordMatcher.group().split(" ");
          userName = data[1];
          newPassword = data[3];
+         oldPassword = data[5];
          return true;
       }
-
       return false;
    }
 }

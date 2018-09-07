@@ -1,6 +1,7 @@
 package com.training.server.work.protocols.userProtocols;
 
 import com.training.server.work.DB.daoImplemnters.UserDAOImp;
+import com.training.server.work.authentication.SignIn;
 import com.training.server.work.protocols.Protocol;
 import com.training.server.work.Status;
 
@@ -12,6 +13,7 @@ public class UserDelete implements Protocol {
    private UserDAOImp userDAOImp ;
    private String statement;
    private String userName;
+   private String password;
 
    public UserDelete(String statement) {
       this.statement = statement;
@@ -22,6 +24,13 @@ public class UserDelete implements Protocol {
 
       if (!checkSyntax())
          return Status.SYNTAX_ERROR;
+
+      // verify user
+
+      boolean verifier = SignIn.isValidPassword(userName, password);
+
+      if (!verifier)
+         return Status.INCORRECT_PASSWORD;
 
       return userDAOImp.deleteUser(userName);
    }
@@ -37,7 +46,7 @@ public class UserDelete implements Protocol {
    @Override
    public boolean checkSyntax() {
 
-      String deleteUserRegex = "^DELETE\\s[a-zA-Z_0-9]+";
+      String deleteUserRegex = "^DELETE\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
 
       Pattern deleteUserPattern = Pattern.compile(deleteUserRegex, Pattern.CASE_INSENSITIVE);
 
@@ -48,6 +57,7 @@ public class UserDelete implements Protocol {
 
          String [] data = deleteUserMatcher.group().split(" ");
          userName = data[1];
+         password = data[3];
          return true;
       }
       return false;

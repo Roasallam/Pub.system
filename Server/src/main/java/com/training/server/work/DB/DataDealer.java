@@ -13,16 +13,19 @@ import java.util.concurrent.Executors;
  * 2- cache
  *
  * Saving and setting data:
- * 1st on disk, (Non-Volatile) in another thread (Slow) (Waiting,Synchronous IO) (Physical)
- * (In synchronous file I/O, a thread starts an I/O operation
- * and immediately enters a wait state until the I/O request has completed.)
- * 2nd in cache (Volatile) (Logical)
+ * 1) On disk, (Non-Volatile),(data is saved in XML format using FileInput & FileOutput
+ * and the help of JAXBContext), saving and removing operations were executed
+ * in another thread, (Slow) (Waiting,Synchronous IO) (Physical Storage)
+ * i.e: In synchronous file I/O, a thread starts an I/O operation
+ * and immediately enters a wait state until the I/O request has completed.
+ *
+ * 2) In cache (Volatile) (Logical storage)
  *
  * Reading data:
- * 1st from cache (faster to get data from), if not found
+ * 1st from cache (faster to get data from + it stores most recently used),
+ * if not found >>
  * 2nd from disk , if not found , then it doesn't exist at all.
  */
-
 public class DataDealer {
 
    private Repository cache ;

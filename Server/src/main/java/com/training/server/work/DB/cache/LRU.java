@@ -4,11 +4,18 @@ import com.training.server.work.Status;
 
 import java.util.*;
 
-
-public class LRU<K,V> implements Cacheable {
+/**
+ * LRU (Least Recently Used) algorithm
+ * This class was implemented as an in-memory storage
+ * different entries are saved in a LinkedHashMap (Insertion order)
+ * when map size exceed maxEntries, deleteLRU method
+ * will delete least recently used entry
+ * to make space for a most recently used entry.
+ */
+public class LRU implements Cacheable {
 
    private final int maxEntries;
-   private static final int DEFAULT_INITIAL_CAPACITY = 100;
+   private static final int DEFAULT_INITIAL_CAPACITY = 50;
    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
    private Map <String,Object> cachedEntries = new LinkedHashMap<>
       (DEFAULT_INITIAL_CAPACITY,DEFAULT_LOAD_FACTOR, false) ;
@@ -17,11 +24,10 @@ public class LRU<K,V> implements Cacheable {
    public LRU (int maxEntries) {
 
       if (maxEntries <= 0 )
-         throw new InputMismatchException("Minimum number of entries the cache can hold is 1");
+         maxEntries = 10;
+
       this.maxEntries = maxEntries;
-
    }
-
 
    @Override
    public synchronized void add(String name, Object obj) {

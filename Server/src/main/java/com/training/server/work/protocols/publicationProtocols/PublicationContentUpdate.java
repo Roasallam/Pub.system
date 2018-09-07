@@ -70,7 +70,6 @@ public class PublicationContentUpdate implements Protocol {
          newContent = newContent.replaceAll("(?i)^UPDATE\\s[a-zA-Z_0-9]+\\sCONTENT\\s", "");
          return true;
       }
-
       return false;
    }
 }

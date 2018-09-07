@@ -6,22 +6,30 @@ import com.training.server.work.entity.User;
 
 public class SignIn {
 
-   private UserDAOImp userDAOImp = new UserDAOImp();
+   private static UserDAOImp userDAOImp = new UserDAOImp();
 
-   private Status isValidPassword (String userName, String password) {
+    private static Status passwordStatus (String userName, String password) {
 
-      Object [] containUser = new Object[1];
-      containUser[0] = userDAOImp.findByName(userName);
+      User user = userDAOImp.findByName(userName);
 
-      if (containUser[0] == null)
+      if (user == null)
          return Status.NOT_EXIST;
 
-      String savedPassword = ((User) containUser[0]).getPassword();
+      String savedPassword = user.getPassword();
 
       if (savedPassword.equals(password))
          return Status.WELCOME;
 
       return Status.INCORRECT_PASSWORD;
+   }
 
+   public static boolean isValidPassword (String userName, String password) {
+
+       Status status = passwordStatus(userName, password);
+
+       if (status == Status.WELCOME)
+          return true;
+
+       return false;
    }
 }

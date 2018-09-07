@@ -18,11 +18,9 @@ public class DiskRepository implements Repository {
     * why in Static block? JAXBContext>>
     * To avoid the overhead involved in creating a JAXBContext instance
     *   and it is thread safe.
-    * while Marshallers and Unmarshallers are cheap and not thread safe,
-    * so created new of those for each operation.
+    * while Marshallers and Unmarshallers are cheap.
     */
    static {
-
       try {
 
          jaxbContext = JAXBContext.newInstance(User.class,Publication.class,License.class);

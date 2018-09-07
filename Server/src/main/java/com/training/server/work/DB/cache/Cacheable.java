@@ -2,7 +2,7 @@ package com.training.server.work.DB.cache;
 
 import com.training.server.work.Status;
 
-public interface Cacheable <K,V> {
+public interface Cacheable {
 
    void add (String name, Object obj) ;
 

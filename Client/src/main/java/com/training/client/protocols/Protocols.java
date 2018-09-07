@@ -1,4 +1,4 @@
-package com.training.server.work.protocols;
+package com.training.client.protocols;
 
 public enum Protocols {
 
