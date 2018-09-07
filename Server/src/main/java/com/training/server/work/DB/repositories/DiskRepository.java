@@ -1,4 +1,4 @@
-package com.training.server.work.memoryDB.repositories;
+package com.training.server.work.DB.repositories;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

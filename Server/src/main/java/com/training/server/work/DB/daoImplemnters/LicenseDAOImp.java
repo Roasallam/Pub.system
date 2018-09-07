@@ -1,11 +1,11 @@
-package com.training.server.work.memoryDB.daoImplemnters;
+package com.training.server.work.DB.daoImplemnters;
 
 import com.training.server.work.SetUpDB;
 import com.training.server.work.Status;
 import com.training.server.work.dao.*;
 import com.training.server.work.entity.*;
-import com.training.server.work.memoryDB.DataDealer;
-import com.training.server.work.memoryDB.Table;
+import com.training.server.work.DB.DataDealer;
+import com.training.server.work.DB.Table;
 
 import java.time.LocalDate;
 
@@ -122,8 +122,9 @@ public class LicenseDAOImp implements LicenseDAO {
       if (containSlice[0] != Status.NOT_EXIST) {
          ((License) containSlice[0]).setSlice(newSlice);
          dataDealer.saveData(Table.LICENSE.getTableName(), userName, containSlice[0]);
+         return Status.MISSION_ACCOMPLISHED;
       }
-      return null;
+      return Status.FAILED;
    }
 
 }

@@ -1,7 +1,7 @@
-package com.training.server.work.memoryDB;
+package com.training.server.work.DB;
 
 public enum Table {
-   PUBLICATION("Publication"), LICENSE ("License"), USER ("User"), CONTENT ("Content");
+   CONTENT("Content"), LICENSE ("License"), USER ("User");
 
    private String tableName;
 

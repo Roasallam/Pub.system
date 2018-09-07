@@ -1,27 +1,34 @@
 package com.training.server.work;
 
+import com.training.server.work.entity.*;
+
 
 /**
- * Like an Optional class
- * EFFECTIVE JAVA, ITEM 55
  * this class was implemented to help DAO's
  * Not returning the values in case they were NULL
  * Instead return a status of the operation
  */
 public enum Status {
 
-   ERROR (0), NOT_EXIST (0) , ALREADY_EXISTS (0), FAILED (0), MISSION_ACCOMPLISHED (1);
+   ERROR ("ERROR"),
+   NOT_EXIST ("NOT EXIST, CHECK AGAIN"),
+   ALREADY_EXISTS ("ALREADY EXIST, TRY AGAIN"),
+   FAILED ("FAILED"),
+   MISSION_ACCOMPLISHED ("MISSION ACCOMPLISHED"),
+   INCORRECT_PASSWORD ("INCORRECT PASSWORD"),
+   WELCOME("WELCOME"),
+   VALID_CODE ("VALID CODE"),
+   INVALID_CODE ("INVALID CODE"),
+   SYNTAX_ERROR ("SYNTAX ERROR");
 
-   private int statusId;
-   Status (int statusId ) {
-      this.statusId = statusId;
+   private String msg;
+
+   Status(String msg) {
+      this.msg = msg;
    }
 
-   public int getStatusId() {
-      return statusId;
+   public String getMsg() {
+      return msg;
    }
 
-   public void setStatusId(int statusId) {
-      this.statusId = statusId;
-   }
 }

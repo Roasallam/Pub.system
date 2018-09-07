@@ -13,7 +13,7 @@ public interface PublicationDAO {
 
    Publication findById(String publicationId);
 
-   int createPublication(String journalName, String content);
+   String createPublication(String journalName, String content);
 
    Status updatePublication(String publicationId, String newContent);
 

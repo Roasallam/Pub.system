@@ -1,9 +1,10 @@
-package com.training.server.work.memoryDB;
+package com.training.server.work.DB;
 
 import com.training.server.work.Status;
-import com.training.server.work.memoryDB.repositories.CacheRepository;
-import com.training.server.work.memoryDB.repositories.DiskRepository;
-import com.training.server.work.memoryDB.repositories.Repository;
+import com.training.server.work.DB.repositories.Repository;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * A Dealer that deals data with
@@ -12,8 +13,10 @@ import com.training.server.work.memoryDB.repositories.Repository;
  * 2- cache
  *
  * Saving and setting data:
- * 1st on disk, (Non-Volatile)
- * 2nd in cache (Volatile)
+ * 1st on disk, (Non-Volatile) in another thread (Slow) (Waiting,Synchronous IO) (Physical)
+ * (In synchronous file I/O, a thread starts an I/O operation
+ * and immediately enters a wait state until the I/O request has completed.)
+ * 2nd in cache (Volatile) (Logical)
  *
  * Reading data:
  * 1st from cache (faster to get data from), if not found
@@ -24,17 +27,21 @@ public class DataDealer {
 
    private Repository cache ;
    private Repository disk ;
+   private final ExecutorService pool;
 
    public DataDealer(Repository cache, Repository disk) {
       this.cache = cache;
       this.disk = disk;
+      pool = Executors.newFixedThreadPool(10);
    }
+
+
 
    public void saveData (String tableName, String id, Object object) {
 
       cache.add(tableName,id,object);
 
-      // adding to the disk in other thread,
+      pool.execute(() -> disk.add(tableName, id, object));
 
    }
 
@@ -64,11 +71,9 @@ public class DataDealer {
 
    public Status deleteData (String tableName, String id) {
 
-      // don't change from status to boolean please
+      cache.remove(tableName, id);
 
-      boolean status = cache.remove(tableName, id);
-
-      // removing from disk in other thread
+      pool.execute(() -> disk.remove(tableName, id));
 
       return Status.MISSION_ACCOMPLISHED;
 

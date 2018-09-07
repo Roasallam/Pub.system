@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/listener/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/SetUpDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/SetUpDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/DataDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/DataDealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/cache/Cacheable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/cache/Cacheable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/cache/LRU.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/cache/LRU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/daoImplemnters/LicenseDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/daoImplemnters/PublicationDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/daoImplemnters/UserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/UserDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/repositories/CacheRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/repositories/CacheRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/repositories/DiskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/repositories/DiskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/memoryDB/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/repositories/Repository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,8 +62,8 @@
     <panes>
       <pane id="ProjectPane" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,11 +143,14 @@
       <updated>1535195130047</updated>
       <workItem from="1535195132094" duration="288000" />
       <workItem from="1535203394923" duration="124000" />
+      <workItem from="1536164733981" duration="354000" />
+      <workItem from="1536169315212" duration="21000" />
+      <workItem from="1536221461062" duration="594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412000" />
+    <option name="totallyTimeSpent" value="1381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -144,19 +163,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -172,6 +191,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>

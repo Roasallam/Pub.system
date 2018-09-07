@@ -1,7 +1,7 @@
-package com.training.server.work.memoryDB.repositories;
+package com.training.server.work.DB.repositories;
 
 import com.training.server.work.Status;
-import com.training.server.work.memoryDB.cache.*;
+import com.training.server.work.DB.cache.*;
 
 import java.util.*;
 
@@ -32,8 +32,7 @@ public class CacheRepository implements Repository {
 
       if (cachedTables.containsKey(tableName)) {
 
-         if ((cachedTables.get(tableName).removeObj(id)))
-            return true;
+         return (cachedTables.get(tableName).removeObj(id));
       }
       return false;
    }

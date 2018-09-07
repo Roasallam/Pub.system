@@ -1,12 +1,12 @@
 package com.training.server.work;
 
-import com.training.server.work.memoryDB.repositories.*;
-import com.training.server.work.memoryDB.*;
-import com.training.server.work.memoryDB.cache.*;
+import com.training.server.work.DB.repositories.*;
+import com.training.server.work.DB.*;
+import com.training.server.work.DB.cache.*;
 import com.training.server.work.entity.*;
 
 /**
- * Singelton
+ * Singelton Data Dealer
  *
  * This class made to set up the repositories
  * that the data will be saved in and queried from
@@ -25,13 +25,19 @@ public class SetUpDB {
       DiskRepository fileSystem = new DiskRepository();
       CacheRepository cache = new CacheRepository();
 
+
+
       LRU <String,User> cachedUsers = new LRU<> (100);
       LRU <String,Publication> cachedPublications = new LRU<> (100);
       LRU <String,License> cachedLicenses = new LRU<> (100);
 
+      // split the cache repository into tables, to avoid chaotic saving.
+
       cache.addTable(Table.PUBLICATION.getTableName(), cachedPublications);
       cache.addTable(Table.LICENSE.getTableName(), cachedLicenses);
       cache.addTable(Table.USER.getTableName(), cachedUsers);
+
+      // provide the dealer with the repositories it will deals with.
 
       dataDealer = new DataDealer(cache, fileSystem);
    }

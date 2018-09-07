@@ -1,4 +1,4 @@
-package com.training.server.work.memoryDB.cache;
+package com.training.server.work.DB.cache;
 
 import com.training.server.work.Status;
 
@@ -8,7 +8,7 @@ import java.util.*;
 public class LRU<K,V> implements Cacheable {
 
    private final int maxEntries;
-   private static final int DEFAULT_INITIAL_CAPACITY = 16;
+   private static final int DEFAULT_INITIAL_CAPACITY = 100;
    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
    private Map <String,Object> cachedEntries = new LinkedHashMap<>
       (DEFAULT_INITIAL_CAPACITY,DEFAULT_LOAD_FACTOR, false) ;

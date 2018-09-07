@@ -1,8 +1,8 @@
-package com.training.server.work.memoryDB.cache;
+package com.training.server.work.DB.cache;
 
 import com.training.server.work.Status;
 
-public interface Cacheable {
+public interface Cacheable <K,V> {
 
    void add (String name, Object obj) ;
 

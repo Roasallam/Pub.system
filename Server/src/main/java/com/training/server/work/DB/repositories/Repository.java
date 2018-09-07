@@ -1,4 +1,4 @@
-package com.training.server.work.memoryDB.repositories;
+package com.training.server.work.DB.repositories;
 
 public interface Repository {
 

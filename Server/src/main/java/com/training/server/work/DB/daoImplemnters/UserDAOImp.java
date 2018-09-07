@@ -1,4 +1,4 @@
-package com.training.server.work.memoryDB.daoImplemnters;
+package com.training.server.work.DB.daoImplemnters;
 
 import com.training.server.work.SetUpDB;
 import com.training.server.work.Status;
@@ -7,9 +7,9 @@ import com.training.server.work.entity.PrivilegesLicense;
 import com.training.server.work.entity.TimeLicense;
 import com.training.server.work.entity.User;
 import com.training.server.work.entity.UserType;
-import com.training.server.work.memoryDB.DataDealer;
+import com.training.server.work.DB.DataDealer;
 import com.training.server.work.entity.License;
-import com.training.server.work.memoryDB.Table;
+import com.training.server.work.DB.Table;
 
 import java.time.LocalDate;
 
@@ -43,9 +43,13 @@ public class UserDAOImp implements UserDAO {
    @Override
    public synchronized Status SignUp(String userName, String password, UserType userType) {
 
+      // check if the userName is reserved or not.
+
       if (dataDealer.retrieveData(Table.USER.getTableName(), userName) != Status.NOT_EXIST) {
          return Status.ALREADY_EXISTS;
       }
+
+      // start a new User.
 
       License license;
 
@@ -96,8 +100,6 @@ public class UserDAOImp implements UserDAO {
 
       if (userName == null)
          return Status.ERROR;
-
-      // don't forget to remove their license from license table
 
       Object [] containLicense = {null};
       containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
