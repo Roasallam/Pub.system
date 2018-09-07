@@ -27,7 +27,7 @@ public class UserDelete implements Protocol {
    }
 
    @Override
-   public Object getResult() {
+   public String getResult() {
 
       Status status = deleteUser();
 

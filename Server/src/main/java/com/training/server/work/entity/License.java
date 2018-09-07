@@ -2,13 +2,14 @@ package com.training.server.work.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
+import java.util.InputMismatchException;
 
 
 /**
- * License Represents entity
- * this class is to contain the License DATA
+ * License represents real-world entity
+ * This model class is to contain the License DATA
+ * and standard get and set methods.
  */
-
 @XmlRootElement
 public class License {
 
@@ -19,12 +20,9 @@ public class License {
    private LocalDate start_date;
    private LocalDate end_date;
 
+   private License () {}
 
-   private License () {
-
-   }
-
-   public License (Builder builder) {
+   License (Builder builder) {
 
       userName = builder.userName;
       timeLicense = builder.timeLicense;
@@ -34,6 +32,18 @@ public class License {
       end_date = builder.end_date;
    }
 
+   /**
+    * In a situation that is faced with many constructor parameters
+    * we should consider a builder inner class,
+    * cause constructors don't scale well
+    * to large numbers of OPTIONAL parameters.
+    * and a builder pattern is better than
+    * telescoping constructor pattern,
+    * i.e:
+    * in the second pattern we will create many constructors
+    * so the client will get confused with it.
+    */
+
    public static class Builder {
 
       // Required parameters
@@ -42,7 +52,7 @@ public class License {
       // Optional parameters - initialized to default values
       private TimeLicense timeLicense = TimeLicense.FREE_TRIAL;
       private PrivilegesLicense privilegesLicense = PrivilegesLicense.READ;
-      private String slice = "FULL";
+      private String slice = "Publication date";
       private LocalDate start_date = LocalDate.now();
       private LocalDate end_date = LocalDate.now().plusDays(20);
 
@@ -70,6 +80,14 @@ public class License {
          end_date = ed; return this;
       }
 
+      /**
+       * using this build method
+       * the client will choose any optional parameter to set
+       * if some optional parameter is not defined by the client,
+       * it will have its default value.
+       * @return a license object
+       *
+       */
       public License build() {
 
          return new License(this);
@@ -89,6 +107,10 @@ public class License {
    }
 
    public void setTimeLicense(TimeLicense timeLicense) {
+
+      if (timeLicense == null)
+         throw new InputMismatchException("there must be a time license");
+
       this.timeLicense = timeLicense;
    }
 
@@ -97,6 +119,10 @@ public class License {
    }
 
    public void setPrivilegesLicense(PrivilegesLicense privilegesLicense) {
+
+      if (privilegesLicense == null)
+         throw new InputMismatchException("there must be a privileges license");
+
       this.privilegesLicense = privilegesLicense;
    }
 
@@ -105,6 +131,10 @@ public class License {
    }
 
    public void setSlice(String slice) {
+
+      if (slice == null)
+         throw new InputMismatchException("slice cannot be null");
+
       this.slice = slice;
    }
 
@@ -121,9 +151,12 @@ public class License {
    }
 
    public void setEnd_date(LocalDate end_date) {
+
+      if (end_date == null)
+         throw new InputMismatchException("end date cannot be null");
+
       this.end_date = end_date;
    }
-
 
    @Override
    public String toString() {
@@ -137,7 +170,7 @@ public class License {
          '}';
    }
 
-   // No Equals and hashcode cause each instance of this class is equal to itself only
+   // No Equals and hashcode are overridden cause each instance of this class is equal to only itself
    // using the userName field which is a unique value for each instance
 
 }

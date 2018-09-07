@@ -28,7 +28,7 @@ public class PublicationDelete implements Protocol {
    }
 
    @Override
-   public Object getResult() {
+   public String getResult() {
 
       Status status = deletePublication();
 

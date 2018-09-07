@@ -24,17 +24,15 @@ public class PublicationDAOImp implements PublicationDAO {
    public Publication findById(String publicationId) {
 
       if (publicationId == null)
-         throw new NullPointerException();
+         return null;
 
-      // didn't use Publication publication = .. , cause that will return the publication object
-      // not the already existing publication.
-      // data retrieved could be a Status , or a Publication ..2 different instances.
+      // data retrieved could be a Status , or a Publication object
 
-      Object [] containPublication = {null};
-      containPublication[0] = dataDealer.retrieveData(Table.PUBLICATION.getTableName(), publicationId);
+      Object [] containPublication = {""};
+      containPublication[0] = dataDealer.retrieveData(Table.CONTENT.getTableName(), publicationId);
 
       if (containPublication[0] != Status.NOT_EXIST)
-         return (Publication) containPublication[0];
+         return  ((Publication)containPublication[0]);
 
       return null;
    }
@@ -44,13 +42,12 @@ public class PublicationDAOImp implements PublicationDAO {
    public String createPublication(String journalName, String content) {
 
       if (journalName == null || content == null)
-         throw new NullPointerException();
+         return "ERROR,TRY AGAIN, CONTENT CAN'T BE NULL";
 
       int publicationId = createID();
       Publication publication = new Publication(publicationId, journalName, content);
 
-
-      dataDealer.saveData(Table.PUBLICATION.getTableName(), String.valueOf(publicationId), publication);
+      dataDealer.saveData(Table.CONTENT.getTableName(), String.valueOf(publicationId), publication);
       return String.valueOf(publicationId);
    }
 
@@ -60,15 +57,17 @@ public class PublicationDAOImp implements PublicationDAO {
       if (publicationId == null || newContent == null)
          return Status.ERROR;
 
-      Object [] containPublication = {null};
-      containPublication[0] = dataDealer.retrieveData(Table.PUBLICATION.getTableName(),publicationId);
+      // data retrieved could be a Status , or a Publication object
+
+      Object [] containPublication = {""};
+      containPublication[0] = dataDealer.retrieveData(Table.CONTENT.getTableName(),publicationId);
 
       if (containPublication[0] != Status.NOT_EXIST) {
 
          ((Publication) containPublication[0]).setContent(newContent);
-         dataDealer.saveData(Table.PUBLICATION.getTableName(), publicationId, containPublication[0]);
+         dataDealer.saveData(Table.CONTENT.getTableName(), publicationId, containPublication[0]);
 
-         return Status.MISSION_ACCOMPLISHED;
+         return Status.UPDATED;
       }
      return Status.FAILED;
    }
@@ -79,7 +78,7 @@ public class PublicationDAOImp implements PublicationDAO {
       if (publicationId == null)
          return Status.ERROR;
 
-      return dataDealer.deleteData(Table.PUBLICATION.getTableName(), publicationId);
+      return dataDealer.deleteData(Table.CONTENT.getTableName(), publicationId);
 
    }
 

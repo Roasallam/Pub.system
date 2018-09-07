@@ -2,6 +2,7 @@ package com.training.server.work.protocols.publicationProtocols;
 
 import com.training.server.work.DB.daoImplemnters.PublicationDAOImp;
 import com.training.server.work.Status;
+import com.training.server.work.authentication.Authenticator;
 import com.training.server.work.entity.Publication;
 import com.training.server.work.protocols.Protocol;
 
@@ -13,27 +14,36 @@ public class PublicationRead implements Protocol {
    private PublicationDAOImp publicationDAOImp;
    private String statement;
    private String publicationId;
+   private String userName;
 
    public PublicationRead(String statement) {
       this.statement = statement;
       publicationDAOImp = new PublicationDAOImp();
    }
 
-   private Publication readPublication () {
+   private String readPublication () {
 
       if (!checkSyntax())
-         return null;
+         return "Syntax error";
 
-      return publicationDAOImp.findById(publicationId);
+      // check if publication exist
 
+      Publication publication = publicationDAOImp.findById(publicationId);
+
+      if (publication == null)
+         return "PUBLICATION NOT FOUND";
+
+      // check license of the reader
+
+      if (Authenticator.readPrivileged(userName) == Status.LICENSE_ACTIVE)
+         return publication.getContent();
+
+      return Authenticator.readPrivileged(userName).getMsg();
    }
 
 
    @Override
-   public Object getResult() {
-
-      if (readPublication() == null)
-         return Status.NOT_EXIST;
+   public String getResult() {
 
       return readPublication();
    }
@@ -41,7 +51,7 @@ public class PublicationRead implements Protocol {
    @Override
    public boolean checkSyntax() {
 
-      String readRegex = "^READ\\s[a-zA-Z_0-9]+";
+      String readRegex = "^[a-zA-Z_0-9]+\\sREAD\\s[a-zA-Z_0-9]+";
 
       Pattern readPattern = Pattern.compile(readRegex, Pattern.CASE_INSENSITIVE);
 
@@ -49,7 +59,8 @@ public class PublicationRead implements Protocol {
 
       if (readMatcher.find()) {
          String [] data = readMatcher.group().split(" ");
-         publicationId = data[1];
+         publicationId = data[2];
+         userName = data[0];
          return true;
       }
       return false;

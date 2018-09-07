@@ -2,7 +2,7 @@ package com.training.server.work.protocols;
 
 public interface Protocol {
 
-   Object getResult();
+   String getResult();
 
    boolean checkSyntax ();
 }

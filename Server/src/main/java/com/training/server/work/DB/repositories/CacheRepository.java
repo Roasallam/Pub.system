@@ -7,6 +7,7 @@ import java.util.*;
 
 /**
  * A Repository that contains tables to be cached
+ * It's separated into tables to avoid chaotic saving.
  */
 
 public class CacheRepository implements Repository {

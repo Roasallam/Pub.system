@@ -33,7 +33,7 @@ public class SetUpDB {
 
       // split the cache repository into tables, to avoid chaotic saving.
 
-      cache.addTable(Table.PUBLICATION.getTableName(), cachedPublications);
+      cache.addTable(Table.CONTENT.getTableName(), cachedPublications);
       cache.addTable(Table.LICENSE.getTableName(), cachedLicenses);
       cache.addTable(Table.USER.getTableName(), cachedUsers);
 

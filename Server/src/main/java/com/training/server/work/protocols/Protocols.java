@@ -12,7 +12,7 @@ public enum Protocols {
 
    DELETE_PUBLICATION ("DELETE publicationId"),
 
-   READ_PUBLICATION ("READ publicationId"),
+   READ_PUBLICATION ("myName READ publicationId"),
 
    CREATE_PUBLICATION ("CREATE IN JOURNAL myName CONTENT content"),
 

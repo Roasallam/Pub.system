@@ -39,7 +39,7 @@ public class UserSignUp implements Protocol {
    }
 
    @Override
-   public Object getResult() {
+   public String getResult() {
 
       Status status = signUp();
 

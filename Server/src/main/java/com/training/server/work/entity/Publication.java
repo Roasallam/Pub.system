@@ -6,8 +6,9 @@ import java.util.InputMismatchException;
 
 
 /**
- * Publication Represents entity
- * this class is to contain the publication DATA
+ * Publication represents real-world entity
+ * This model class is to contain the Publication DATA
+ * and standard get and set methods.
  */
 @XmlRootElement
 public class Publication {
@@ -15,7 +16,6 @@ public class Publication {
    private String journalName;
    private LocalDate publicationDate;
    private int publicationId;
-
    private String content;
 
    private Publication () {
@@ -23,11 +23,8 @@ public class Publication {
    }
 
 
-   // solve this ,, it is not atomic
+   // atomic
    public Publication(int publicationId, String journalName, String content) {
-
-      if (journalName == null) throw new InputMismatchException("JOURNAL NAME  cannot be null");
-      if (content == null) throw new InputMismatchException("PUBLICATION cannot be empty");
 
       this.publicationId = publicationId;
       this.journalName = journalName;
@@ -49,8 +46,10 @@ public class Publication {
    }
 
    public void setPublicationDate(LocalDate publicationDate) {
+
       if (publicationDate == null)
          throw new InputMismatchException("Date cannot be null!");
+
       this.publicationDate = publicationDate;
    }
 
@@ -59,8 +58,10 @@ public class Publication {
    }
 
    public void setJournalName(String journalName) {
+
       if(journalName == null)
-         throw new InputMismatchException("JOURNAL NAME cannot be null!") ;
+         throw new InputMismatchException("JOURNAL NAME cannot be null!");
+
       this.journalName = journalName;
    }
 
@@ -70,12 +71,10 @@ public class Publication {
 
    public void setContent(String content) {
 
-      // PUBLICATION must have a content to publish.
-
       if (content == null)
-         throw new InputMismatchException("PUBLICATION cannot be empty!");
-      this.content = content;
+         throw new InputMismatchException("A Publication MUST have a content to publish!");
 
+      this.content = content;
    }
 
    @Override
@@ -88,5 +87,5 @@ public class Publication {
    }
 
    // No Equals and hashcode cause each instance of this class is equal to itself only
-   // using the publicationId field which is a unique value for each instance , with IdGenerator
+   // using the publicationId field which is a unique value for each instance
 }

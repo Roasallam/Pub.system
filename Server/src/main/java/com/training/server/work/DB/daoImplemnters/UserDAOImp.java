@@ -26,12 +26,11 @@ public class UserDAOImp implements UserDAO {
    public User findByName(String userName) {
 
       if (userName == null)
-         throw new NullPointerException();
+         return null;
 
-      // to prevent from retrieving an object of type Object, than an object of type User
-      // we have to put the result in a container so we save its type
+      // this could contain a Status or a User object
 
-      Object [] containUser = {null};
+      Object [] containUser = {""};
       containUser[0] = dataDealer.retrieveData(Table.USER.getTableName(), userName);
 
       if (containUser[0] != Status.NOT_EXIST)
@@ -42,6 +41,9 @@ public class UserDAOImp implements UserDAO {
 
    @Override
    public synchronized Status SignUp(String userName, String password, UserType userType) {
+
+      if (userName == null || password == null || userType == null)
+         return Status.ERROR;
 
       // check if the userName is reserved or not.
 
@@ -74,7 +76,7 @@ public class UserDAOImp implements UserDAO {
          dataDealer.saveData(Table.USER.getTableName(), userName, user);
          dataDealer.saveData(Table.LICENSE.getTableName(), userName, license);
 
-      return Status.MISSION_ACCOMPLISHED;
+      return Status.WELCOME;
    }
 
    @Override
@@ -83,14 +85,16 @@ public class UserDAOImp implements UserDAO {
       if (userName == null || newPassword == null)
          return Status.ERROR;
 
-     Object [] containUser = {null};
+      // this could contain a Status or a User object
+
+     Object [] containUser = {""};
      containUser[0] = dataDealer.retrieveData(Table.USER.getTableName(), userName);
 
      if (containUser[0] != Status.NOT_EXIST) {
 
         ((User) containUser[0]).setPassword(newPassword);
         dataDealer.saveData(Table.USER.getTableName(), userName, containUser[0]);
-        return Status.MISSION_ACCOMPLISHED;
+        return Status.UPDATED;
      }
       return Status.FAILED;
    }
@@ -101,15 +105,16 @@ public class UserDAOImp implements UserDAO {
       if (userName == null)
          return Status.ERROR;
 
-      Object [] containLicense = {null};
+      // this could contain a Status or a User object
+
+      Object [] containLicense = {""};
       containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
       if (containLicense[0] != Status.NOT_EXIST) {
          dataDealer.deleteData(Table.LICENSE.getTableName(), userName);
          dataDealer.deleteData(Table.USER.getTableName(), userName);
-         return Status.MISSION_ACCOMPLISHED;
+         return Status.DELETED;
       }
-
       return Status.NOT_EXIST;
    }
 }

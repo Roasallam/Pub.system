@@ -12,8 +12,4 @@ public enum PrivilegesLicense {
       public int getLicense_id() {
          return license_id;
       }
-
-      public void setLicense_id(int license_id) {
-         this.license_id = license_id;
-      }
 }

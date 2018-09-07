@@ -1,8 +1,9 @@
 package com.training.server.work.protocols.publicationProtocols;
 
 import com.training.server.work.DB.daoImplemnters.PublicationDAOImp;
-import com.training.server.work.protocols.Protocol;
 import com.training.server.work.Status;
+import com.training.server.work.authentication.Authenticator;
+import com.training.server.work.protocols.Protocol;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -19,25 +20,24 @@ public class PublicationCreate implements Protocol {
       publicationDAOImp = new PublicationDAOImp();
    }
 
-   private Object createPublication () {
+   private String createPublication () {
 
       if (!checkSyntax())
-         return Status.SYNTAX_ERROR;
+         return "Syntax error";
 
-      return publicationDAOImp.createPublication(journalName, content);
+      // check license
+
+      if (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE)
+         return "Publication ID is: " + publicationDAOImp.createPublication(journalName, content);
+
+      return Authenticator.writePrivileged(journalName).getMsg();
    }
 
 
    @Override
-   public Object getResult() {
+   public String getResult() {
 
-      String msg = "Syntax error";
-
-      if (createPublication() == Status.SYNTAX_ERROR)
-          return msg;
-
-      msg = "Publication ID is: " + createPublication();
-      return msg;
+      return createPublication();
    }
 
    @Override
@@ -53,8 +53,8 @@ public class PublicationCreate implements Protocol {
 
          String [] data = createMatcher.group().split(" ");
          journalName = data[3];
-         content = statement.toLowerCase();
-         content = content.replaceAll("^CREATE\\sIN\\sJOURNAL\\s[a-zA-Z_0-9]+\\sCONTENT\\s".toLowerCase(), "");
+         content = statement;
+         content = content.replaceAll("(?i)^CREATE\\sIN\\sJOURNAL\\s[a-zA-Z_0-9]+\\sCONTENT\\s", "");
          return true;
       }
       return false;

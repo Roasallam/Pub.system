@@ -29,7 +29,7 @@ public class UserUpdatePassword implements Protocol {
    }
 
    @Override
-   public Object getResult() {
+   public String getResult() {
 
       Status status = updatePassword();
 

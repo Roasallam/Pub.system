@@ -15,7 +15,7 @@ public class LicenseDAOImp implements LicenseDAO {
 
    private final DataDealer dataDealer;
 
-   LicenseDAOImp () {
+   public LicenseDAOImp () {
       this.dataDealer = SetUpDB.getInstance();
    }
 
@@ -24,9 +24,11 @@ public class LicenseDAOImp implements LicenseDAO {
    public License findByUserName(String userName) {
 
       if (userName == null)
-         throw new NullPointerException();
+         return null;
 
-      Object [] containLicense = {null};
+      // this could contain a License or a Status object
+
+      Object [] containLicense = {""};
       containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
       if (containLicense[0] != Status.NOT_EXIST)
@@ -41,7 +43,9 @@ public class LicenseDAOImp implements LicenseDAO {
       if (newTimeLicense == null || userName == null)
          return Status.ERROR;
 
-      Object [] containTimeLicense = {null};
+      // this could contain a License or a Status object
+
+      Object [] containTimeLicense = {""};
       containTimeLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
       if (containTimeLicense[0] != Status.NOT_EXIST) {
@@ -78,7 +82,7 @@ public class LicenseDAOImp implements LicenseDAO {
          }
 
          dataDealer.saveData(Table.LICENSE.getTableName(), userName, containTimeLicense[0]);
-         return Status.MISSION_ACCOMPLISHED;
+         return Status.UPDATED;
       }
       return Status.FAILED;
    }
@@ -89,7 +93,9 @@ public class LicenseDAOImp implements LicenseDAO {
       if (newPrivilegesLicense == null || userName == null)
          return Status.ERROR;
 
-      Object [] containPrivilegesLicense = {null};
+      // this could contain a License or a Status object
+
+      Object [] containPrivilegesLicense = {""};
       containPrivilegesLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
       if (containPrivilegesLicense[0] != Status.NOT_EXIST) {
@@ -105,7 +111,7 @@ public class LicenseDAOImp implements LicenseDAO {
          }
 
          dataDealer.saveData(Table.LICENSE.getTableName(), userName, containPrivilegesLicense[0]);
-         return Status.MISSION_ACCOMPLISHED;
+         return Status.UPDATED;
       }
       return Status.FAILED;
    }
@@ -116,13 +122,15 @@ public class LicenseDAOImp implements LicenseDAO {
       if (newSlice == null || userName == null)
          return Status.ERROR;
 
-      Object [] containSlice = {null};
-      containSlice[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
+      // this could contain a License or a Status object
 
-      if (containSlice[0] != Status.NOT_EXIST) {
-         ((License) containSlice[0]).setSlice(newSlice);
-         dataDealer.saveData(Table.LICENSE.getTableName(), userName, containSlice[0]);
-         return Status.MISSION_ACCOMPLISHED;
+      Object [] containLicense = {""};
+      containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
+
+      if (containLicense[0] != Status.NOT_EXIST) {
+         ((License) containLicense[0]).setSlice(newSlice);
+         dataDealer.saveData(Table.LICENSE.getTableName(), userName, containLicense[0]);
+         return Status.UPDATED;
       }
       return Status.FAILED;
    }

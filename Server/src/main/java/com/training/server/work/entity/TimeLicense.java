@@ -19,24 +19,4 @@ public enum TimeLicense {
       return license_id;
    }
 
-   public void setLicense_id(int license_id) {
-      this.license_id = license_id;
-   }
-
-   public LocalDate getStart_date() {
-      return start_date;
-   }
-
-   public void setStart_date(LocalDate start_date) {
-      this.start_date = start_date;
-   }
-
-   public LocalDate getEnd_date() {
-      return end_date;
-   }
-
-   public void setEnd_date(LocalDate end_date) {
-      this.end_date = end_date;
-   }
-
 }

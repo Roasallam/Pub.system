@@ -36,7 +36,6 @@ public class DataDealer {
    }
 
 
-
    public void saveData (String tableName, String id, Object object) {
 
       cache.add(tableName,id,object);
@@ -46,6 +45,8 @@ public class DataDealer {
    }
 
    public Object retrieveData (String tableName,String id) {
+
+      // this could contain a (Status or License or User or Publication) object
 
       Object [] containType = {null};
       containType[0] = cache.get(tableName, id);
@@ -61,10 +62,10 @@ public class DataDealer {
 
          if (containType[0] !=  Status.NOT_EXIST) {
 
+            // make recently used
             cache.add(tableName, id, containType[0]);
             return containType[0];
          }
-
          return Status.NOT_EXIST;
       }
    }
@@ -75,7 +76,7 @@ public class DataDealer {
 
       pool.execute(() -> disk.remove(tableName, id));
 
-      return Status.MISSION_ACCOMPLISHED;
+      return Status.DELETED;
 
    }
 

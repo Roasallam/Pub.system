@@ -1,12 +1,9 @@
 package com.training.server.work;
 
-import com.training.server.work.entity.*;
-
-
 /**
- * this class was implemented to help DAO's
- * Not returning the values in case they were NULL
- * Instead return a status of the operation
+ * This class was implemented to help other classes
+ * inform the user the status of the operation
+ * were requested for.
  */
 public enum Status {
 
@@ -19,7 +16,12 @@ public enum Status {
    WELCOME("WELCOME"),
    VALID_CODE ("VALID CODE"),
    INVALID_CODE ("INVALID CODE"),
-   SYNTAX_ERROR ("SYNTAX ERROR");
+   SYNTAX_ERROR ("SYNTAX ERROR"),
+   LICENSE_EXPIRED ("LICENSE_EXPIRED"),
+   NOT_ALLOWED ("NOT_ALLOWED"),
+   LICENSE_ACTIVE ("LICENSE_ACTIVE"),
+   UPDATED ("UPDATED"),
+   DELETED ("DELETED");
 
    private String msg;
 

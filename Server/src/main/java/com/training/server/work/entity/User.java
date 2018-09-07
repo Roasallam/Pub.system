@@ -5,8 +5,9 @@ import java.util.InputMismatchException;
 
 
 /**
- * User Represents entity
- * this class is to contain the User DATA
+ * User represents real-world entity
+ * This model class is to contain the User DATA
+ * and standard get and set methods.
  */
 @XmlRootElement
 public class User {
@@ -16,18 +17,11 @@ public class User {
    private String password;
    private UserType userType;
 
-
-
    private User () {
-
    }
 
-   // solve this ,, it is not atomic
+   // atomic
    public User(String userName, String password, UserType userType) {
-
-      if (userName == null) throw new InputMismatchException("USERNAME cannot be null");
-      if (password == null) throw new InputMismatchException("PASSWORD cannot be null");
-      if (userType == null) throw new InputMismatchException("TYPE cannot be null");
 
       this.userName = userName;
       this.password = password;
@@ -39,7 +33,10 @@ public class User {
    }
 
    public void setUserName(String userName) {
-      if(userName == null) throw new InputMismatchException("userName cannot be null") ;
+
+      if(userName == null)
+         throw new InputMismatchException("userName cannot be null") ;
+
       this.userName = userName;
    }
 
@@ -48,7 +45,10 @@ public class User {
    }
 
    public void setPassword(String password) {
-      if(password == null) throw new InputMismatchException("password cannot be null") ;
+
+      if(password == null)
+         throw new InputMismatchException("password cannot be null") ;
+
       this.password = password;
    }
 
@@ -60,6 +60,7 @@ public class User {
 
       if (userType == null)
          throw new InputMismatchException("USER TYPE cannot be null");
+
       this.userType = userType;
    }
 
