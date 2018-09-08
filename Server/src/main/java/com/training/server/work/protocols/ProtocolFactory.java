@@ -10,6 +10,8 @@ import com.training.server.work.protocols.userProtocols.UserUpdatePassword;
 
 public class ProtocolFactory extends Factory {
 
+   public ProtocolFactory() {
+   }
 
    @Override
    public Protocol acknowledgeProtocol(Protocols protocolType, String statement) {

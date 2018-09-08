@@ -1,6 +1,6 @@
 package com.training.server;
 
-import com.training.server.listener.Listener;
+import com.training.server.serving.Listener;
 
 /**
  * start server

@@ -1,4 +1,4 @@
-package com.training.server.listener;
+package com.training.server.serving;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -29,6 +29,8 @@ public class Listener {
             // server is waiting for clients requests
 
             Socket clientSocket = serverSocket.accept();
+
+            System.out.println("connected with " + clientSocket.getInetAddress());
 
             // execute each connection/request in a thread, to manage concurrent connections
 

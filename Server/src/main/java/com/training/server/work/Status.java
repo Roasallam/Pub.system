@@ -22,7 +22,6 @@ public enum Status {
    LICENSE_ACTIVE ("LICENSE_ACTIVE"),
    UPDATED ("UPDATED"),
    DELETED ("DELETED"),
-   IN_PROGRESS ("IN_PROGRESS"),
    UNKNOWN_PROTOCOL ("UNKNOWN_PROTOCOL");
 
    private String msg;

@@ -1,4 +1,4 @@
-package com.training.server.listener;
+package com.training.server.serving;
 
 import com.training.server.work.Status;
 import com.training.server.work.protocols.Factory;
@@ -6,10 +6,7 @@ import com.training.server.work.protocols.Protocol;
 import com.training.server.work.protocols.ProtocolFactory;
 import com.training.server.work.protocols.Protocols;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 
 public class WorkerResponse implements Runnable {
@@ -23,19 +20,20 @@ public class WorkerResponse implements Runnable {
    @Override
    public void run() {
 
-      try (PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
-           BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
+      try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+           PrintWriter printWriter = new PrintWriter(clientSocket.getOutputStream(),true)) {
 
-         String requestedService;
-         String statement;
+         String requestedService = bufferedReader.readLine();
+         String statement = bufferedReader.readLine();
          String response = "failed reading";
 
-         if ((requestedService = in.readLine()) != null) {
-            if ((statement = in.readLine()) != null) {
+         if (requestedService != null) {
+            if (statement != null) {
                response = guideConnection(requestedService, statement);
             }
          }
-         out.println(response);
+
+         printWriter.println(response);
 
       } catch (IOException e) {
 
@@ -51,6 +49,7 @@ public class WorkerResponse implements Runnable {
       try {
 
          protocolType = Protocols.valueOf(requestService.toUpperCase());
+
          Factory protocolFactory = new ProtocolFactory();
 
          requestedProtocol = protocolFactory.acknowledgeProtocol(protocolType, statement);

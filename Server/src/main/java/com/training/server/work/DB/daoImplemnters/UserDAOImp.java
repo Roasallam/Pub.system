@@ -65,7 +65,7 @@ public class UserDAOImp implements UserDAO {
          license = new License.Builder(userName)
             .setPrivilegesLicense(PrivilegesLicense.READ_WRITE)
             .setTimeLicense(TimeLicense.PERMANENT)
-            .setEnd_date(LocalDate.now().plusYears(Integer.MAX_VALUE))
+            .setEnd_date(LocalDate.now().plusYears(100))
             .build();
       } else {
          license = new License.Builder(userName).build();
