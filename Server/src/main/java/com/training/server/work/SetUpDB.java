@@ -20,8 +20,8 @@ public class SetUpDB {
    // setting up the DB while loading the class
 
    static {
-      DiskRepository fileSystem = new DiskRepository();
-      CacheRepository cache = new CacheRepository();
+      Repository fileSystem = new Disk();
+      Cache cache = new Cache();
 
       Cacheable cachedUsers = new LRU (100);
       Cacheable cachedPublications = new LRU (100);

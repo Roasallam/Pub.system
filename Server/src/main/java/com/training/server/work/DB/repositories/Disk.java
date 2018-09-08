@@ -10,7 +10,8 @@ import com.training.server.work.Status;
 import com.training.server.work.entity.*;
 
 
-public class DiskRepository implements Repository {
+
+public class Disk implements Repository {
 
    private static JAXBContext jaxbContext;
 

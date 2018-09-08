@@ -20,7 +20,7 @@ public class Test {
 
       ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-      executorService.execute(new Request("NEW_ADMIN\nNEW ADMIN Roa PASSWORD 1997 CODE AdminRoa"));
+      executorService.execute(new Request("NEW_ADMIN\nNEW ADMIN Bayan PASSWORD 1997 CODE AdminRoa"));
 
       executorService.shutdown();
    }

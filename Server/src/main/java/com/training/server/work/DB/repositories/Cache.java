@@ -9,7 +9,7 @@ import java.util.*;
  * A Repository that saves tables records to be cached
  * It's separated into tables to avoid chaotic saving.
  */
-public class CacheRepository implements Repository {
+public class Cache implements Repository {
 
 
    private Map<String, Cacheable> cachedTables = new HashMap<>();
