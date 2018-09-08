@@ -17,6 +17,7 @@ public class DiskRepository implements Repository {
    /**
     * why in Static block? JAXBContext>>
     * To avoid the overhead involved in creating a JAXBContext instance
+    *  so now it will be Initiated only at loading class phase
     *   and it is thread safe.
     * while Marshallers and Unmarshallers are cheap.
     */

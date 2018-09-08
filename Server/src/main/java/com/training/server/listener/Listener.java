@@ -1,35 +1,43 @@
 package com.training.server.listener;
 
-import com.training.server.work.Status;
-import com.training.server.work.protocols.Factory;
-import com.training.server.work.protocols.Protocol;
-import com.training.server.work.protocols.ProtocolFactory;
-import com.training.server.work.protocols.Protocols;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Listener {
 
-   private final int port;
-   private boolean listening = true;
+   private static final int port = 1975;
+   private static boolean listening = true;
+   private static ExecutorService executorService;
 
-   public Listener(int port) {
-      this.port = port;
+
+   // setting up thread pool while loading the class
+   // server can serve 100 connections at a time
+   static {
+
+      executorService = Executors.newFixedThreadPool(100);
    }
 
-   public void start () {
+   public static void start () {
 
+      try (ServerSocket serverSocket = new ServerSocket(port)) {
 
-   }
+         while (listening) {
 
-   public Object recieveRequest (Protocols protocolType, String statement) {
+            // server is waiting for clients requests
 
-      Factory protocolFactory = new ProtocolFactory();
+            Socket clientSocket = serverSocket.accept();
 
-      Protocol requestedProtocol = protocolFactory.proceedProtocol(protocolType, statement);
+            // execute each connection/request in a thread, to manage concurrent connections
 
-      if (requestedProtocol == null)
-         return Status.UNKNOWN_PROTOCOL;
+            executorService.execute(new WorkerResponse(clientSocket));
+         }
+      } catch (IOException e ) {
 
-      return requestedProtocol.getResult();
+         e.printStackTrace();
+      }
 
    }
 }

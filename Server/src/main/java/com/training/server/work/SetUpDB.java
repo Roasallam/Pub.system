@@ -17,6 +17,8 @@ public class SetUpDB {
 
    private static DataDealer dataDealer ;
 
+   // setting up the DB while loading the class
+
    static {
       DiskRepository fileSystem = new DiskRepository();
       CacheRepository cache = new CacheRepository();

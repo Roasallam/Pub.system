@@ -12,7 +12,7 @@ public class ProtocolFactory extends Factory {
 
 
    @Override
-   public Protocol proceedProtocol(Protocols protocolType, String statement) {
+   public Protocol acknowledgeProtocol(Protocols protocolType, String statement) {
 
       if (protocolType == null)
          return null;

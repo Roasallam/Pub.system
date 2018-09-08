@@ -35,7 +35,7 @@ public class DataDealer {
    public DataDealer(Repository cache, Repository disk) {
       this.cache = cache;
       this.disk = disk;
-      pool = Executors.newFixedThreadPool(10);
+      pool = Executors.newFixedThreadPool(20);
    }
 
 

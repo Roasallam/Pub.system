@@ -2,36 +2,27 @@ package com.training.server.work.protocols;
 
 public enum Protocols {
 
-   NEW_JOURNAL ("NEW JOURNAL myName PASSWORD myPassword"),
+   NEW_JOURNAL ("NEW_JOURNAL"),
 
-   NEW_USER ("NEW USER myName PASSWORD myPassword"),
+   NEW_USER ("NEW_USER"),
 
-   NEW_ADMIN("NEW ADMIN myName PASSWORD myPassword CODE authenticationCode"),
+   NEW_ADMIN("NEW_ADMIN"),
 
-   UPDATE_PASSWORD ("UPDATE myName NEWPASSWORD myNewPassword OLDPASSWORD myOldPassword"),
+   UPDATE_PASSWORD ("UPDATE_PASSWORD"),
 
-   DELETE_USER ("DELETE myName PASSWORD myPassword"),
+   DELETE_USER ("DELETE_USER"),
 
-   DELETE_PUBLICATION ("DELETE publicationId PASSWORD myPassword"),
+   DELETE_PUBLICATION ("DELETE_PUBLICATION"),
 
-   READ_PUBLICATION ("myName READ publicationId"),
+   READ_PUBLICATION ("READ_PUBLICATION"),
 
-   CREATE_PUBLICATION ("CREATE IN JOURNAL myName CONTENT content"),
+   CREATE_PUBLICATION ("CREATE_PUBLICATION"),
 
-   UPDATE_CONTENT ("UPDATE publicationId CONTENT myNewContent");
+   UPDATE_CONTENT ("UPDATE_CONTENT");
 
+   private String service;
 
-   private String statement;
-
-   Protocols(String statement) {
-      this.statement = statement;
-   }
-
-   public String getStatement() {
-      return statement;
-   }
-
-   public void setStatement(String statement) {
-      this.statement = statement;
+   Protocols(String service) {
+      this.service = service;
    }
 }

@@ -1,6 +1,6 @@
-package com.training.client.protocols;
+package com.training.client.services;
 
-public enum Protocols {
+public enum Services {
 
    NEW_JOURNAL ("NEW JOURNAL myName PASSWORD myPassword"),
 
@@ -21,17 +21,9 @@ public enum Protocols {
    UPDATE_CONTENT ("UPDATE publicationId CONTENT myNewContent");
 
 
-   private String statement;
+   private String protocol;
 
-   Protocols(String statement) {
-      this.statement = statement;
-   }
-
-   public String getStatement() {
-      return statement;
-   }
-
-   public void setStatement(String statement) {
-      this.statement = statement;
+   Services(String protocol) {
+      this.protocol = protocol;
    }
 }
