@@ -9,6 +9,7 @@ import java.util.InputMismatchException;
  * This model class is to contain the User DATA
  * and standard get and set methods.
  */
+
 @XmlRootElement
 public class User {
 
@@ -17,9 +18,6 @@ public class User {
    private String password;
    private UserType userType;
 
-   private User () {
-   }
-
    // atomic
    public User(String userName, String password, UserType userType) {
 
@@ -27,6 +25,10 @@ public class User {
       this.password = password;
       this.userType = userType;
    }
+
+   /**
+    * standard get/set methods.
+    */
 
    public String getUserName() {
       return userName;

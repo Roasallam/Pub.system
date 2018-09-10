@@ -1,15 +1,15 @@
 package com.training.server.work.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import java.time.LocalDate;
 import java.util.InputMismatchException;
-
+import org.joda.time.LocalDate;
 
 /**
  * Publication represents real-world entity
  * This model class is to contain the Publication DATA
  * and standard get and set methods.
  */
+
 @XmlRootElement
 public class Publication {
 
@@ -17,11 +17,6 @@ public class Publication {
    private LocalDate publicationDate;
    private int publicationId;
    private String content;
-
-   private Publication () {
-
-   }
-
 
    // atomic
    public Publication(int publicationId, String journalName, String content) {
@@ -32,6 +27,9 @@ public class Publication {
       this.publicationDate = LocalDate.now();
    }
 
+   /**
+    * standard get/set methods.
+    */
 
    public int getPublicationId() {
       return publicationId;

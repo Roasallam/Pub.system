@@ -19,18 +19,28 @@ import java.util.concurrent.Executors;
  * i.e: In synchronous file I/O, a thread starts an I/O operation
  * and immediately enters a wait state until the I/O request has completed.
  *
- * 2) In cache (Volatile) (Logical storage)
+ * 2) In cache (Logical storage)
  *
  * Reading data:
  * 1st from cache (faster to get data from + it stores most recently used),
  * if not found >>
  * 2nd from disk , if not found , then it doesn't exist at all.
  */
+
 public class DataDealer {
 
    private Repository cache ;
    private Repository disk ;
    private final ExecutorService pool;
+
+   /**
+    * constructs a new dataDealer instance and
+    * initiate the repositories to deals with
+    * also a fixed thread pool with #20 thread
+    * for disk operations
+    * @param cache cache repository
+    * @param disk disk repository
+    */
 
    public DataDealer(Repository cache, Repository disk) {
       this.cache = cache;
@@ -38,6 +48,13 @@ public class DataDealer {
       pool = Executors.newFixedThreadPool(20);
    }
 
+   /**
+    * saves data to cache repository
+    * and starts a new thread for saving in disk
+    * @param tableName the table which the entry belongs to
+    * @param id the id if that entry
+    * @param object value object
+    */
 
    public void saveData (String tableName, String id, Object object) {
 
@@ -47,9 +64,18 @@ public class DataDealer {
 
    }
 
-   public Object retrieveData (String tableName,String id) {
+   /**
+    * retrieves the value object from cache first
+    * if found then return it, (cache hit)
+    * if not (cache miss) see if its in disk, if so then
+    * add to cache as a most recently used and return it
+    * otherwise its not exist
+    * @param tableName table which the entry belongs to
+    * @param id the id of that entry
+    * @return the object if found, NOT_EXIST if not
+    */
 
-      // this could contain a (Status or License or User or Publication) object
+   public Object retrieveData (String tableName,String id) {
 
       Object [] containType = {null};
       containType[0] = cache.get(tableName, id);
@@ -73,6 +99,14 @@ public class DataDealer {
       }
    }
 
+   /**
+    * deletes a specified entry from cache and starts a new thread
+    * to delete it from disk
+    * @param tableName table that the entry belongs to
+    * @param id the id of that entry
+    * @return the status of the operation
+    */
+
    public Status deleteData (String tableName, String id) {
 
       cache.remove(tableName, id);
@@ -80,8 +114,5 @@ public class DataDealer {
       pool.execute(() -> disk.remove(tableName, id));
 
       return Status.DELETED;
-
    }
-
-
 }

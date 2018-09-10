@@ -1,6 +1,8 @@
 package com.training.client.services;
 
+import com.training.client.Request;
+
 public interface Service {
 
-   String askService ();
+   Request askService ();
 }

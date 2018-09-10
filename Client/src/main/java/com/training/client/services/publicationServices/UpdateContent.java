@@ -1,5 +1,6 @@
 package com.training.client.services.publicationServices;
 
+import com.training.client.Request;
 import com.training.client.services.Service;
 
 public class UpdateContent implements Service {
@@ -10,7 +11,10 @@ public class UpdateContent implements Service {
       this.statement = statement;
    }
 
-   public String askService() {
-      return null;
+   public Request askService() {
+
+      String temp = "UPDATE_CONTENT\n" + statement;
+
+      return new Request(temp);
    }
 }

@@ -5,7 +5,7 @@ import com.training.server.work.entity.User;
 import com.training.server.work.entity.UserType;
 
 /**
- * DATA ACCESS OBJECT FOR User
+ * DATA ACCESS OBJECT for User.
  */
 
 public interface UserDAO {

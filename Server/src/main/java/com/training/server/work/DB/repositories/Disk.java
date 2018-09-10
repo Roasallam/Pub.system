@@ -9,19 +9,18 @@ import java.io.*;
 import com.training.server.work.Status;
 import com.training.server.work.entity.*;
 
-
+/**
+ * A Repository which stores data based on xml format
+ * each entity ,, User/Publication/License
+ * are XML root elements
+ * and each instance of them is stored to disk in XML files
+ */
 
 public class Disk implements Repository {
 
    private static JAXBContext jaxbContext;
 
-   /**
-    * why in Static block? JAXBContext>>
-    * To avoid the overhead involved in creating a JAXBContext instance
-    *  so now it will be Initiated only at loading class phase
-    *   and it is thread safe.
-    * while Marshallers and Unmarshallers are cheap.
-    */
+   // To avoid the overhead involved in creating a JAXBContext instance
    static {
       try {
 
@@ -31,6 +30,14 @@ public class Disk implements Repository {
          e.printStackTrace();
       }
    }
+
+   /**
+    * adds an entry with the specified folder name
+    * which it belongs to, using marshaller to save it in XML file
+    * @param folderName the folder(table) that entry belongs to
+    * @param id the id of the entry
+    * @param obj value object of the entry
+    */
 
    @Override
    public void add(String folderName, String id, Object obj) {
@@ -50,6 +57,14 @@ public class Disk implements Repository {
       }
    }
 
+   /**
+    * removes the file that the entry is saved in
+    * @param folderName the folder which the entry belongs to
+    * @param id the id of the entry
+    * @return {@code true} if the file was found and successfully deleted
+    * {@code false} otherwise
+    */
+
    @Override
    public boolean remove(String folderName, String id) {
 
@@ -57,6 +72,15 @@ public class Disk implements Repository {
 
       return file.delete();
    }
+
+   /**
+    * gets the entry value objects using
+    * unmarshaller, with the specified folder which
+    * it belongs to
+    * @param folderName the folder which the entry belongs to
+    * @param id the id of the entry
+    * @return the value object of that entry
+    */
 
    @Override
    public Object get(String folderName, String id) {
@@ -78,12 +102,18 @@ public class Disk implements Repository {
       }
    }
 
+   /**
+    * generates a new file
+    * with the specified uri
+    * @param folderName folder which the file belongs to
+    * @param id the id for the file
+    * @return a new file instance with the specified uri
+    */
+
    private File generateFile (String folderName, String id) {
 
       String uri = "DiskRepo" + File.separator +
          folderName + File.separator + "records" + File.separator + id + ".xml";
       return new File(uri);
    }
-
-
 }

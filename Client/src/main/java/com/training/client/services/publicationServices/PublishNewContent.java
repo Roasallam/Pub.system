@@ -1,5 +1,6 @@
 package com.training.client.services.publicationServices;
 
+import com.training.client.Request;
 import com.training.client.services.Service;
 
 public class PublishNewContent implements Service {
@@ -10,7 +11,10 @@ public class PublishNewContent implements Service {
       this.statement = statement;
    }
 
-   public String askService() {
-      return statement;
+   public Request askService() {
+
+      String temp = "CREATE_PUBLICATION\n" + statement;
+
+      return new Request(temp);
    }
 }

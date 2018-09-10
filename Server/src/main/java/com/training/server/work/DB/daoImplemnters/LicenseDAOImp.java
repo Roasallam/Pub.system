@@ -7,18 +7,35 @@ import com.training.server.work.entity.*;
 import com.training.server.work.DB.DataDealer;
 import com.training.server.work.DB.Table;
 
-import java.time.LocalDate;
+import org.joda.time.LocalDate;
 
-
+/**
+ * concrete class of LicenseDAO
+ * which has the implementations of CRUD operations
+ * that manipulates the License Data.
+ */
 
 public class LicenseDAOImp implements LicenseDAO {
 
    private final DataDealer dataDealer;
 
+   /**
+    * constructs a new instance
+    * and gets the instance of the data dealer
+    * which provides data to manipulate
+    * using this class methods
+    */
+
    public LicenseDAOImp () {
       this.dataDealer = SetUpDB.getInstance();
    }
 
+   /**
+    * finds the value license to which the specified key userName
+    * is mapped,
+    * @param userName userName for the license
+    * @return {@code license} if it exist, {@code null} otherwise
+    */
 
    @Override
    public License findByUserName(String userName) {
@@ -37,13 +54,20 @@ public class LicenseDAOImp implements LicenseDAO {
       return null;
    }
 
+   /**
+    * updates a license time license,
+    * according to the {@param newTimeLicense} id
+    * and sets the new start date and end date of the license
+    * @param userName userName for the license
+    * @param newTimeLicense new time license
+    * @return the status of the operation
+    */
+
    @Override
    public Status updateTimeLicense(String userName, TimeLicense newTimeLicense) {
 
       if (newTimeLicense == null || userName == null)
          return Status.ERROR;
-
-      // this could contain a License or a Status object
 
       Object [] containTimeLicense = {""};
       containTimeLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
@@ -87,13 +111,19 @@ public class LicenseDAOImp implements LicenseDAO {
       return Status.FAILED;
    }
 
+   /**
+    * updates license privileges
+    *
+    * @param userName userName for the license
+    * @param newPrivilegesLicense new privileges license
+    * @return the status of the operation
+    */
+
    @Override
    public Status updatePrivilegesLicense(String userName, PrivilegesLicense newPrivilegesLicense) {
 
       if (newPrivilegesLicense == null || userName == null)
          return Status.ERROR;
-
-      // this could contain a License or a Status object
 
       Object [] containPrivilegesLicense = {""};
       containPrivilegesLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
@@ -116,13 +146,18 @@ public class LicenseDAOImp implements LicenseDAO {
       return Status.FAILED;
    }
 
+   /**
+    * updates license slice
+    * @param userName userName for the license
+    * @param newSlice new slice
+    * @return the status of the operation
+    */
+
    @Override
    public Status updateSlice(String userName, String newSlice) {
 
       if (newSlice == null || userName == null)
          return Status.ERROR;
-
-      // this could contain a License or a Status object
 
       Object [] containLicense = {""};
       containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);

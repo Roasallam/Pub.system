@@ -1,7 +1,7 @@
 package com.training.server.work.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import java.time.LocalDate;
+import org.joda.time.LocalDate;
 import java.util.InputMismatchException;
 
 
@@ -10,6 +10,7 @@ import java.util.InputMismatchException;
  * This model class is to contain the License DATA
  * and standard get and set methods.
  */
+
 @XmlRootElement
 public class License {
 
@@ -33,17 +34,11 @@ public class License {
    }
 
    /**
-    * In a situation that is faced with many constructor parameters
-    * we should consider a builder inner class,
-    * cause constructors don't scale well
-    * to large numbers of OPTIONAL parameters.
-    * and a builder pattern is better than
+    * Builder inner class, instead of
     * telescoping constructor pattern,
-    * i.e:
-    * in the second pattern we will create many constructors
-    * so the client will get confused with it.
+    * due to the number of optional
+    * parameters.
     */
-
    public static class Builder {
 
       // Required parameters
@@ -86,13 +81,16 @@ public class License {
        * if some optional parameter is not defined by the client,
        * it will have its default value.
        * @return a license object
-       *
        */
       public License build() {
 
          return new License(this);
       }
    }
+
+   /**
+    * standard get/set methods.
+    */
 
    public String getUserName() {
       return userName;

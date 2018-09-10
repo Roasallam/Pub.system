@@ -8,7 +8,7 @@ public class Request implements Runnable {
    int LISTENING_PORT = 1975;
    String requestedService;
 
-   Request(String requestedService) {
+   public Request(String requestedService) {
       this.requestedService = requestedService;
    }
 

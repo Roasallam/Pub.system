@@ -20,9 +20,9 @@ public class ServiceFactory extends Factory {
 
       switch (request.getId()) {
 
-         case 1:
-         case 2:
-         case 3: return new SignUp(statement);
+         case 1: return new SignUp(statement,1);
+         case 2: return new SignUp(statement,2);
+         case 3: return new SignUp(statement,3);
 
          case 4: return new UpdatePassword(statement);
 

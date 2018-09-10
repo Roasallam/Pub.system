@@ -4,10 +4,10 @@ import com.training.server.work.Status;
 import com.training.server.work.entity.License;
 import com.training.server.work.entity.*;
 
-
 /**
- * DATA ACCESS OBJECT FOR License
+ * DATA ACCESS OBJECT for License.
  */
+
 public interface LicenseDAO {
 
    License findByUserName(String userName);

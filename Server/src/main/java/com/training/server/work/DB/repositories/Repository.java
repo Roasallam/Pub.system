@@ -1,9 +1,11 @@
 package com.training.server.work.DB.repositories;
 
-public interface Repository {
+/**
+ * defines the operations that happens
+ * to data in a repository
+ */
 
-   // id could be publicationId (int)
-   // or userName (String)
+public interface Repository {
 
    void add (String name, String id, Object obj);
 

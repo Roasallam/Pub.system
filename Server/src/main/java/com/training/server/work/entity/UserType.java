@@ -1,20 +1,10 @@
 package com.training.server.work.entity;
 
+/**
+ * There are 3 types only of users.
+ */
+
 public enum UserType {
-   ADMIN (0) , JOURNAL (1), READER (10000);
-
-   private int userTypeId;
-
-   UserType (int userTypeId) {
-      this.userTypeId = userTypeId;
-   }
-
-   public int getUserTypeId() {
-      return userTypeId;
-   }
-
-   public void setUserTypeId(int userTypeId) {
-      this.userTypeId = userTypeId;
-   }
+   ADMIN  , JOURNAL , READER
 
 }

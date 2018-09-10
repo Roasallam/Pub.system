@@ -5,7 +5,7 @@ import com.training.server.work.entity.Publication;
 import java.util.List;
 
 /**
- *  DATA ACCESS OBJECT FOR Publication
+ *  DATA ACCESS OBJECT for Publication.
  */
 
 public interface PublicationDAO {

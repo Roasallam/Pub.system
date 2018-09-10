@@ -1,5 +1,6 @@
 package com.training.client.services.userServices;
 
+import com.training.client.Request;
 import com.training.client.services.Service;
 
 public class DeleteMe implements Service {
@@ -10,7 +11,10 @@ public class DeleteMe implements Service {
       this.statement = statement;
    }
 
-   public String askService() {
-      return statement;
+   public Request askService() {
+
+      String temp = "DELETE_USER\n" + statement;
+
+      return new Request(temp);
    }
 }
