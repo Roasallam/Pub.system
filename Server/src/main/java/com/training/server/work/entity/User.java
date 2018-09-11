@@ -18,6 +18,9 @@ public class User {
    private String password;
    private UserType userType;
 
+   private User() {
+   }
+
    // atomic
    public User(String userName, String password, UserType userType) {
 

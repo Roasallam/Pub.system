@@ -13,11 +13,12 @@ import com.training.server.work.DB.cache.*;
  * that he will manage the data retrieving and saving
  * operations among those repositories.
  */
-public class SetUpDB {
+
+public class Database {
 
    private static DataDealer dataDealer ;
 
-   // setting up the DB while loading the class
+   // setting up the DB
 
    static {
       Repository fileSystem = new Disk();
@@ -43,6 +44,7 @@ public class SetUpDB {
     * Singelton Data Dealer
     * @return DataDealer instance
     */
+
    public static DataDealer getInstance () {
       return dataDealer;
    }

@@ -21,7 +21,8 @@ public class License {
    private LocalDate start_date;
    private LocalDate end_date;
 
-   private License () {}
+   private License() {
+   }
 
    License (Builder builder) {
 
@@ -39,6 +40,7 @@ public class License {
     * due to the number of optional
     * parameters.
     */
+
    public static class Builder {
 
       // Required parameters
@@ -82,6 +84,7 @@ public class License {
        * it will have its default value.
        * @return a license object
        */
+
       public License build() {
 
          return new License(this);

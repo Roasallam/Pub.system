@@ -22,9 +22,20 @@ import org.joda.time.LocalDate;
  * the admin checks their licenses if they were active
  * or expired.
  */
+
 public class Authenticator {
 
    private static LicenseDAOImp licenseDAOImp = new LicenseDAOImp();
+
+   /**
+    * checks if the user is privileged to read a content
+    * 1st checks if the license of the user exist
+    * then checks if the license passed its end date
+    * if so then its expired and the user is not able to read
+    * otherwise its privileged to read
+    * @param userName userName specified for the user
+    * @return the status of the license if found, not exist otherwise
+    */
 
    public static Status readPrivileged (String userName) {
 
@@ -39,8 +50,16 @@ public class Authenticator {
          return Status.LICENSE_EXPIRED;
 
       return Status.LICENSE_ACTIVE;
-
    }
+
+   /**
+    * checks if the journal is privileged to publish a content
+    * or a user to write anything,
+    * 1st checks if the user can write or its not allowed
+    * 2nd checks for end date of the license if its passed or not
+    * @param userName userName specified for the user
+    * @return the status of the license if found, not exist otherwise
+    */
 
    public static Status writePrivileged (String userName) {
 
@@ -58,9 +77,16 @@ public class Authenticator {
          return Status.LICENSE_EXPIRED;
 
       return Status.LICENSE_ACTIVE;
-
    }
 
+   /**
+    * verifies an admin holding its code
+    * if his code is equal to system authentication code
+    * then its valid, otherwise he is not verified
+    * @param adminCode code with the admin
+    * @return valid code if and only if it equals system code,
+    * invalid otherwise
+    */
 
    public static Status checkAuthenticationCode (String adminCode) {
 
@@ -78,23 +104,6 @@ public class Authenticator {
 
          return Status.VALID_CODE;
       }
-
       return Status.INVALID_CODE;
    }
-
-   public static Status updateTimeLicense (String userName, License requestedLicense) {
-
-      return Status.ERROR;
-   }
-
-   public static Status updatePrivilegesLicense (String userName, License requestedLicense){
-
-      return Status.ERROR;
-   }
-
-   public static Status updateSlice (String userName, String requestedSlice) {
-
-      return Status.ERROR;
-   }
-
 }

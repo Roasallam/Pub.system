@@ -2,9 +2,10 @@ package com.training.server.work;
 
 /**
  * This class was implemented to help other classes
- * inform the user the status of the operation
- * were requested for.
+ * inform the user of the status of the operation
+ * they requested for.
  */
+
 public enum Status {
 
    ERROR ("ERROR"),

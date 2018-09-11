@@ -1,6 +1,6 @@
 package com.training.server.work.DB.daoImplemnters;
 
-import com.training.server.work.SetUpDB;
+import com.training.server.work.Database;
 import com.training.server.work.Status;
 import com.training.server.work.dao.*;
 import com.training.server.work.entity.*;
@@ -27,7 +27,7 @@ public class LicenseDAOImp implements LicenseDAO {
     */
 
    public LicenseDAOImp () {
-      this.dataDealer = SetUpDB.getInstance();
+      this.dataDealer = Database.getInstance();
    }
 
    /**
@@ -43,13 +43,10 @@ public class LicenseDAOImp implements LicenseDAO {
       if (userName == null)
          return null;
 
-      // this could contain a License or a Status object
+      Object obj = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
-      Object [] containLicense = {""};
-      containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
-
-      if (containLicense[0] != Status.NOT_EXIST)
-         return (License) containLicense[0];
+      if (obj instanceof License)
+         return ((License) obj);
 
       return null;
    }
@@ -58,6 +55,7 @@ public class LicenseDAOImp implements LicenseDAO {
     * updates a license time license,
     * according to the {@param newTimeLicense} id
     * and sets the new start date and end date of the license
+    * using addPeriodToLicense method
     * @param userName userName for the license
     * @param newTimeLicense new time license
     * @return the status of the operation
@@ -69,46 +67,33 @@ public class LicenseDAOImp implements LicenseDAO {
       if (newTimeLicense == null || userName == null)
          return Status.ERROR;
 
-      Object [] containTimeLicense = {""};
-      containTimeLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
+      Object obj = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
-      if (containTimeLicense[0] != Status.NOT_EXIST) {
+      if (obj instanceof License) {
+         License license = (License) obj;
 
-         switch (newTimeLicense.getLicense_id()) {
-            case 3: {
-               ((License) containTimeLicense[0]).setStart_date(LocalDate.now());
-               ((License) containTimeLicense[0]).setEnd_date(LocalDate.now().plusMonths(3));
-               ((License) containTimeLicense[0]).setTimeLicense(TimeLicense.QUARTER_YEAR);
-            }
-            break;
-            case 6: {
-               ((License) containTimeLicense[0]).setStart_date(LocalDate.now());
-               ((License) containTimeLicense[0]).setEnd_date(LocalDate.now().plusMonths(6));
-               ((License) containTimeLicense[0]).setTimeLicense(TimeLicense.HALF_YEAR);
-            }
-            break;
-            case 2: {
-               ((License) containTimeLicense[0]).setStart_date(LocalDate.now());
-               ((License) containTimeLicense[0]).setEnd_date(LocalDate.now().plusYears(2));
-               ((License) containTimeLicense[0]).setTimeLicense(TimeLicense.TWO_YEARS);
-            }
-            break;
-            case 7: {
-               ((License) containTimeLicense[0]).setStart_date(LocalDate.now());
-               ((License) containTimeLicense[0]).setEnd_date(LocalDate.now().plusYears(Integer.MAX_VALUE));
-               ((License) containTimeLicense[0]).setTimeLicense(TimeLicense.PERMANENT);
-            }
-            break;
-            case 0: {
-               ((License) containTimeLicense[0]).setEnd_date(LocalDate.now());
-               ((License) containTimeLicense[0]).setTimeLicense(TimeLicense.EXPIRED);
+         switch (newTimeLicense) {
+            case QUARTER_YEAR:
+               addPeriodToLicense(license, LocalDate.now(), LocalDate.now().plusMonths(3), TimeLicense.QUARTER_YEAR);
+               break;
+            case HALF_YEAR:
+               addPeriodToLicense(license, LocalDate.now(), LocalDate.now().plusMonths(6), TimeLicense.HALF_YEAR);
+               break;
+            case TWO_YEARS:
+               addPeriodToLicense(license, LocalDate.now(), LocalDate.now().plusYears(2), TimeLicense.TWO_YEARS);
+               break;
+            case PERMANENT:
+               addPeriodToLicense(license, LocalDate.now(), LocalDate.now().plusYears(200), TimeLicense.PERMANENT);
+               break;
+            case EXPIRED: {
+               license.setEnd_date(LocalDate.now());
+               license.setTimeLicense(TimeLicense.EXPIRED);
             }
          }
-
-         dataDealer.saveData(Table.LICENSE.getTableName(), userName, containTimeLicense[0]);
+         dataDealer.saveData(Table.LICENSE.getTableName(), userName, license);
          return Status.UPDATED;
       }
-      return Status.FAILED;
+      return (Status) obj;
    }
 
    /**
@@ -125,25 +110,23 @@ public class LicenseDAOImp implements LicenseDAO {
       if (newPrivilegesLicense == null || userName == null)
          return Status.ERROR;
 
-      Object [] containPrivilegesLicense = {""};
-      containPrivilegesLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
+      Object obj = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
-      if (containPrivilegesLicense[0] != Status.NOT_EXIST) {
+      if (obj instanceof License) {
+         License license = (License) obj;
 
-         switch (newPrivilegesLicense.getLicense_id()) {
-            case 1: {
-               ((License) containPrivilegesLicense[0]).setPrivilegesLicense(PrivilegesLicense.READ);
-            }
-            break;
-            case 2: {
-               ((License) containPrivilegesLicense[0]).setPrivilegesLicense(PrivilegesLicense.READ_WRITE);
-            }
+         switch (newPrivilegesLicense) {
+            case READ:
+               license.setPrivilegesLicense(PrivilegesLicense.READ);
+               break;
+            case READ_WRITE:
+               license.setPrivilegesLicense(PrivilegesLicense.READ_WRITE);
          }
 
-         dataDealer.saveData(Table.LICENSE.getTableName(), userName, containPrivilegesLicense[0]);
+         dataDealer.saveData(Table.LICENSE.getTableName(), userName, license);
          return Status.UPDATED;
       }
-      return Status.FAILED;
+      return (Status) obj;
    }
 
    /**
@@ -159,15 +142,32 @@ public class LicenseDAOImp implements LicenseDAO {
       if (newSlice == null || userName == null)
          return Status.ERROR;
 
-      Object [] containLicense = {""};
-      containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
+      Object obj = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
 
-      if (containLicense[0] != Status.NOT_EXIST) {
-         ((License) containLicense[0]).setSlice(newSlice);
-         dataDealer.saveData(Table.LICENSE.getTableName(), userName, containLicense[0]);
+      if (obj instanceof License) {
+
+         License license = (License) obj;
+         license.setSlice(newSlice);
+
+         dataDealer.saveData(Table.LICENSE.getTableName(), userName, license);
          return Status.UPDATED;
       }
-      return Status.FAILED;
+      return (Status) obj;
    }
 
+   /**
+    * adds a specified period of time to
+    * a license
+    * @param license license to update
+    * @param start start date for the license
+    * @param end end date for the license
+    * @param time type of the time license
+    */
+
+   private void addPeriodToLicense(License license, LocalDate start, LocalDate end, TimeLicense time) {
+
+      license.setStart_date(start);
+      license.setEnd_date(end);
+      license.setTimeLicense(time);
+   }
 }

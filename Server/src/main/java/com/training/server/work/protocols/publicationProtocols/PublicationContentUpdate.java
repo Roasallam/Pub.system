@@ -9,6 +9,10 @@ import com.training.server.work.protocols.Protocol;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * update publication's content protocol
+ */
+
 public class PublicationContentUpdate implements Protocol {
 
    private PublicationDAOImp publicationDAOImp;
@@ -16,34 +20,47 @@ public class PublicationContentUpdate implements Protocol {
    private String publicationId;
    private String newContent;
    private String journalName;
+   private Publication publication;
+
+   /**
+    * constructs a new instance of this protocol
+    * and initiate it with the statement
+    * @param statement statement specified from user
+    */
 
    public PublicationContentUpdate(String statement) {
       this.statement = statement;
       publicationDAOImp = new PublicationDAOImp();
    }
 
+   /**
+    * updates a publication content
+    * 1st checks syntax of the statement sent by the user
+    * if it's incorrect syntax then return
+    * 2nd checks if the publication requested for updating
+    * is exist or not
+    * 3rd checks if the user is privileged to write
+    * @return the status of the opertation
+    */
 
    private Status updateContent () {
 
       if (!checkSyntax())
          return Status.SYNTAX_ERROR;
 
-      // check license
-
-      Publication publication = publicationDAOImp.findById(publicationId);
-
-      if (publication == null)
+      if (!isFound())
          return Status.NOT_EXIST;
 
-      journalName = publication.getJournalName();
-
-      if (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE)
+      if (isPrivileged())
          return publicationDAOImp.updatePublication(publicationId, newContent);
 
       return Authenticator.writePrivileged(journalName);
-
    }
 
+   /**
+    * returns the result of PublicationContentUpdate method
+    * @return returns the result of PublicationContentUpdate method
+    */
 
    @Override
    public String getResult() {
@@ -52,6 +69,12 @@ public class PublicationContentUpdate implements Protocol {
 
       return status.getMsg();
    }
+
+   /**
+    * checks for the statement syntax
+    * @return {@code true} if and only if the syntax was correct
+    * {@code false} otherwise
+    */
 
    @Override
    public boolean checkSyntax() {
@@ -70,6 +93,38 @@ public class PublicationContentUpdate implements Protocol {
          newContent = newContent.replaceAll("(?i)^UPDATE\\s[a-zA-Z_0-9]+\\sCONTENT\\s", "");
          return true;
       }
+      return false;
+   }
+
+   /**
+    * checks if the publication is exist or not
+    * @return {@code true} if and only if the publication is found
+    * {@code false} otherwise
+    */
+
+   private boolean isFound () {
+
+      publication = publicationDAOImp.findById(publicationId);
+
+      if (publication != null)
+         return true;
+
+      return false;
+   }
+
+   /**
+    * checks if the user is privileged to write or not
+    * @return {@code true} if and only if the user is privileged to write
+    * {@code false} otherwise
+    */
+
+   private boolean isPrivileged () {
+
+      journalName = publication.getJournalName();
+
+      if (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE)
+         return true;
+
       return false;
    }
 }

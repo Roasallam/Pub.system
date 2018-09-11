@@ -9,6 +9,10 @@ import com.training.server.work.protocols.Protocol;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * sign up user protocol
+ */
+
 public class UserSignUp implements Protocol {
 
    private UserDAOImp userDAOImp ;
@@ -18,11 +22,25 @@ public class UserSignUp implements Protocol {
    private String password;
    private String code;
 
+   /**
+    * constructs a new instance of this protocol
+    * and initiate it with the statement
+    * @param statement statement specified from user
+    */
+
    public UserSignUp(String statement) {
 
       this.statement = statement;
       userDAOImp = new UserDAOImp();
    }
+
+   /**
+    * signs up a new user/admin/journal
+    * 1st checks syntax of the statement sent by the user
+    * if it's incorrect syntax then return
+    * 2nd if its admin checks his code
+    * @return the status of the operation
+    */
 
    private Status signUp () {
 
@@ -31,12 +49,16 @@ public class UserSignUp implements Protocol {
 
       // if Admin > check the authentication code
       if (userType == UserType.ADMIN) {
-         if (Authenticator.checkAuthenticationCode(code) == Status.INVALID_CODE)
+         if (!isVerified())
             return Status.INVALID_CODE;
       }
-
       return userDAOImp.SignUp(userName, password, userType);
    }
+
+   /**
+    * returns the result of signUp method
+    * @return returns the result of signUp method
+    */
 
    @Override
    public String getResult() {
@@ -44,8 +66,13 @@ public class UserSignUp implements Protocol {
       Status status = signUp();
 
       return status.getMsg();
-
    }
+
+   /**
+    * checks for the statement syntax
+    * @return {@code true} if and only if the syntax was correct
+    * {@code false} otherwise
+    */
 
    public boolean checkSyntax () {
 
@@ -89,5 +116,17 @@ public class UserSignUp implements Protocol {
       }
 
       return false;
+   }
+
+   /**
+    * checks if the admin is verified or not
+    * @return @code true} if and only if the admin is verified,
+    * {@code false} otherwise
+    */
+
+   private boolean isVerified () {
+
+      return Authenticator.checkAuthenticationCode(code) == Status.VALID_CODE;
+
    }
 }

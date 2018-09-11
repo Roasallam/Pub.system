@@ -3,33 +3,41 @@
   <component name="ChangeListManager">
     <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/ServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/DeleteContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/DeleteContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/PublishNewContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/PublishNewContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/Read.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/UpdateContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/UpdateContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/userServices/DeleteMe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/userServices/DeleteMe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/userServices/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/userServices/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/services/userServices/UpdatePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/services/userServices/UpdatePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/Content/records/0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/Roa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/DiskRepo/User/records/Roa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/DataDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/DataDealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/UserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/UserDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/SetUpDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/SignIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/License.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/License.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/DataDealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/DataDealer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/cache/LRU.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/cache/LRU.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/UserDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/UserDAOImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Cache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Disk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Disk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/SetUpDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/Status.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Authenticator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/SignIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/SignIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License$Builder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/PrivilegesLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/PrivilegesLicense.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/Publication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/Publication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/TimeLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/TimeLicense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/UserType.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +49,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -94,28 +102,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -139,7 +126,28 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,11 +252,12 @@
       <workItem from="1536445819392" duration="898000" />
       <workItem from="1536476277730" duration="275000" />
       <workItem from="1536573907999" duration="10974000" />
+      <workItem from="1536663245685" duration="1253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37735000" />
+    <option name="totallyTimeSpent" value="38988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -262,19 +271,19 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31766382" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28513733" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -284,31 +293,31 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28513733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
@@ -608,13 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/services/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -628,21 +634,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/services/Services.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="-215">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
           <folding>
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/services/Service.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/services/Services.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="405">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

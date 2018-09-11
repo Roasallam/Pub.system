@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
  * to test the server performance under
  * some amount of requests
  */
+
 public class Test {
 
 
@@ -23,6 +24,7 @@ public class Test {
       Service requestedService;
 
       String statement = "";
+
 
       // 100 reader sign up
 
@@ -69,16 +71,6 @@ public class Test {
 
          statement = "0 " + "READ " + i;
          requestedService = factory.provideService(Services.READ_PUBLICATION, statement);
-         executorService.execute(requestedService.askService());
-
-      }
-
-      // delete publications in journal 100
-
-      for (int i = 0 ; i < 100 ; i++) {
-
-         statement = "DELETE " + i + " PASSWORD 100";
-         requestedService = factory.provideService(Services.DELETE_PUBLICATION, statement);
          executorService.execute(requestedService.askService());
 
       }

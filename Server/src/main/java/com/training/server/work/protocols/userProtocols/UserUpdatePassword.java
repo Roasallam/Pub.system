@@ -2,11 +2,15 @@ package com.training.server.work.protocols.userProtocols;
 
 import com.training.server.work.DB.daoImplemnters.UserDAOImp;
 import com.training.server.work.Status;
-import com.training.server.work.authentication.SignIn;
+import com.training.server.work.authentication.Verification;
 import com.training.server.work.protocols.Protocol;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+/**
+ * update user password protocol
+ */
 
 public class UserUpdatePassword implements Protocol {
 
@@ -16,26 +20,41 @@ public class UserUpdatePassword implements Protocol {
    private String newPassword;
    private String oldPassword;
 
+   /**
+    * constructs a new instance of this protocol
+    * and initiate it with the statement
+    * @param statement statement specified from user
+    */
+
    public UserUpdatePassword(String statement) {
 
       this.statement = statement;
       userDAOImp = new UserDAOImp();
    }
 
+   /**
+    * updates a user password
+    * 1st checks syntax of the statement sent by the user
+    * if it's incorrect syntax then return
+    * 2nd verifies the user if he is able to update his password
+    * @return the status of the operation
+    */
+
    private Status updatePassword () {
 
       if (!checkSyntax())
          return Status.SYNTAX_ERROR;
 
-      // verify user
-
-      boolean verifier = SignIn.isValidPassword(userName, oldPassword);
-
-      if (!verifier)
+      if (!isVerified())
          return Status.INCORRECT_PASSWORD;
 
       return userDAOImp.updatePassword(userName, newPassword);
    }
+
+   /**
+    * returns the result of updatePassword method
+    * @return returns the result of updatePassword method
+    */
 
    @Override
    public String getResult() {
@@ -44,6 +63,12 @@ public class UserUpdatePassword implements Protocol {
 
       return status.getMsg();
    }
+
+   /**
+    * checks for the statement syntax
+    * @return {@code true} if and only if the syntax was correct
+    * {@code false} otherwise
+    */
 
    public boolean checkSyntax () {
 
@@ -63,5 +88,16 @@ public class UserUpdatePassword implements Protocol {
          return true;
       }
       return false;
+   }
+
+   /**
+    * checks if the user is verified or not
+    * @return @code true} if and only if the user is verified,
+    * {@code false} otherwise
+    */
+
+   private boolean isVerified () {
+
+      return Verification.isValidPassword(userName, oldPassword);
    }
 }

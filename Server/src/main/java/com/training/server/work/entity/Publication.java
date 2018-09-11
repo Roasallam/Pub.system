@@ -18,6 +18,9 @@ public class Publication {
    private int publicationId;
    private String content;
 
+   private Publication() {
+   }
+
    // atomic
    public Publication(int publicationId, String journalName, String content) {
 

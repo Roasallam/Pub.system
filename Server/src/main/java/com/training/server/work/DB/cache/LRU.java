@@ -96,7 +96,7 @@ public class LRU implements Cacheable {
    public synchronized Object retrieve(String name) {
 
       if (name == null)
-         return Status.NOT_EXIST;
+         return Status.FAILED;
 
       if (!(cachedEntries.containsKey(name)))
          return Status.NOT_EXIST;

@@ -37,7 +37,7 @@ public class DataDealer {
     * constructs a new dataDealer instance and
     * initiate the repositories to deals with
     * also a fixed thread pool with #20 thread
-    * for disk operations
+    * to run disk operations
     * @param cache cache repository
     * @param disk disk repository
     */
@@ -77,23 +77,22 @@ public class DataDealer {
 
    public Object retrieveData (String tableName,String id) {
 
-      Object [] containType = {null};
-      containType[0] = cache.get(tableName, id);
+      Object obj = cache.get(tableName, id);
 
       // cache HIT
-      if (containType[0] != Status.NOT_EXIST)
-         return containType[0];
+      if (obj != Status.NOT_EXIST)
+         return obj;
 
       // cache MISS
       else {
 
-         containType[0] = disk.get(tableName, id);
+         obj = disk.get(tableName, id);
 
-         if (containType[0] !=  Status.NOT_EXIST) {
+         if (obj !=  Status.NOT_EXIST) {
 
-            // make recently used
-            cache.add(tableName, id, containType[0]);
-            return containType[0];
+            // make most recently used
+            cache.add(tableName, id, obj);
+            return obj;
          }
          return Status.NOT_EXIST;
       }

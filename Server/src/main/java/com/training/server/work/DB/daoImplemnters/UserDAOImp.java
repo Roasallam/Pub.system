@@ -1,14 +1,10 @@
 package com.training.server.work.DB.daoImplemnters;
 
-import com.training.server.work.SetUpDB;
+import com.training.server.work.Database;
 import com.training.server.work.Status;
 import com.training.server.work.dao.UserDAO;
-import com.training.server.work.entity.PrivilegesLicense;
-import com.training.server.work.entity.TimeLicense;
-import com.training.server.work.entity.User;
-import com.training.server.work.entity.UserType;
+import com.training.server.work.entity.*;
 import com.training.server.work.DB.DataDealer;
-import com.training.server.work.entity.License;
 import com.training.server.work.DB.Table;
 
 import org.joda.time.LocalDate;
@@ -31,7 +27,7 @@ public class UserDAOImp implements UserDAO {
     */
 
    public UserDAOImp() {
-      this.dataDealer = SetUpDB.getInstance();
+      this.dataDealer = Database.getInstance();
    }
 
    /**
@@ -47,13 +43,10 @@ public class UserDAOImp implements UserDAO {
       if (userName == null)
          return null;
 
-      // this could contain a Status or a User object
+      Object obj = dataDealer.retrieveData(Table.USER.getTableName(), userName);
 
-      Object [] containUser = {""};
-      containUser[0] = dataDealer.retrieveData(Table.USER.getTableName(), userName);
-
-      if (containUser[0] != Status.NOT_EXIST)
-         return (User) containUser[0];
+      if (obj instanceof User)
+         return ((User) obj);
 
       return null;
    }
@@ -122,16 +115,16 @@ public class UserDAOImp implements UserDAO {
       if (userName == null || newPassword == null)
          return Status.ERROR;
 
-     Object [] containUser = {""};
-     containUser[0] = dataDealer.retrieveData(Table.USER.getTableName(), userName);
+      Object obj = dataDealer.retrieveData(Table.USER.getTableName(), userName);
 
-     if (containUser[0] != Status.NOT_EXIST) {
+      if (obj instanceof User) {
+         User user = (User) obj;
 
-        ((User) containUser[0]).setPassword(newPassword);
-        dataDealer.saveData(Table.USER.getTableName(), userName, containUser[0]);
+        user.setPassword(newPassword);
+        dataDealer.saveData(Table.USER.getTableName(), userName, user);
         return Status.UPDATED;
      }
-      return Status.FAILED;
+      return (Status) obj;
    }
 
    /**
@@ -146,14 +139,13 @@ public class UserDAOImp implements UserDAO {
       if (userName == null)
          return Status.ERROR;
 
-      Object [] containLicense = {""};
-      containLicense[0] = dataDealer.retrieveData(Table.LICENSE.getTableName(), userName);
+      Object obj = dataDealer.retrieveData(Table.USER.getTableName(), userName);
 
-      if (containLicense[0] != Status.NOT_EXIST) {
+      if (obj instanceof User) {
          dataDealer.deleteData(Table.LICENSE.getTableName(), userName);
          dataDealer.deleteData(Table.USER.getTableName(), userName);
          return Status.DELETED;
       }
-      return Status.NOT_EXIST;
+      return (Status) obj;
    }
 }

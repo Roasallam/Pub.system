@@ -1,8 +1,9 @@
 package com.training.server.work.DB.daoImplemnters;
 
-import com.training.server.work.SetUpDB;
+import com.training.server.work.Database;
 import com.training.server.work.dao.PublicationDAO;
 import com.training.server.work.Status;
+import com.training.server.work.entity.License;
 import com.training.server.work.entity.Publication;
 import com.training.server.work.DB.DataDealer;
 import com.training.server.work.DB.Table;
@@ -27,7 +28,7 @@ public class PublicationDAOImp implements PublicationDAO {
     */
 
    public PublicationDAOImp() {
-      this.dataDealer = SetUpDB.getInstance();
+      this.dataDealer = Database.getInstance();
    }
 
    private static AtomicInteger idCounter = new AtomicInteger();
@@ -45,13 +46,10 @@ public class PublicationDAOImp implements PublicationDAO {
       if (publicationId == null)
          return null;
 
-      // data retrieved could be a Status , or a Publication object
+      Object obj = dataDealer.retrieveData(Table.CONTENT.getTableName(), publicationId);
 
-      Object [] containPublication = {""};
-      containPublication[0] = dataDealer.retrieveData(Table.CONTENT.getTableName(), publicationId);
-
-      if (containPublication[0] != Status.NOT_EXIST)
-         return  ((Publication)containPublication[0]);
+      if (obj instanceof Publication)
+         return ((Publication) obj);
 
       return null;
    }
@@ -94,17 +92,18 @@ public class PublicationDAOImp implements PublicationDAO {
       if (publicationId == null || newContent == null)
          return Status.ERROR;
 
-      Object [] containPublication = {""};
-      containPublication[0] = dataDealer.retrieveData(Table.CONTENT.getTableName(),publicationId);
+      Object obj = dataDealer.retrieveData(Table.CONTENT.getTableName(), publicationId);
 
-      if (containPublication[0] != Status.NOT_EXIST) {
+      if (obj instanceof Publication) {
+         Publication publication = (Publication) obj;
 
-         ((Publication) containPublication[0]).setContent(newContent);
-         dataDealer.saveData(Table.CONTENT.getTableName(), publicationId, containPublication[0]);
+         publication.setContent(newContent);
+
+         dataDealer.saveData(Table.CONTENT.getTableName(), publicationId, publication);
 
          return Status.UPDATED;
       }
-     return Status.FAILED;
+     return (Status) obj;
    }
 
    /**
@@ -131,5 +130,4 @@ public class PublicationDAOImp implements PublicationDAO {
 
       return idCounter.getAndIncrement();
    }
-
 }
