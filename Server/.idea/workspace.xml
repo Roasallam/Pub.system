@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="" />
+    <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/training/client/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/training/client/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/training/client/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/Bayan.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/Roa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/amar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/aseel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/myName.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/Bayan.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/Roa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/amar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/aseel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/myName.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/DataDealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/DataDealer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/cache/LRU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/cache/LRU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/daoImplemnters/UserDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/daoImplemnters/UserDAOImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/Authenticator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/SignIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/entity/PrivilegesLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/entity/PrivilegesLicense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/entity/TimeLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/entity/TimeLicense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationCreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationCreate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationRead.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationRead.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/userProtocols/UserSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/userProtocols/UserSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,20 +47,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="LicenseDAOImp.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -69,10 +91,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/serving/WorkerResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/repositories/DiskRepository.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/LicenseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/UserType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/dao/PublicationDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/cache/Cacheable.java" />
@@ -103,6 +123,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" />
       </list>
     </option>
   </component>
@@ -125,6 +147,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="server" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Server" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="server" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Server" type="616d4139:PackageViewModuleNode" />
+              <item name="com.training.server" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,45 +282,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
-              <item name="work" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
-              <item name="work" type="1f31426a:PackageElementNode" />
-              <item name="DB" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
-              <item name="work" type="1f31426a:PackageElementNode" />
-              <item name="DB" type="1f31426a:PackageElementNode" />
-              <item name="daoImplemnters" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -410,17 +411,20 @@
       <workItem from="1536573909075" duration="14069000" />
       <workItem from="1536654538353" duration="12689000" />
       <workItem from="1536674369218" duration="77000" />
+      <workItem from="1536684977739" duration="420000" />
+      <workItem from="1536736967123" duration="1312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269561000" />
+    <option name="totallyTimeSpent" value="271293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -432,7 +436,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27948305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28756058" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -446,37 +450,36 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.5911681" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27544427" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3988604" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27544427" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,27 +562,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cache-configProperty">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -694,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -736,20 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -761,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="911">
           <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,11 +790,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+        <state relative-caret-position="2160">
+          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/UserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

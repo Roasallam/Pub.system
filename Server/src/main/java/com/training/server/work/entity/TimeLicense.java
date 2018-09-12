@@ -7,18 +7,9 @@ package com.training.server.work.entity;
  */
 
 public enum TimeLicense {
-   EXPIRED(0),FREE_TRIAL(1), QUARTER_YEAR(3), HALF_YEAR(6),
-   TWO_YEARS(2), PERMANENT(7);
+   EXPIRED,FREE_TRIAL, QUARTER_YEAR, HALF_YEAR,
+   TWO_YEARS, PERMANENT
 
-   private int license_id;
 
-   TimeLicense (int license_id) {
-
-      this.license_id = license_id;
-   }
-
-   public int getLicense_id() {
-      return license_id;
-   }
 
 }

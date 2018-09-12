@@ -3,41 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/DataDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/DataDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/UserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/daoImplemnters/UserDAOImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/SetUpDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/SignIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/License.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/License.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/Bayan.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/Roa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/amar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/aseel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/myName.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/Bayan.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/Roa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/amar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/aseel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/myName.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/TimeLicense.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/entity/TimeLicense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/DataDealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/DataDealer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/Table.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/cache/LRU.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/cache/LRU.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/PublicationDAOImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/UserDAOImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/daoImplemnters/UserDAOImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Cache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Disk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Disk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/SetUpDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/Status.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Authenticator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/SignIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/SignIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/License.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/SignIn.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/PrivilegesLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/PrivilegesLicense.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/Publication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/Publication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/TimeLicense.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/TimeLicense.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/entity/UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationCreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationCreate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationRead.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationRead.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,6 +77,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/PublishNewContent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/Read.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/UpdateContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/com/training/client/TestSignUp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdateContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestReadContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestCreatePublication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" />
       </list>
     </option>
@@ -102,7 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -110,22 +115,11 @@
               <item name="client" type="58d84e3e:PackageViewProjectNode" />
               <item name="Client" type="616d4139:PackageViewModuleNode" />
             </path>
-            <path>
-              <item name="client" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Client" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.client" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="client" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Client" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.client" type="1f31426a:PackageElementNode" />
-              <item name="services" type="1f31426a:PackageElementNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,6 +142,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,11 +248,12 @@
       <workItem from="1536476277730" duration="275000" />
       <workItem from="1536573907999" duration="10974000" />
       <workItem from="1536663245685" duration="1253000" />
+      <workItem from="1536737189507" duration="2603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38988000" />
+    <option name="totallyTimeSpent" value="41591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -276,7 +272,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22455573" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -293,22 +289,22 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28513733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -316,8 +312,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
@@ -634,23 +630,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/com/training/client/TestSignUp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-215">
-          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/com/training/client/test/TestUpdateContent.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/services/Services.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="60" lean-forward="true" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+          <folding>
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestCreatePublication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/services/Services.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding>
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestReadContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdateContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
