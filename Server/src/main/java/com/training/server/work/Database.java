@@ -41,7 +41,7 @@ public class Database {
 
 
    /**
-    * Singelton Data Dealer
+    * Singleton Data Dealer
     * @return DataDealer instance
     */
 
