@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/training/client/test/TestCreatePublication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/training/client/test/TestCreatePublication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/Authenticator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,20 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/Start.java">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-680">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="315">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -107,7 +93,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" />
@@ -116,6 +101,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationDelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java" />
       </list>
     </option>
   </component>
@@ -174,23 +160,15 @@
               <item name="Server" type="616d4139:PackageViewModuleNode" />
               <item name="com.training.server" type="1f31426a:PackageElementNode" />
               <item name="work" type="1f31426a:PackageElementNode" />
-              <item name="protocols" type="1f31426a:PackageElementNode" />
+              <item name="DB" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="server" type="58d84e3e:PackageViewProjectNode" />
               <item name="Server" type="616d4139:PackageViewModuleNode" />
               <item name="com.training.server" type="1f31426a:PackageElementNode" />
               <item name="work" type="1f31426a:PackageElementNode" />
-              <item name="protocols" type="1f31426a:PackageElementNode" />
-              <item name="publicationProtocols" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
-              <item name="work" type="1f31426a:PackageElementNode" />
-              <item name="protocols" type="1f31426a:PackageElementNode" />
-              <item name="userProtocols" type="1f31426a:PackageElementNode" />
+              <item name="DB" type="1f31426a:PackageElementNode" />
+              <item name="daoImplemnters" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -448,16 +426,15 @@
       <workItem from="1536736967123" duration="1312000" />
       <workItem from="1536749248757" duration="560000" />
       <workItem from="1536750073787" duration="703000" />
-      <workItem from="1536752248663" duration="5858000" />
+      <workItem from="1536752248663" duration="6577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278414000" />
+    <option name="totallyTimeSpent" value="279133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -713,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -738,13 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -864,6 +827,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/Start.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -871,10 +851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="315">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
