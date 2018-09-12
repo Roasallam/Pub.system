@@ -4,14 +4,10 @@
     <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/training/client/test/TestCreatePublication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/training/client/test/TestCreatePublication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/training/client/test/TestUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/training/client/test/TestUpdatePassword.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiskRepo/License/records/Roaa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiskRepo/User/records/Roaa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationCreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationCreate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationDelete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationRead.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/protocols/publicationProtocols/PublicationRead.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/authentication/Authenticator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,20 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProtocolFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/ProtocolFactory.java">
+      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublicationRead.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="-680">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -116,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/cache/LRU.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/UserDAOImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" />
@@ -129,6 +115,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationCreate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationDelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" />
       </list>
     </option>
   </component>
@@ -461,12 +448,12 @@
       <workItem from="1536736967123" duration="1312000" />
       <workItem from="1536749248757" duration="560000" />
       <workItem from="1536750073787" duration="703000" />
-      <workItem from="1536752248663" duration="5180000" />
+      <workItem from="1536752248663" duration="5858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277736000" />
+    <option name="totallyTimeSpent" value="278414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -726,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/daoImplemnters/LicenseDAOImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
@@ -870,10 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/Start.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="265">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -884,10 +864,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="26" />
         </state>
       </provider>
     </entry>

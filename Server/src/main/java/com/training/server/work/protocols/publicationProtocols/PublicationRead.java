@@ -85,7 +85,7 @@ public class PublicationRead implements Protocol {
       readMatcher = readPattern.matcher(statement);
 
       if (isCorrectSyntax()) {
-         
+
          String [] data = readMatcher.group().split(" ");
          publicationId = data[2];
          userName = data[0];

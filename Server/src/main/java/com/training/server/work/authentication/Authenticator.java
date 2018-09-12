@@ -90,19 +90,18 @@ public class Authenticator {
 
    public static Status checkAuthenticationCode (String adminCode) {
 
-      String systemCode = null;
-      try {
 
-         BufferedReader br = new BufferedReader(new FileReader("AuthenticationCode"));
-         systemCode = br.readLine();
+      try (BufferedReader br = new BufferedReader(new FileReader("AuthenticationCode"))){
+
+         String systemCode = br.readLine();
+
+         if (adminCode != null && adminCode.equals(systemCode)) {
+
+            return Status.VALID_CODE;
+         }
 
       } catch (Exception e ) {
          e.printStackTrace();
-      }
-
-      if (adminCode != null && adminCode.equals(systemCode)) {
-
-         return Status.VALID_CODE;
       }
       return Status.INVALID_CODE;
    }
