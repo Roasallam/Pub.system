@@ -19,6 +19,10 @@ public class PublicationCreate implements Protocol {
    private String journalName;
    private String content;
 
+   private String createRegex = "^CREATE\\sIN\\sJOURNAL\\s[a-zA-Z_0-9]+\\sCONTENT\\s.*";
+   private final Pattern createPattern = Pattern.compile(createRegex, Pattern.CASE_INSENSITIVE);
+   private Matcher createMatcher;
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -69,13 +73,9 @@ public class PublicationCreate implements Protocol {
    @Override
    public boolean checkSyntax() {
 
-      String createRegex = "^CREATE\\sIN\\sJOURNAL\\s[a-zA-Z_0-9]+\\sCONTENT\\s.*";
+      createMatcher = createPattern.matcher(statement);
 
-      Pattern createPattern = Pattern.compile(createRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher createMatcher = createPattern.matcher(statement);
-
-      if (createMatcher.find()) {
+      if (isCorrectSyntax()) {
 
          String [] data = createMatcher.group().split(" ");
          journalName = data[3];
@@ -84,6 +84,11 @@ public class PublicationCreate implements Protocol {
          return true;
       }
       return false;
+   }
+
+   private boolean isCorrectSyntax () {
+
+      return createMatcher.find();
    }
 
    /**

@@ -22,6 +22,10 @@ public class PublicationDelete implements Protocol {
    private String journalName;
    private Publication publication;
 
+   private String deletePublicationRegex = "^DELETE\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+   private final Pattern deletePublicationPattern = Pattern.compile(deletePublicationRegex, Pattern.CASE_INSENSITIVE);
+   private Matcher deletePublicationMatcher;
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -79,20 +83,21 @@ public class PublicationDelete implements Protocol {
    @Override
    public boolean checkSyntax() {
 
+      deletePublicationMatcher = deletePublicationPattern.matcher(statement);
 
-      String deletePublicationRegex = "^DELETE\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+      if (isCorrectSyntax()) {
 
-      Pattern deletePublicationPattern = Pattern.compile(deletePublicationRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher deletePublicationMatcher = deletePublicationPattern.matcher(statement);
-
-      if (deletePublicationMatcher.find()) {
          String [] data = deletePublicationMatcher.group().split(" ");
          publicationId = data[1];
          password = data[3];
          return true;
       }
       return false;
+   }
+
+   private boolean isCorrectSyntax () {
+
+      return deletePublicationMatcher.find();
    }
 
    /**

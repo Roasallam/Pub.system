@@ -22,6 +22,10 @@ public class PublicationContentUpdate implements Protocol {
    private String journalName;
    private Publication publication;
 
+   private String updateRegex = "^UPDATE\\s[a-zA-Z_0-9]+\\sCONTENT\\s.*";
+   private final Pattern updatePattern = Pattern.compile(updateRegex, Pattern.CASE_INSENSITIVE);
+   private Matcher updateMatcher;
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -79,13 +83,9 @@ public class PublicationContentUpdate implements Protocol {
    @Override
    public boolean checkSyntax() {
 
-      String updateRegex = "^UPDATE\\s[a-zA-Z_0-9]+\\sCONTENT\\s.*";
+      updateMatcher = updatePattern.matcher(statement);
 
-      Pattern updatePattern = Pattern.compile(updateRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher updateMatcher = updatePattern.matcher(statement);
-
-      if (updateMatcher.find()) {
+      if (isCorrectSyntax()) {
 
          String [] data = updateMatcher.group().split(" ");
          publicationId = data[1];
@@ -94,6 +94,11 @@ public class PublicationContentUpdate implements Protocol {
          return true;
       }
       return false;
+   }
+
+   private boolean isCorrectSyntax () {
+
+      return updateMatcher.find();
    }
 
    /**

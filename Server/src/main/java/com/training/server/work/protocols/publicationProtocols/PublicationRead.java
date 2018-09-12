@@ -21,6 +21,10 @@ public class PublicationRead implements Protocol {
    private String userName;
    private Publication publication;
 
+   private String readRegex = "^[a-zA-Z_0-9]+\\sREAD\\s[a-zA-Z_0-9]+";
+   private final Pattern readPattern = Pattern.compile(readRegex, Pattern.CASE_INSENSITIVE);
+   private Matcher readMatcher;
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -78,19 +82,21 @@ public class PublicationRead implements Protocol {
    @Override
    public boolean checkSyntax() {
 
-      String readRegex = "^[a-zA-Z_0-9]+\\sREAD\\s[a-zA-Z_0-9]+";
+      readMatcher = readPattern.matcher(statement);
 
-      Pattern readPattern = Pattern.compile(readRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher readMatcher = readPattern.matcher(statement);
-
-      if (readMatcher.find()) {
+      if (isCorrectSyntax()) {
+         
          String [] data = readMatcher.group().split(" ");
          publicationId = data[2];
          userName = data[0];
          return true;
       }
       return false;
+   }
+
+   private boolean isCorrectSyntax () {
+
+      return readMatcher.find();
    }
 
    /**

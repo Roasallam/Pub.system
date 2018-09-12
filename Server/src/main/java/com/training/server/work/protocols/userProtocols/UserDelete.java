@@ -19,6 +19,10 @@ public class UserDelete implements Protocol {
    private String userName;
    private String password;
 
+   private String deleteUserRegex = "^DELETE\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+   private final Pattern deleteUserPattern = Pattern.compile(deleteUserRegex, Pattern.CASE_INSENSITIVE);
+   private Matcher deleteUserMatcher ;
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -71,14 +75,9 @@ public class UserDelete implements Protocol {
    @Override
    public boolean checkSyntax() {
 
-      String deleteUserRegex = "^DELETE\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+      deleteUserMatcher = deleteUserPattern.matcher(statement);
 
-      Pattern deleteUserPattern = Pattern.compile(deleteUserRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher deleteUserMatcher = deleteUserPattern.matcher(statement);
-
-
-      if (deleteUserMatcher.find()) {
+      if (isCorrectSyntax()) {
 
          String [] data = deleteUserMatcher.group().split(" ");
          userName = data[1];
@@ -86,6 +85,11 @@ public class UserDelete implements Protocol {
          return true;
       }
       return false;
+   }
+
+   private boolean isCorrectSyntax () {
+
+      return deleteUserMatcher.find();
    }
 
    /**

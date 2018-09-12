@@ -20,6 +20,12 @@ public class UserUpdatePassword implements Protocol {
    private String newPassword;
    private String oldPassword;
 
+   private String passwordRegex =
+      "^UPDATE\\s[a-zA-Z_0-9]+\\sNEWPASSWORD\\s[a-zA-Z_0-9]+\\sOLDPASSWORD\\s[a-zA-Z_0-9]+";
+
+   private final Pattern passwordPattern = Pattern.compile(passwordRegex, Pattern.CASE_INSENSITIVE);
+   private Matcher passwordMatcher;
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -72,14 +78,9 @@ public class UserUpdatePassword implements Protocol {
 
    public boolean checkSyntax () {
 
-      String passwordRegex = "^UPDATE\\s[a-zA-Z_0-9]+\\sNEWPASSWORD\\s[a-zA-Z_0-9]+\\sOLDPASSWORD\\s[a-zA-Z_0-9]+";
+      passwordMatcher = passwordPattern.matcher(statement);
 
-      Pattern passwordPattern = Pattern.compile(passwordRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher passwordMatcher = passwordPattern.matcher(statement);
-
-
-      if (passwordMatcher.find()) {
+      if (isCorrectSyntax()) {
 
          String [] data = passwordMatcher.group().split(" ");
          userName = data[1];
@@ -88,6 +89,11 @@ public class UserUpdatePassword implements Protocol {
          return true;
       }
       return false;
+   }
+
+   private boolean isCorrectSyntax () {
+
+      return passwordMatcher.find();
    }
 
    /**

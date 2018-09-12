@@ -22,6 +22,19 @@ public class UserSignUp implements Protocol {
    private String password;
    private String code;
 
+   private String journalRegex = "^NEW\\sJOURNAL\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+   private String adminRegex = "^NEW\\sADMIN\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+\\sCODE\\s[a-zA-Z_0-9]+";
+   private String userRegex = "^NEW\\sUSER\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
+
+   private final Pattern journalPattern = Pattern.compile(journalRegex, Pattern.CASE_INSENSITIVE);
+   private final Pattern adminPattern = Pattern.compile(adminRegex, Pattern.CASE_INSENSITIVE);
+   private final Pattern userPattern = Pattern.compile(userRegex, Pattern.CASE_INSENSITIVE);
+
+   private Matcher journalMatcher ;
+   private Matcher adminMatcher ;
+   private Matcher userMatcher;
+
+
    /**
     * constructs a new instance of this protocol
     * and initiate it with the statement
@@ -76,18 +89,9 @@ public class UserSignUp implements Protocol {
 
    public boolean checkSyntax () {
 
-      String journalRegex = "^NEW\\sJOURNAL\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
-      String adminRegex = "^NEW\\sADMIN\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+\\sCODE\\s[a-zA-Z_0-9]+";
-      String userRegex = "^NEW\\sUSER\\s[a-zA-Z_0-9]+\\sPASSWORD\\s[a-zA-Z_0-9]+";
-
-      Pattern journalPattern = Pattern.compile(journalRegex, Pattern.CASE_INSENSITIVE);
-      Pattern adminPattern = Pattern.compile(adminRegex, Pattern.CASE_INSENSITIVE);
-      Pattern userPattern = Pattern.compile(userRegex, Pattern.CASE_INSENSITIVE);
-
-      Matcher journalMatcher = journalPattern.matcher(statement);
-      Matcher adminMatcher = adminPattern.matcher(statement);
-      Matcher userMatcher = userPattern.matcher(statement);
-
+      journalMatcher = journalPattern.matcher(statement);
+      adminMatcher = adminPattern.matcher(statement);
+      userMatcher = userPattern.matcher(statement);
 
       if (journalMatcher.find()) {
 

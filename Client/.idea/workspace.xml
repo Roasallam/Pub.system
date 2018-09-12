@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="" />
+    <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/test/TestSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/client/test/TestSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/test/TestUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/client/test/TestUpdatePassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,14 +60,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/Read.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/services/publicationServices/UpdateContent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/com/training/client/TestSignUp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdateContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestReadContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteContent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestCreatePublication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java" />
       </list>
     </option>
   </component>
@@ -73,17 +90,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="client" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Client" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,8 +112,30 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="client" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Client" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="client" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Client" type="616d4139:PackageViewModuleNode" />
+              <item name="com.training.client" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="client" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Client" type="616d4139:PackageViewModuleNode" />
+              <item name="com.training.client" type="1f31426a:PackageElementNode" />
+              <item name="test" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -133,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TestUpdatePassword">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.training.client.Test" />
       <module name="Client" />
@@ -141,6 +169,39 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.training.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TestDeleteUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.training.client.test.TestDeleteUser" />
+      <module name="Client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.client.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TestSignUp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.training.client.test.TestSignUp" />
+      <module name="Client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.client.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TestUpdatePassword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.training.client.test.TestUpdatePassword" />
+      <module name="Client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.client.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,8 +247,17 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.TestDeleteUser" />
+      <item itemvalue="Application.TestSignUp" />
+      <item itemvalue="Application.TestUpdatePassword" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestUpdatePassword" />
+        <item itemvalue="Application.TestSignUp" />
+        <item itemvalue="Application.TestDeleteUser" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -215,29 +285,32 @@
       <workItem from="1536663245685" duration="1253000" />
       <workItem from="1536737189507" duration="2603000" />
       <workItem from="1536749250439" duration="12000" />
+      <workItem from="1536753294639" duration="2804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41603000" />
+    <option name="totallyTimeSpent" value="44407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31766382" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31766382" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22778675" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23101777" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -251,37 +324,36 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28513733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28513733" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,28 +623,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestDeleteUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="225">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="360">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

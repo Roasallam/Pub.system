@@ -23,7 +23,6 @@ public class TestSignUp {
          statement = "new user " + i + " password " + i;
          requestedService = factory.provideService(Services.NEW_USER, statement);
          executorService.execute(requestedService.askService());
-
       }
 
       for (int i = 100 ; i < 200 ; i++) {
@@ -31,7 +30,6 @@ public class TestSignUp {
          statement = "new journal " + i + " password " + i;
          requestedService = factory.provideService(Services.NEW_JOURNAL, statement);
          executorService.execute(requestedService.askService());
-
       }
 
       for (int i = 200 ; i < 300 ; i++) {
@@ -39,7 +37,6 @@ public class TestSignUp {
          statement = "new admin " + i + " password " + i + " code AdminRoa";
          requestedService = factory.provideService(Services.NEW_ADMIN, statement);
          executorService.execute(requestedService.askService());
-
       }
       executorService.shutdown();
    }
