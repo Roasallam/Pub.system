@@ -55,7 +55,7 @@ public class Disk implements Repository {
          marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,Boolean.TRUE);
          marshaller.marshal(obj, bufferedOutputStream);
 
-      } catch (Exception e) {
+      } catch (IOException|JAXBException e) {
          e.printStackTrace();
       }
    }
@@ -100,7 +100,7 @@ public class Disk implements Repository {
          Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
          return unmarshaller.unmarshal(bufferedInputStream);
 
-      } catch (Exception e ) {
+      } catch (IOException|JAXBException e) {
          e.printStackTrace();
          return Status.NOT_EXIST;
       }

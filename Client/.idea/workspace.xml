@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/repositories/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/DB/repositories/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Verification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationContentUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/bla.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/roa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/bla.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/roa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Verification.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Verification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="285">
+              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestUpdatePassword.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdatePassword.java">
+      <file leaf-file-name="TestUpdateContent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdateContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="285">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -318,12 +317,12 @@
       <workItem from="1536753294639" duration="4272000" />
       <workItem from="1536761406499" duration="889000" />
       <workItem from="1536836320841" duration="596000" />
-      <workItem from="1536850225616" duration="1357000" />
+      <workItem from="1536850225616" duration="1974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48717000" />
+    <option name="totallyTimeSpent" value="49334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -338,7 +337,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31766382" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31766382" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
@@ -661,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdateContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestSignUp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -685,10 +677,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/test/TestUpdateContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/client/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="50" />
+        <state relative-caret-position="285">
+          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
