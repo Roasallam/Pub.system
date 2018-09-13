@@ -6,6 +6,13 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Creates a server socket, and bound it
+ * to the specified port, then start listening
+ * for clients requests.
+ * each request runs in a separate thread
+ */
+
 public class Listener {
 
    private static final int port = 1975;
@@ -19,6 +26,11 @@ public class Listener {
 
       executorService = Executors.newFixedThreadPool(100);
    }
+
+   /**
+    * starts the server, listening to
+    * clients requests.
+    */
 
    public static void start () {
 

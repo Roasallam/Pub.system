@@ -15,7 +15,7 @@ import org.joda.time.LocalDate;
  * have full rights and give authorities
  * to users
  * An admin is verified using the authentication code written in a file
- * through checkAuthenticationCode method.
+ * through {@code checkAuthenticationCode}.
  *
  * Each time a user request for a read operation or
  * a journal requests to publish a content
@@ -34,7 +34,8 @@ public class Authenticator {
     * if so then its expired and the user is not able to read
     * otherwise its privileged to read
     * @param userName userName specified for the user
-    * @return the status of the license if found, not exist otherwise
+    * @return the status of the license if found,
+    * {@code NOT_EXIST} otherwise
     */
 
    public static Status readPrivileged (String userName) {
@@ -44,9 +45,7 @@ public class Authenticator {
       if (license == null)
          return Status.NOT_EXIST;
 
-      LocalDate licenseDate = license.getEnd_date();
-
-      if (LocalDate.now().isAfter(licenseDate))
+      if (isExpired(license))
          return Status.LICENSE_EXPIRED;
 
       return Status.LICENSE_ACTIVE;
@@ -58,7 +57,8 @@ public class Authenticator {
     * 1st checks if the user can write or its not allowed
     * 2nd checks for end date of the license if its passed or not
     * @param userName userName specified for the user
-    * @return the status of the license if found, not exist otherwise
+    * @return the status of the license if found,
+    * {@code NOT_EXIST} otherwise
     */
 
    public static Status writePrivileged (String userName) {
@@ -71,9 +71,7 @@ public class Authenticator {
       if (license.getPrivilegesLicense() != PrivilegesLicense.READ_WRITE )
          return Status.NOT_ALLOWED;
 
-      LocalDate licenseDate = license.getEnd_date();
-
-      if (LocalDate.now().isAfter(licenseDate))
+      if (isExpired(license))
          return Status.LICENSE_EXPIRED;
 
       return Status.LICENSE_ACTIVE;
@@ -84,8 +82,8 @@ public class Authenticator {
     * if his code is equal to system authentication code
     * then its valid, otherwise he is not verified
     * @param adminCode code with the admin
-    * @return valid code if and only if it equals system code,
-    * invalid otherwise
+    * @return {@code VALID} code if and only if it equals system code,
+    * {@code INVALID} otherwise
     */
 
    public static Status checkAuthenticationCode (String adminCode) {
@@ -104,5 +102,12 @@ public class Authenticator {
          e.printStackTrace();
       }
       return Status.INVALID_CODE;
+   }
+
+   private static boolean isExpired (License license) {
+
+      LocalDate licenseDate = license.getEnd_date();
+
+      return LocalDate.now().isAfter(licenseDate);
    }
 }
