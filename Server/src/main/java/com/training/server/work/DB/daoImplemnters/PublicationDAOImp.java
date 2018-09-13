@@ -37,7 +37,8 @@ public class PublicationDAOImp implements PublicationDAO {
     * finds the value publication to which the specified key publication id
     * is mapped,
     * @param publicationId id for the publication
-    * @return {@code publication} if it exist, {@code null} otherwise
+    * @return {@code publication} if it exist,
+    * {@code null} otherwise
     */
 
    @Override
@@ -63,7 +64,7 @@ public class PublicationDAOImp implements PublicationDAO {
     * @param journalName journalName that the publication
     *                    belongs to
     * @param content content of the publication
-    * @return the id of the publication
+    * @return the id of the publication if operation succeeded
     */
 
    @Override

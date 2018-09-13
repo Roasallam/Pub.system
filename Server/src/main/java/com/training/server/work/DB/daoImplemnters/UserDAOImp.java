@@ -34,7 +34,8 @@ public class UserDAOImp implements UserDAO {
     * finds the value user to which the specified key userName
     * is mapped,
     * @param userName userName for the user
-    * @return {@code user} if it exist, {@code null} otherwise
+    * @return {@code user} if it exist,
+    * {@code null} otherwise
     */
 
    @Override

@@ -34,7 +34,8 @@ public class LicenseDAOImp implements LicenseDAO {
     * finds the value license to which the specified key userName
     * is mapped,
     * @param userName userName for the license
-    * @return {@code license} if it exist, {@code null} otherwise
+    * @return {@code license} if it exist,
+    * {@code null} otherwise
     */
 
    @Override
