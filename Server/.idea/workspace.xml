@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/serving/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/serving/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/serving/WorkerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/serving/WorkerResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Verification.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Verification.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Verification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-875">
-              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="374">
+              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -54,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/cache/LRU.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/memoryDB/daoImplemnters/UserDAOImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/listener/ServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationCreation.java" />
@@ -105,6 +112,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/serving/Listener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/serving/WorkerResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Verification.java" />
       </list>
     </option>
   </component>
@@ -415,12 +423,12 @@
       <workItem from="1536749248757" duration="560000" />
       <workItem from="1536750073787" duration="703000" />
       <workItem from="1536752248663" duration="6577000" />
-      <workItem from="1536836320271" duration="8748000" />
+      <workItem from="1536836320271" duration="9202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287881000" />
+    <option name="totallyTimeSpent" value="288335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -666,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Verification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/Protocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -847,8 +848,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-875">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        <state relative-caret-position="374">
+          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Verification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
         </state>
       </provider>
     </entry>

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/serving/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/serving/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/serving/WorkerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/serving/WorkerResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/training/server/work/authentication/Verification.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -327,12 +325,12 @@
       <workItem from="1536753294639" duration="4272000" />
       <workItem from="1536761406499" duration="889000" />
       <workItem from="1536836320841" duration="596000" />
-      <workItem from="1536850225616" duration="582000" />
+      <workItem from="1536850225616" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47942000" />
+    <option name="totallyTimeSpent" value="47957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />

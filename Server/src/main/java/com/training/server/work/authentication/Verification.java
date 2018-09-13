@@ -16,14 +16,15 @@ public class Verification {
 
    /**
     * checks for the password status,
-    * if a user is not exist then return NOT EXIST
+    * if a user is not exist then return {@code NOT_EXIST},
     * if the password which entered by the user is not equal to
     * the password which saved in the database then
-    * return INCORRECT PASSWORD and the user is not able to sign in
+    * return {@code INCORRECT_PASSWORD} and the user is not able to sign in
     * if not then he is able to sign in
     * @param userName userName specified for the user
     * @param password the password that the user entered
-    * @return not exist if the user is not a user of the system, WELCOME if and only if
+    * @return {@code NOT_EXIST} if the user is not a user of the system,
+    * {@code WELCOME} if and only if
     * the password matched the saved one
     */
 
@@ -46,17 +47,14 @@ public class Verification {
     * checks if the password entered by the user is valid or not
     * @param userName userName specified for the user
     * @param password the password that the user entered
-    * @return {@code true} if and only if the password is valid, {@code false}
-    * otherwise
+    * @return {@code true} if and only if the password is valid,
+    * {@code false} otherwise
     */
 
    public static boolean isValidPassword (String userName, String password) {
 
        Status status = passwordStatus(userName, password);
 
-       if (status == Status.WELCOME)
-          return true;
-
-       return false;
+       return status == Status.WELCOME;
    }
 }

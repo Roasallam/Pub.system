@@ -104,6 +104,14 @@ public class Authenticator {
       return Status.INVALID_CODE;
    }
 
+   /**
+    * checks if a specified license
+    * is expired or not
+    * @param license specified license to check its availability
+    * @return {@code true} if license is expired
+    * {@code false} otherwise
+    */
+
    private static boolean isExpired (License license) {
 
       LocalDate licenseDate = license.getEnd_date();
