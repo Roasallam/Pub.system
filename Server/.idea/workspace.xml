@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/training/client/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/training/client/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/training/client/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/training/client/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/serving/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/serving/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/serving/WorkerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/serving/WorkerResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/repositories/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/repositories/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/repositories/Disk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/server/work/DB/repositories/Disk.class" afterDir="false" />
-    </list>
+    <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -396,12 +387,12 @@
       <workItem from="1536749248757" duration="560000" />
       <workItem from="1536750073787" duration="703000" />
       <workItem from="1536752248663" duration="6577000" />
-      <workItem from="1536836320271" duration="13726000" />
+      <workItem from="1536836320271" duration="13853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292859000" />
+    <option name="totallyTimeSpent" value="292986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
