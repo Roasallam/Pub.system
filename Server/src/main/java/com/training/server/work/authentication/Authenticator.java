@@ -99,7 +99,8 @@ public class Authenticator {
          }
 
       } catch (Exception e ) {
-         e.printStackTrace();
+
+         throw new AssertionError(e);
       }
       return Status.INVALID_CODE;
    }

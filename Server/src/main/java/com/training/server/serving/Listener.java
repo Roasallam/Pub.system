@@ -50,7 +50,7 @@ public class Listener {
          }
       } catch (IOException e ) {
 
-         e.printStackTrace();
+         throw new AssertionError(e);
       }
 
    }

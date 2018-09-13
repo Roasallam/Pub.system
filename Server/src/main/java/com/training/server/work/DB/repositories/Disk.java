@@ -30,7 +30,8 @@ public class Disk implements Repository {
          jaxbContext = JAXBContext.newInstance(User.class,Publication.class,License.class);
 
       } catch (JAXBException e ) {
-         e.printStackTrace();
+
+         throw new AssertionError(e);
       }
    }
 
@@ -56,7 +57,8 @@ public class Disk implements Repository {
          marshaller.marshal(obj, bufferedOutputStream);
 
       } catch (IOException|JAXBException e) {
-         e.printStackTrace();
+
+         throw new AssertionError(e);
       }
    }
 
@@ -101,7 +103,7 @@ public class Disk implements Repository {
          return unmarshaller.unmarshal(bufferedInputStream);
 
       } catch (IOException|JAXBException e) {
-         e.printStackTrace();
+
          return Status.NOT_EXIST;
       }
    }

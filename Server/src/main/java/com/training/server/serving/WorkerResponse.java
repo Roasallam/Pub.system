@@ -50,7 +50,7 @@ public class WorkerResponse implements Runnable {
 
       } catch (IOException e) {
 
-         e.printStackTrace();
+         throw new AssertionError(e);
       }
    }
 
@@ -80,7 +80,6 @@ public class WorkerResponse implements Runnable {
 
       } catch (IllegalArgumentException e) {
 
-         e.printStackTrace();
          return Status.UNKNOWN_PROTOCOL.getMsg();
       }
 

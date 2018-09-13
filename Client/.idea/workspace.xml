@@ -4,14 +4,7 @@
     <list default="true" id="61cbb4a8-598f-40b0-9c6d-079e2f0e7105" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/client/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/training/client/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/bla.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/License/records/roa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/bla.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/DiskRepo/User/records/roa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Verification.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/authentication/Verification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserDelete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/protocols/userProtocols/UserUpdatePassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Disk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/com/training/server/work/DB/repositories/Disk.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -106,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -151,7 +145,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,11 +311,12 @@
       <workItem from="1536761406499" duration="889000" />
       <workItem from="1536836320841" duration="596000" />
       <workItem from="1536850225616" duration="1974000" />
+      <workItem from="1536860435853" duration="120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49334000" />
+    <option name="totallyTimeSpent" value="49454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -342,7 +336,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2374798" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24071082" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -359,33 +353,33 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31766382" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23101777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23101777" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
