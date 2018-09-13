@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3dfec4db-f99b-4595-8791-1d18fdaeb49b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,11 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
+      <file leaf-file-name="DataDealer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="1074">
+              <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LRU.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/cache/LRU.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -92,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/Start.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/PrivilegesLicense.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/entity/TimeLicense.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserDelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserUpdatePassword.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/userProtocols/UserSignUp.java" />
@@ -102,6 +112,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/protocols/publicationProtocols/PublicationRead.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/authentication/Authenticator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java" />
       </list>
     </option>
   </component>
@@ -124,6 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -140,20 +152,7 @@
               <item name="server" type="58d84e3e:PackageViewProjectNode" />
               <item name="Server" type="616d4139:PackageViewModuleNode" />
               <item name="com.training.server" type="1f31426a:PackageElementNode" />
-              <item name="serving" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
               <item name="work" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="server" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Server" type="616d4139:PackageViewModuleNode" />
-              <item name="com.training.server" type="1f31426a:PackageElementNode" />
-              <item name="work" type="1f31426a:PackageElementNode" />
-              <item name="authentication" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="server" type="58d84e3e:PackageViewProjectNode" />
@@ -168,12 +167,13 @@
               <item name="com.training.server" type="1f31426a:PackageElementNode" />
               <item name="work" type="1f31426a:PackageElementNode" />
               <item name="DB" type="1f31426a:PackageElementNode" />
-              <item name="daoImplemnters" type="1f31426a:PackageElementNode" />
+              <item name="cache" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,8 +291,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,18 +425,19 @@
       <workItem from="1536749248757" duration="560000" />
       <workItem from="1536750073787" duration="703000" />
       <workItem from="1536752248663" duration="6577000" />
+      <workItem from="1536836320271" duration="1839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279133000" />
+    <option name="totallyTimeSpent" value="280972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -450,7 +449,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30210015" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3069467" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -464,34 +463,35 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.34615386" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30210015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3988604" />
-      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32905984" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
@@ -627,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/cache/LRU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/cache/Cacheable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -711,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/serving/Listener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -743,10 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="711" column="19" selection-start-line="711" selection-start-column="19" selection-end-line="711" selection-end-column="19" />
-          <folding>
-            <element signature="e#24818#24819#0" expanded="true" />
-            <element signature="e#24863#24864#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,8 +835,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="178">
           <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/cache/LRU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/server/work/DB/DataDealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1074">
+          <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
         </state>
       </provider>
     </entry>

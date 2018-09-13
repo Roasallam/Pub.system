@@ -8,49 +8,34 @@ import java.util.concurrent.Executors;
 
 /**
  * A Dealer that deals data with
- * many repositories
- * 1- disk
- * 2- cache
- *
- * Saving and setting data:
- * 1) On disk, (Non-Volatile),(data is saved in XML format using FileInput & FileOutput
- * and the help of JAXBContext), saving and removing operations were executed
- * in another thread, (Slow) (Waiting,Synchronous IO) (Physical Storage)
- * i.e: In synchronous file I/O, a thread starts an I/O operation
- * and immediately enters a wait state until the I/O request has completed.
- *
- * 2) In cache (Logical storage)
- *
- * Reading data:
- * 1st from cache (faster to get data from + it stores most recently used),
- * if not found >>
- * 2nd from disk , if not found , then it doesn't exist at all.
+ * 2 defined repositories
+ * 1st repository should be faster than the 2nd one
  */
 
 public class DataDealer {
 
-   private Repository cache ;
-   private Repository disk ;
+   private Repository repo1 ;
+   private Repository repo2 ;
    private final ExecutorService pool;
 
    /**
     * constructs a new dataDealer instance and
-    * initiate the repositories to deals with
+    * initiate the repositories to deals with,
     * also a fixed thread pool with #20 thread
-    * to run disk operations
-    * @param cache cache repository
-    * @param disk disk repository
+    * to run 2nd repository operations
+    * @param repo1 1st repository
+    * @param repo2 2nd repository
     */
 
-   public DataDealer(Repository cache, Repository disk) {
-      this.cache = cache;
-      this.disk = disk;
+   public DataDealer(Repository repo1, Repository repo2) {
+      this.repo1 = repo1;
+      this.repo2 = repo2;
       pool = Executors.newFixedThreadPool(20);
    }
 
    /**
-    * saves data to cache repository
-    * and starts a new thread for saving in disk
+    * saves data to first repository
+    * and starts a new thread for saving in 2nd repository
     * @param tableName the table which the entry belongs to
     * @param id the id if that entry
     * @param object value object
@@ -58,17 +43,17 @@ public class DataDealer {
 
    public void saveData (String tableName, String id, Object object) {
 
-      cache.add(tableName,id,object);
+      repo1.add(tableName,id,object);
 
-      pool.execute(() -> disk.add(tableName, id, object));
+      pool.execute(() -> repo2.add(tableName, id, object));
 
    }
 
    /**
-    * retrieves the value object from cache first
-    * if found then return it, (cache hit)
-    * if not (cache miss) see if its in disk, if so then
-    * add to cache as a most recently used and return it
+    * retrieves the value object from 1st repository first
+    * if found then return it, (hit)
+    * if not (miss) see if its in 2nd repository, if so then
+    * add to 1st repository as a most recently used and return it
     * otherwise its not exist
     * @param tableName table which the entry belongs to
     * @param id the id of that entry
@@ -77,21 +62,21 @@ public class DataDealer {
 
    public Object retrieveData (String tableName,String id) {
 
-      Object obj = cache.get(tableName, id);
+      Object obj = repo1.get(tableName, id);
 
-      // cache HIT
+      //  HIT
       if (obj != Status.NOT_EXIST)
          return obj;
 
-      // cache MISS
+      //  MISS
       else {
 
-         obj = disk.get(tableName, id);
+         obj = repo2.get(tableName, id);
 
          if (obj !=  Status.NOT_EXIST) {
 
             // make most recently used
-            cache.add(tableName, id, obj);
+            repo1.add(tableName, id, obj);
             return obj;
          }
          return Status.NOT_EXIST;
@@ -99,8 +84,8 @@ public class DataDealer {
    }
 
    /**
-    * deletes a specified entry from cache and starts a new thread
-    * to delete it from disk
+    * deletes a specified entry from first repository and starts a new thread
+    * to delete it from 2nd one
     * @param tableName table that the entry belongs to
     * @param id the id of that entry
     * @return the status of the operation
@@ -108,9 +93,9 @@ public class DataDealer {
 
    public Status deleteData (String tableName, String id) {
 
-      cache.remove(tableName, id);
+      repo1.remove(tableName, id);
 
-      pool.execute(() -> disk.remove(tableName, id));
+      pool.execute(() -> repo2.remove(tableName, id));
 
       return Status.DELETED;
    }
