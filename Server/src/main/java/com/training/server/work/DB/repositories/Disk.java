@@ -79,7 +79,8 @@ public class Disk implements Repository {
     * it belongs to
     * @param folderName the folder which the entry belongs to
     * @param id the id of the entry
-    * @return the value object of that entry
+    * @return the value object of that entry,
+    * {@code NOT_EXIST} if its not exist
     */
 
    @Override

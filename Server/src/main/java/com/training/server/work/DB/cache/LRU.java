@@ -7,22 +7,36 @@ import java.util.*;
 /**
  * This class implements
  * LRU (Least Recently Used) algorithm.
- * Different cacheable entries are saved in a LinkedHashMap (Insertion order).
- * When map size exceed maxEntries, deleteLRU method
- * will delete least recently used entry
+ * Different cacheable entries are saved in a LinkedHashMap,
+ * whose order of iteration is the order
+ * in which its entries were last accessed,
+ * from least-recently accessed to most-recently,
+ * This kind of map is well-suited to building LRU caches.
+ * When map size exceed maxEntries,
+ * the removeEldestEntry, which invoked by {@code put}, will return {@code true},
+ * so it will delete least recently used entry
  * to make space for a most recently used entry.
  */
 
-public class LRU implements Cacheable {
+public class LRU extends LinkedHashMap <String,Object> implements Cacheable {
 
    private final int maxEntries;
-   private static final int DEFAULT_INITIAL_CAPACITY = 50;
+   private static final int DEFAULT_INITIAL_CAPACITY = 30;
    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
-   private Map <String,Object> cachedEntries = new LinkedHashMap<>
-      (DEFAULT_INITIAL_CAPACITY,DEFAULT_LOAD_FACTOR, false) ;
 
+   /**
+    * Constructs an empty {@code LinkedHashMap} instance
+    * whose order of iteration is the order
+    * in which its entries were last accessed, from least-recently accessed to
+    * most-recently, with the
+    * specified initial capacity, load factor and ordering mode, and
+    * the max number of entries the map can hold.
+    * @param maxEntries the max number of entries the map can hold
+    */
 
    public LRU (int maxEntries) {
+
+      super(DEFAULT_INITIAL_CAPACITY, DEFAULT_LOAD_FACTOR, true);
 
       if (maxEntries <= 0 )
          maxEntries = 10;
@@ -33,9 +47,14 @@ public class LRU implements Cacheable {
    /**
     * adds an entry into the LinkedHashMap
     * if the entry is already exist then updated it
-    * with the new value, otherwise add new entry.
+    * with the new value, and update its
+    * access order, this happens internally by {@code put}
+    * otherwise add new entry.
+    *
     * @param name key name
     * @param obj value object
+    * @throws InputMismatchException if one or both
+    * of the parameters are null
     */
 
    @Override
@@ -44,52 +63,19 @@ public class LRU implements Cacheable {
       if (name == null || obj == null)
          throw new InputMismatchException("nulls");
 
-      if (cachedEntries.containsKey(name))
-         update(name, obj);
-      else
-         addNew(name, obj);
+      this.put(name, obj);
    }
 
    /**
-    * updates an exiting entry with the new value.
-    * no need to check for available space.
-    * @param name key name
-    * @param obj new value object
-    */
-
-   private void update (String name, Object obj) {
-
-     cachedEntries.remove(name);
-     cachedEntries.put(name, obj);
-   }
-
-   /**
-    * adds a new entry.
-    * check for available space first,
-    * if HashMap is full, then remove the LRU entry,
-    * if failed removing the LRU entry, throw runtime exception,
-    * now add the new entry.
-    * @param name key name
-    * @param obj value object
-    */
-
-   private void addNew (String name, Object obj) {
-
-      if (isFull()) {
-         Status status = deleteLRU();
-         if (status == Status.FAILED)
-            throw new RuntimeException("Failed to delete Least recently used");
-      }
-      cachedEntries.put(name, obj);
-   }
-
-   /**
-    * retrieves an entry object, if the HashMap
-    * does not contain it, then the entry is not exist,
-    * otherwise update its position, Most Recently Used.
+    * Retrieves the value to which the specified key is mapped,
+    * or {@code NOT_EXIST} if this map
+    * contains no mapping for the key.
+    * {@code get} also puts the entry back to the end of the map
+    * as most recently used
     * @param name key name
     * @return the value object to which the specified key name
-    * is mapped
+    * is mapped, {@code NOT_EXIST} if map contain no mapping
+    * for the specified key
     */
 
    @Override
@@ -98,71 +84,46 @@ public class LRU implements Cacheable {
       if (name == null)
          return Status.FAILED;
 
-      if (!(cachedEntries.containsKey(name)))
+      if (!(this.containsKey(name)))
          return Status.NOT_EXIST;
 
-      update(name, cachedEntries.get(name));
-      return cachedEntries.get(name);
+      return this.get(name);
    }
 
    /**
-    * removes an entry from the HashMap, if it
-    * does not contain the entry, returns false,
-    * otherwise removes it from the HashMap
+    * removes an entry from the map, if map contain no mapping
+    * for the specified key, returns {@code false},
+    * otherwise removes it from the map
     * @param name key name
-    * @return {@code true} if the entry successfully deleted, {@code false} otherwise
+    * @return {@code true} if the entry successfully deleted,
+    * {@code false} otherwise
     */
 
    @Override
    public synchronized boolean removeObj(String name) {
 
-      if (!cachedEntries.containsKey(name))
+      if (!this.containsKey(name))
          return false;
 
-      cachedEntries.remove(name);
+      this.remove(name);
 
       return true;
    }
 
    /**
-    * deletes the least recently used entry when
-    * the HashMap is full
-    * @return FAILED if the LRU entry was not deleted,
-    * otherwise returns MISSION_ACCOMPLISHED
+    * Returns {@code true} if this map size exceed the
+    * maximum number of entries it can hold.
+    * This method is invoked by {@code put} after
+    * inserting a new entry into the map.
+    * @param eldest the least recently accessed
+    * entry.
+    * @return Returns {@code true} if this map size exceed the
+    * maximum number of entries it can hold,
+    * {@code false} otherwise
     */
 
    @Override
-   public synchronized Status deleteLRU() {
-
-      String name = getEldestKey();
-
-      if (name == null)
-         return Status.FAILED;
-
-      cachedEntries.remove(name);
-
-      return Status.MISSION_ACCOMPLISHED;
-   }
-
-   /**
-    * checks if the HashMap size has exceeded
-    * maxEntries
-    * @return {@code true} if the HashMap is full, {@code false} otherwise
-    */
-
-   private boolean isFull () {
-      return cachedEntries.size() >= maxEntries;
-   }
-
-   /**
-    * gets the key corresponding to the LRU entry
-    * @return the key name of the LRU entry
-    */
-
-   private String getEldestKey () {
-
-      Map.Entry<String ,Object> eldest = cachedEntries.entrySet().iterator().next();
-
-      return eldest.getKey();
+   protected boolean removeEldestEntry(Map.Entry<String, Object> eldest) {
+      return this.size() > maxEntries;
    }
 }

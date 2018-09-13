@@ -57,7 +57,8 @@ public class DataDealer {
     * otherwise its not exist
     * @param tableName table which the entry belongs to
     * @param id the id of that entry
-    * @return the object if found, NOT_EXIST if not
+    * @return the object if found,
+    * {@code NOT_EXIST} if not found
     */
 
    public Object retrieveData (String tableName,String id) {

@@ -67,7 +67,7 @@ public class Cache implements Repository {
     * @param tableName table which the entry is in
     * @param id the id of that cacheable entry
     * @return the value object if its exist, otherwise
-    * returns NOT_EXIST
+    * returns {@code NOT_EXIST}
     */
 
    @Override
