@@ -15,7 +15,7 @@ public class Test {
       ExecutorService executorService = Executors.newFixedThreadPool(300);
       Service requestedService;
 
-      String statement = "delete bayan password 1997";
+      String statement = "delete roa password 1997";
 
       requestedService = factory.provideService(Services.DELETE_USER, statement);
       executorService.execute(requestedService.askService());

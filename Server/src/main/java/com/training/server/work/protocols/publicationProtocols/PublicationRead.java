@@ -109,10 +109,7 @@ public class PublicationRead implements Protocol {
 
        publication = publicationDAOImp.findById(publicationId);
 
-       if (publication != null)
-          return true;
-
-       return false;
+      return publication != null;
    }
 
    /**
@@ -123,9 +120,6 @@ public class PublicationRead implements Protocol {
 
    private boolean isPrivileged () {
 
-      if (Authenticator.readPrivileged(userName) == Status.LICENSE_ACTIVE)
-         return true;
-
-      return false;
+      return (Authenticator.readPrivileged(userName) == Status.LICENSE_ACTIVE);
    }
 }

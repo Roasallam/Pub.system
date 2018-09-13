@@ -51,6 +51,9 @@ public class UserUpdatePassword implements Protocol {
       if (!checkSyntax())
          return Status.SYNTAX_ERROR;
 
+      if (!isExist())
+         return Status.NOT_EXIST;
+
       if (!isVerified())
          return Status.INCORRECT_PASSWORD;
 
@@ -105,5 +108,16 @@ public class UserUpdatePassword implements Protocol {
    private boolean isVerified () {
 
       return Verification.isValidPassword(userName, oldPassword);
+   }
+
+   /**
+    * checks if a user exist or not
+    * @return {@code true} if the user is a user of the system
+    * {@code false} if the user is not exist
+    */
+
+   private boolean isExist () {
+
+      return Verification.isExist(userName);
    }
 }

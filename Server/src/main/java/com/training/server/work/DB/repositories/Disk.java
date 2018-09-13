@@ -11,6 +11,9 @@ import com.training.server.work.entity.*;
 
 /**
  * A Repository which stores data based on xml format
+ * using JAXBContext, Marshaller and Unmarshaller.
+ * (Waiting,Synchronous IO) (FileOutputStream, FileInputStream..)
+ * (Physical Storage)
  * each entity ,, User/Publication/License
  * are XML root elements
  * and each instance of them is stored to disk in XML files

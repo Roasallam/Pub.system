@@ -99,9 +99,6 @@ public class PublicationCreate implements Protocol {
 
    private boolean isPrivileged () {
 
-      if (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE)
-         return true;
-
-      return false;
+      return (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE);
    }
 }

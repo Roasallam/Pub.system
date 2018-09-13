@@ -110,10 +110,7 @@ public class PublicationDelete implements Protocol {
 
       publication = publicationDAOImp.findById(publicationId);
 
-      if (publication != null)
-         return true;
-
-      return false;
+      return publication != null;
    }
 
    /**

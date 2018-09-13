@@ -13,6 +13,7 @@ import com.training.server.work.entity.User;
 public class Verification {
 
    private static UserDAOImp userDAOImp = new UserDAOImp();
+   private static User user;
 
    /**
     * checks for the password status,
@@ -30,9 +31,7 @@ public class Verification {
 
     private static Status passwordStatus (String userName, String password) {
 
-      User user = userDAOImp.findByName(userName);
-
-      if (user == null)
+      if (!isExist(userName))
          return Status.NOT_EXIST;
 
       String savedPassword = user.getPassword();
@@ -56,5 +55,19 @@ public class Verification {
        Status status = passwordStatus(userName, password);
 
        return status == Status.WELCOME;
+   }
+
+   /**
+    * checks if a user exist or not
+    * @param userName userName specified for the user
+    * @return {@code true} if the user is a user of the system
+    * {@code false} if the user is not exist
+    */
+
+   public static boolean isExist (String userName) {
+
+      user = userDAOImp.findByName(userName);
+
+      return user != null;
    }
 }

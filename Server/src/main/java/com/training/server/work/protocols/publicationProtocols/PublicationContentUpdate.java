@@ -44,7 +44,7 @@ public class PublicationContentUpdate implements Protocol {
     * 2nd checks if the publication requested for updating
     * is exist or not
     * 3rd checks if the user is privileged to write
-    * @return the status of the opertation
+    * @return the status of the operation
     */
 
    private Status updateContent () {
@@ -111,10 +111,7 @@ public class PublicationContentUpdate implements Protocol {
 
       publication = publicationDAOImp.findById(publicationId);
 
-      if (publication != null)
-         return true;
-
-      return false;
+        return publication != null;
    }
 
    /**
@@ -127,9 +124,6 @@ public class PublicationContentUpdate implements Protocol {
 
       journalName = publication.getJournalName();
 
-      if (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE)
-         return true;
-
-      return false;
+      return (Authenticator.writePrivileged(journalName) == Status.LICENSE_ACTIVE);
    }
 }

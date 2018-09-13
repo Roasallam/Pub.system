@@ -131,6 +131,5 @@ public class UserSignUp implements Protocol {
    private boolean isVerified () {
 
       return Authenticator.checkAuthenticationCode(code) == Status.VALID_CODE;
-
    }
 }
