@@ -1,8 +1,8 @@
 package com.training.server.work.DB.cache;
 
 /**
- * defines the operations applied
- * to a cacheable entries.
+ * defines the behavior of a
+ * cacheable objects
  */
 
 public interface Cacheable {

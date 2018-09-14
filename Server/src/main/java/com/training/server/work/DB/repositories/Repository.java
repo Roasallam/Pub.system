@@ -1,8 +1,8 @@
 package com.training.server.work.DB.repositories;
 
 /**
- * defines the operations that happens
- * to data in a repository
+ * defines the behavior
+ * of a repository
  */
 
 public interface Repository {
