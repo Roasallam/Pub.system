@@ -88,8 +88,8 @@ public class PublicationDelete implements Protocol {
       if (isCorrectSyntax()) {
 
          String [] data = deletePublicationMatcher.group().split(" ");
-         publicationId = data[1];
          password = data[3];
+         publicationId = data[1];
          return true;
       }
       return false;
